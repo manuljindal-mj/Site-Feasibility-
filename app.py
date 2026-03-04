@@ -7,10 +7,9 @@ import re
 
 st.title("Site Feasibility Tool")
 
-# -------------------------
+# -------------------------------------------------
 # Convert DMS → Decimal
-# -------------------------
-
+# -------------------------------------------------
 def convert_coord(coord):
 
     coord = str(coord).strip()
@@ -36,14 +35,14 @@ def convert_coord(coord):
     return None
 
 
-# -------------------------
+# -------------------------------------------------
 # Load Data
-# -------------------------
-
+# -------------------------------------------------
 p0 = pd.read_csv("P0.csv")
 qis = pd.read_csv("QIS Locations.csv")
 deals = pd.read_csv("deals.csv")
 
+# Clean column names
 p0.columns = p0.columns.str.strip()
 qis.columns = qis.columns.str.strip()
 deals.columns = deals.columns.str.strip()
@@ -53,7 +52,6 @@ if "QIS No." in qis.columns:
     qis = qis.drop_duplicates(subset=["QIS No."])
 
 # Convert coordinates
-
 p0["Latitude"] = pd.to_numeric(p0["Latitude"], errors="coerce")
 p0["Longitude"] = pd.to_numeric(p0["Longitude"], errors="coerce")
 
@@ -63,20 +61,26 @@ qis["Long"] = pd.to_numeric(qis["Long"], errors="coerce")
 deals["Latitude"] = pd.to_numeric(deals["Latitude"], errors="coerce")
 deals["Longitude"] = pd.to_numeric(deals["Longitude"], errors="coerce")
 
+# Drop invalid rows
 p0 = p0.dropna(subset=["Latitude","Longitude"])
 qis = qis.dropna(subset=["Lat","Long"])
 deals = deals.dropna(subset=["Latitude","Longitude"])
 
+# Remove invalid coordinates
+deals = deals[
+    (deals["Latitude"] >= -90) &
+    (deals["Latitude"] <= 90) &
+    (deals["Longitude"] >= -180) &
+    (deals["Longitude"] <= 180)
+]
 
 # Detect QIS count column automatically
 p0_qis_col = next((c for c in p0.columns if "qis" in c.lower()), None)
 deal_qis_col = next((c for c in deals.columns if "qis" in c.lower()), None)
 
-
-# -------------------------
+# -------------------------------------------------
 # User Input
-# -------------------------
-
+# -------------------------------------------------
 lat_input = st.text_input("Enter Latitude (Decimal or DMS)")
 lon_input = st.text_input("Enter Longitude (Decimal or DMS)")
 
@@ -91,10 +95,9 @@ if st.button("Check Location"):
 
     input_point = (lat, lon)
 
-    # -------------------------
-    # P0 analysis
-    # -------------------------
-
+    # -------------------------------------------------
+    # P0 Analysis
+    # -------------------------------------------------
     p0_results = []
     nearest_p0 = None
     nearest_p0_distance = 999
@@ -116,10 +119,9 @@ if st.button("Check Location"):
             })
 
 
-    # -------------------------
-    # QIS analysis
-    # -------------------------
-
+    # -------------------------------------------------
+    # QIS Analysis
+    # -------------------------------------------------
     qis_results = []
     nearest_qis = None
     nearest_qis_distance = 999
@@ -139,14 +141,11 @@ if st.button("Check Location"):
             "Distance_km": round(distance,3)
         })
 
-
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
-
-    # -------------------------
-    # Work in progress deals
-    # -------------------------
-
+    # -------------------------------------------------
+    # Work in Progress Deals
+    # -------------------------------------------------
     wip_results = []
 
     for _, row in deals.iterrows():
@@ -155,37 +154,32 @@ if st.button("Check Location"):
         distance = geodesic(input_point, deal_point).km
 
         if distance <= 2:
+
             wip_results.append({
                 "Deal Name": row.get("Deal Name",""),
                 "QIS Count": row[deal_qis_col] if deal_qis_col else "",
                 "Distance_km": round(distance,3)
             })
 
-
     wip_table = pd.DataFrame(wip_results)
 
-
-    # -------------------------
+    # -------------------------------------------------
     # Feasibility
-    # -------------------------
-
+    # -------------------------------------------------
     st.subheader("Feasibility Result")
 
     if len(p0_results) > 0:
-        st.success("Feasible (P0 within 1.5 km)")
+        st.success("Feasible (P0 exists within 1.5 km)")
     else:
         st.error("Non-Feasible")
-
 
     st.write("Nearest P0:", nearest_p0, "| Distance:", round(nearest_p0_distance,3),"km")
     st.write("Nearest QIS:", nearest_qis, "| Distance:", round(nearest_qis_distance,3),"km")
 
-
-    # -------------------------
+    # -------------------------------------------------
     # Tables
-    # -------------------------
-
-    st.subheader("P0 within 1.5 km")
+    # -------------------------------------------------
+    st.subheader("P0 Locations within 1.5 km")
     st.dataframe(pd.DataFrame(p0_results))
 
     st.subheader("Nearest QIS Stations")
@@ -197,11 +191,9 @@ if st.button("Check Location"):
     else:
         st.write("No WIP sites nearby")
 
-
-    # -------------------------
-    # MAP VISUALIZATION
-    # -------------------------
-
+    # -------------------------------------------------
+    # MAP
+    # -------------------------------------------------
     st.subheader("Map View")
 
     m = folium.Map(location=[lat, lon], zoom_start=13)
@@ -224,7 +216,6 @@ if st.button("Check Location"):
 
     # P0 markers
     for _, row in p0.iterrows():
-
         folium.CircleMarker(
             location=[row["Latitude"], row["Longitude"]],
             radius=5,
@@ -234,7 +225,6 @@ if st.button("Check Location"):
 
     # QIS markers
     for _, row in qis.iterrows():
-
         folium.CircleMarker(
             location=[row["Lat"], row["Long"]],
             radius=4,
@@ -244,21 +234,18 @@ if st.button("Check Location"):
 
     # Deals markers
     for _, row in deals.iterrows():
-
         folium.CircleMarker(
             location=[row["Latitude"], row["Longitude"]],
             radius=5,
             color="red",
-            popup=row["Deal Name"]
+            popup=row.get("Deal Name","Deal")
         ).add_to(m)
-
 
     st_folium(m, width=700, height=500)
 
 
-# -------------------------
+# -------------------------------------------------
 # Footer
-# -------------------------
-
+# -------------------------------------------------
 st.markdown("---")
 st.markdown("Created by Manul 🌐")
