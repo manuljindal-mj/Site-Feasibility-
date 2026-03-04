@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 from geopy.distance import geodesic
 
-# Title
-st.title("Site Feasibility Tool")
+st.title("Site Feasibility Checker")
 
 # Load data
 p0_df = pd.read_csv("P0.csv")
@@ -16,74 +15,60 @@ p0_df["Longitude"] = pd.to_numeric(p0_df["Longitude"], errors="coerce")
 qis_df["Lat"] = pd.to_numeric(qis_df["Lat"], errors="coerce")
 qis_df["Long"] = pd.to_numeric(qis_df["Long"], errors="coerce")
 
-# Remove invalid rows
+# Remove rows with missing coordinates
 p0_df = p0_df.dropna(subset=["Latitude", "Longitude"])
 qis_df = qis_df.dropna(subset=["Lat", "Long"])
 
-# User input
-input_lat = st.number_input("Enter Latitude", format="%.6f")
-input_lon = st.number_input("Enter Longitude", format="%.6f")
+# User inputs
+lat = st.number_input("Enter Latitude", format="%.6f")
+lon = st.number_input("Enter Longitude", format="%.6f")
 
-if st.button("Check Location"):
+if st.button("Check Feasibility"):
 
-    input_point = (float(input_lat), float(input_lon))
+    input_point = (float(lat), float(lon))
 
-    p0_results = []
-    qis_results = []
+    feasible = False
+    nearest_p0 = None
+    nearest_p0_distance = 999
 
-    # Calculate P0 distances
+    # Check P0 distance
     for _, row in p0_df.iterrows():
 
         p0_point = (float(row["Latitude"]), float(row["Longitude"]))
         distance = geodesic(input_point, p0_point).km
 
-        p0_results.append({
-            "Location": row["Location"],
-            "Latitude": row["Latitude"],
-            "Longitude": row["Longitude"],
-            "Distance_km": round(distance, 3)
-        })
+        if distance < nearest_p0_distance:
+            nearest_p0_distance = distance
+            nearest_p0 = row["Location"]
 
-    p0_results_df = pd.DataFrame(p0_results).sort_values("Distance_km")
+        if distance <= 1.5:
+            feasible = True
 
-    # Calculate QIS distances
+    # Find nearest QIS station
+    nearest_qis = None
+    nearest_qis_distance = 999
+
     for _, row in qis_df.iterrows():
 
         qis_point = (float(row["Lat"]), float(row["Long"]))
         distance = geodesic(input_point, qis_point).km
 
-        qis_results.append({
-            "QIS Name": row["QIS Name"],
-            "Latitude": row["Lat"],
-            "Longitude": row["Long"],
-            "Distance_km": round(distance, 3)
-        })
+        if distance < nearest_qis_distance:
+            nearest_qis_distance = distance
+            nearest_qis = row["QIS Name"]
 
-    qis_results_df = pd.DataFrame(qis_results).sort_values("Distance_km")
+    st.subheader("Feasibility Result")
 
-    st.subheader("Nearest P0 Locations")
-    st.dataframe(p0_results_df.head(10))
-
-    st.subheader("Nearest QIS Stations")
-    st.dataframe(qis_results_df.head(10))
-
-    st.subheader("P0 Locations within 1.5 km")
-
-    p0_radius = p0_results_df[p0_results_df["Distance_km"] <= 1.5]
-
-    if not p0_radius.empty:
-        st.dataframe(p0_radius)
+    if feasible:
+        st.success("Feasible - Within 1.5 km of P0")
     else:
-        st.write("No P0 locations within 1.5 km")
+        st.error("Non-Feasible")
 
-    st.subheader("QIS Stations between 3–4 km")
+    st.write("Nearest P0 Location:", nearest_p0)
+    st.write("Distance to P0 (km):", round(nearest_p0_distance, 3))
 
-    qis_radius = qis_results_df[
-        (qis_results_df["Distance_km"] >= 3) &
-        (qis_results_df["Distance_km"] <= 4)
-    ]
+    st.write("Nearest QIS Station:", nearest_qis)
+    st.write("Distance to QIS (km):", round(nearest_qis_distance, 3))
 
-    if not qis_radius.empty:
-        st.dataframe(qis_radius)
-    else:
-        st.write("No QIS stations in this range")
+st.write("")
+st.write("Created by Manul 🌐")
