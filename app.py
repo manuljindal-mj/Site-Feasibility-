@@ -6,7 +6,7 @@ st.title("Site Feasibility Tool")
 
 # Load data
 p0 = pd.read_csv("P0.csv")
-qis = pd.read_csv("QIS Locations .csv")
+qis = pd.read_csv("QIS Locations.csv")
 
 # Convert coordinates to numbers
 p0["Latitude"] = pd.to_numeric(p0["Latitude"], errors="coerce")
