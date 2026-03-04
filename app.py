@@ -4,8 +4,9 @@ from geopy.distance import geodesic
 
 st.title("Site Feasibility Tool")
 
+# Load data
 p0 = pd.read_csv("P0.csv")
-qis = pd.read_csv("QIS Locations.csv")
+qis = pd.read_csv("QIS_Locations.csv")
 
 lat = st.number_input("Enter Latitude", format="%.6f")
 lon = st.number_input("Enter Longitude", format="%.6f")
@@ -17,27 +18,29 @@ if st.button("Check Location"):
     p0_results = []
     qis_results = []
 
+    # -------- CHECK P0 LOCATIONS (1.5km) --------
     for _, row in p0.iterrows():
 
-        p0_point = (row["lat"], row["lon"])
+        p0_point = (row["Latitude"], row["Longitude"])
         distance = geodesic(input_point, p0_point).km
 
         if distance <= 1.5:
 
             p0_results.append({
-                "P0 Location": row["location_name"],
+                "P0 Location": row["Location"],
                 "Distance (km)": round(distance,2)
             })
 
+    # -------- CHECK QIS STATIONS (3-4km) --------
     for _, row in qis.iterrows():
 
-        qis_point = (row["lat"], row["lon"])
+        qis_point = (row["Lat"], row["Long"])
         distance = geodesic(input_point, qis_point).km
 
         if 3 <= distance <= 4:
 
             qis_results.append({
-                "QIS Station": row["station_name"],
+                "QIS Station": row["QIS Name"],
                 "Distance (km)": round(distance,2)
             })
 
@@ -48,7 +51,7 @@ if st.button("Check Location"):
     else:
         st.write("No P0 locations nearby")
 
-    st.subheader("QIS stations within 3–4 km")
+    st.subheader("QIS stations between 3–4 km")
 
     if qis_results:
         st.dataframe(pd.DataFrame(qis_results))
