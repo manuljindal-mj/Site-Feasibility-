@@ -1,13 +1,16 @@
 import streamlit as st
 import pandas as pd
 from geopy.distance import geodesic
+import folium
+from streamlit_folium import st_folium
 import re
 
 st.title("Site Feasibility Tool")
 
-# -----------------------------
-# Convert DMS to Decimal
-# -----------------------------
+# -------------------------
+# Convert DMS → Decimal
+# -------------------------
+
 def convert_coord(coord):
 
     coord = str(coord).strip()
@@ -21,7 +24,6 @@ def convert_coord(coord):
     match = re.match(pattern, coord)
 
     if match:
-
         deg, minutes, seconds, direction = match.groups()
 
         decimal = float(deg) + float(minutes)/60 + float(seconds)/3600
@@ -34,14 +36,14 @@ def convert_coord(coord):
     return None
 
 
-# -----------------------------
+# -------------------------
 # Load Data
-# -----------------------------
+# -------------------------
+
 p0 = pd.read_csv("P0.csv")
 qis = pd.read_csv("QIS Locations.csv")
 deals = pd.read_csv("deals.csv")
 
-# Clean column names
 p0.columns = p0.columns.str.strip()
 qis.columns = qis.columns.str.strip()
 deals.columns = deals.columns.str.strip()
@@ -50,9 +52,8 @@ deals.columns = deals.columns.str.strip()
 if "QIS No." in qis.columns:
     qis = qis.drop_duplicates(subset=["QIS No."])
 
-# -----------------------------
-# Standardize Coordinate Columns
-# -----------------------------
+# Convert coordinates
+
 p0["Latitude"] = pd.to_numeric(p0["Latitude"], errors="coerce")
 p0["Longitude"] = pd.to_numeric(p0["Longitude"], errors="coerce")
 
@@ -66,27 +67,16 @@ p0 = p0.dropna(subset=["Latitude","Longitude"])
 qis = qis.dropna(subset=["Lat","Long"])
 deals = deals.dropna(subset=["Latitude","Longitude"])
 
-# -----------------------------
-# Identify QIS count column automatically
-# -----------------------------
-p0_qis_col = None
 
-for col in p0.columns:
-    if "qis" in col.lower():
-        p0_qis_col = col
-        break
-
-deal_qis_col = None
-
-for col in deals.columns:
-    if "qis" in col.lower():
-        deal_qis_col = col
-        break
+# Detect QIS count column automatically
+p0_qis_col = next((c for c in p0.columns if "qis" in c.lower()), None)
+deal_qis_col = next((c for c in deals.columns if "qis" in c.lower()), None)
 
 
-# -----------------------------
+# -------------------------
 # User Input
-# -----------------------------
+# -------------------------
+
 lat_input = st.text_input("Enter Latitude (Decimal or DMS)")
 lon_input = st.text_input("Enter Longitude (Decimal or DMS)")
 
@@ -101,9 +91,10 @@ if st.button("Check Location"):
 
     input_point = (lat, lon)
 
-    # -----------------------------
-    # P0 Analysis
-    # -----------------------------
+    # -------------------------
+    # P0 analysis
+    # -------------------------
+
     p0_results = []
     nearest_p0 = None
     nearest_p0_distance = 999
@@ -118,19 +109,17 @@ if st.button("Check Location"):
             nearest_p0 = row["Location"]
 
         if distance <= 1.5:
-
             p0_results.append({
                 "Location": row["Location"],
                 "QIS Count": row[p0_qis_col] if p0_qis_col else "",
-                "Latitude": row["Latitude"],
-                "Longitude": row["Longitude"],
                 "Distance_km": round(distance,3)
             })
 
 
-    # -----------------------------
-    # QIS Analysis
-    # -----------------------------
+    # -------------------------
+    # QIS analysis
+    # -------------------------
+
     qis_results = []
     nearest_qis = None
     nearest_qis_distance = 999
@@ -147,8 +136,6 @@ if st.button("Check Location"):
         qis_results.append({
             "QIS ID": row.get("QIS No.",""),
             "QIS Name": row["QIS Name"],
-            "Latitude": row["Lat"],
-            "Longitude": row["Long"],
             "Distance_km": round(distance,3)
         })
 
@@ -156,9 +143,10 @@ if st.button("Check Location"):
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
 
-    # -----------------------------
-    # Work in Progress Deals
-    # -----------------------------
+    # -------------------------
+    # Work in progress deals
+    # -------------------------
+
     wip_results = []
 
     for _, row in deals.iterrows():
@@ -167,13 +155,9 @@ if st.button("Check Location"):
         distance = geodesic(input_point, deal_point).km
 
         if distance <= 2:
-
             wip_results.append({
-                "Record ID": row.get("Record ID",""),
                 "Deal Name": row.get("Deal Name",""),
                 "QIS Count": row[deal_qis_col] if deal_qis_col else "",
-                "Latitude": row["Latitude"],
-                "Longitude": row["Longitude"],
                 "Distance_km": round(distance,3)
             })
 
@@ -181,53 +165,100 @@ if st.button("Check Location"):
     wip_table = pd.DataFrame(wip_results)
 
 
-    # -----------------------------
-    # Feasibility Result
-    # -----------------------------
+    # -------------------------
+    # Feasibility
+    # -------------------------
+
     st.subheader("Feasibility Result")
 
     if len(p0_results) > 0:
-        st.success("Feasible (P0 exists within 1.5 km)")
+        st.success("Feasible (P0 within 1.5 km)")
     else:
         st.error("Non-Feasible")
 
 
-    # -----------------------------
-    # Nearest Locations
-    # -----------------------------
-    st.write("Nearest P0:", nearest_p0)
-    st.write("Distance to nearest P0 (km):", round(nearest_p0_distance,3))
-
-    st.write("Nearest QIS:", nearest_qis)
-    st.write("Distance to nearest QIS (km):", round(nearest_qis_distance,3))
+    st.write("Nearest P0:", nearest_p0, "| Distance:", round(nearest_p0_distance,3),"km")
+    st.write("Nearest QIS:", nearest_qis, "| Distance:", round(nearest_qis_distance,3),"km")
 
 
-    # -----------------------------
+    # -------------------------
     # Tables
-    # -----------------------------
-    st.subheader("P0 Locations within 1.5 km")
+    # -------------------------
 
-    if len(p0_results) > 0:
-        st.dataframe(pd.DataFrame(p0_results))
-    else:
-        st.write("No P0 locations within 1.5 km")
-
+    st.subheader("P0 within 1.5 km")
+    st.dataframe(pd.DataFrame(p0_results))
 
     st.subheader("Nearest QIS Stations")
-
     st.dataframe(qis_table)
 
-
     st.subheader("Nearby Work-in-Progress Sites")
-
     if not wip_table.empty:
         st.dataframe(wip_table)
     else:
         st.write("No WIP sites nearby")
 
 
-# -----------------------------
+    # -------------------------
+    # MAP VISUALIZATION
+    # -------------------------
+
+    st.subheader("Map View")
+
+    m = folium.Map(location=[lat, lon], zoom_start=13)
+
+    # Input location
+    folium.Marker(
+        [lat, lon],
+        popup="Input Location",
+        icon=folium.Icon(color="blue")
+    ).add_to(m)
+
+    # 1.5 km radius
+    folium.Circle(
+        location=[lat, lon],
+        radius=1500,
+        color="blue",
+        fill=True,
+        fill_opacity=0.1
+    ).add_to(m)
+
+    # P0 markers
+    for _, row in p0.iterrows():
+
+        folium.CircleMarker(
+            location=[row["Latitude"], row["Longitude"]],
+            radius=5,
+            color="green",
+            popup=row["Location"]
+        ).add_to(m)
+
+    # QIS markers
+    for _, row in qis.iterrows():
+
+        folium.CircleMarker(
+            location=[row["Lat"], row["Long"]],
+            radius=4,
+            color="orange",
+            popup=row["QIS Name"]
+        ).add_to(m)
+
+    # Deals markers
+    for _, row in deals.iterrows():
+
+        folium.CircleMarker(
+            location=[row["Latitude"], row["Longitude"]],
+            radius=5,
+            color="red",
+            popup=row["Deal Name"]
+        ).add_to(m)
+
+
+    st_folium(m, width=700, height=500)
+
+
+# -------------------------
 # Footer
-# -----------------------------
+# -------------------------
+
 st.markdown("---")
 st.markdown("Created by Manul 🌐")
