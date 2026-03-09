@@ -9,11 +9,11 @@ import re
 
 st.set_page_config(layout="wide")
 
-st.title("EV Site Feasibility Tool")
+st.title("Site Feasibility Tool")
 
-# ---------------------------------------------------
+# ------------------------------------------------
 # Convert coordinate (Decimal or DMS)
-# ---------------------------------------------------
+# ------------------------------------------------
 
 def convert_coord(coord):
 
@@ -41,9 +41,9 @@ def convert_coord(coord):
     return None
 
 
-# ---------------------------------------------------
+# ------------------------------------------------
 # Validate coordinates
-# ---------------------------------------------------
+# ------------------------------------------------
 
 def valid_coord(lat, lon):
 
@@ -59,83 +59,93 @@ def valid_coord(lat, lon):
     return True
 
 
-# ---------------------------------------------------
+# ------------------------------------------------
 # Load KMZ file
-# ---------------------------------------------------
+# ------------------------------------------------
 
 def load_kmz(file):
 
     coords = []
 
-    with zipfile.ZipFile(file, 'r') as z:
+    try:
 
-        for name in z.namelist():
+        with zipfile.ZipFile(file, 'r') as z:
 
-            if name.endswith(".kml"):
+            for name in z.namelist():
 
-                with z.open(name) as f:
+                if name.endswith(".kml"):
 
-                    root = ET.parse(f).getroot()
+                    with z.open(name) as f:
 
-                    for elem in root.iter():
+                        root = ET.parse(f).getroot()
 
-                        if "coordinates" in elem.tag:
+                        for elem in root.iter():
 
-                            coord = elem.text.strip()
+                            if "coordinates" in elem.tag:
 
-                            lon, lat, *_ = coord.split(",")
+                                coord = elem.text.strip()
 
-                            try:
+                                lon, lat, *_ = coord.split(",")
 
-                                lat = float(lat)
-                                lon = float(lon)
+                                try:
 
-                                if valid_coord(lat, lon):
+                                    lat = float(lat)
+                                    lon = float(lon)
 
-                                    coords.append({
-                                        "Latitude": lat,
-                                        "Longitude": lon
-                                    })
+                                    if valid_coord(lat, lon):
 
-                            except:
-                                continue
+                                        coords.append({
+                                            "Latitude": lat,
+                                            "Longitude": lon
+                                        })
+
+                                except:
+                                    continue
+
+    except:
+        st.warning("KMZ file could not be loaded")
 
     return pd.DataFrame(coords)
 
 
-# ---------------------------------------------------
-# Load datasets
-# ---------------------------------------------------
+# ------------------------------------------------
+# Load Data
+# ------------------------------------------------
 
-p0 = pd.read_csv("P0.csv")
-qis = pd.read_csv("QIS Locations.csv")
-deals = pd.read_csv("deals.csv")
+@st.cache_data
+def load_data():
 
-darkstores = load_kmz("darkstores.kmz")
+    p0 = pd.read_csv("P0.csv")
+    qis = pd.read_csv("QIS Locations.csv")
+    deals = pd.read_csv("deals.csv")
+    darkstores = load_kmz("darkstores.kmz")
 
-# Clean column names
-p0.columns = p0.columns.str.strip()
-qis.columns = qis.columns.str.strip()
-deals.columns = deals.columns.str.strip()
+    p0.columns = p0.columns.str.strip()
+    qis.columns = qis.columns.str.strip()
+    deals.columns = deals.columns.str.strip()
 
-# Convert coordinates
-p0["Latitude"] = pd.to_numeric(p0["Latitude"], errors="coerce")
-p0["Longitude"] = pd.to_numeric(p0["Longitude"], errors="coerce")
+    p0["Latitude"] = pd.to_numeric(p0["Latitude"], errors="coerce")
+    p0["Longitude"] = pd.to_numeric(p0["Longitude"], errors="coerce")
 
-qis["Lat"] = pd.to_numeric(qis["Lat"], errors="coerce")
-qis["Long"] = pd.to_numeric(qis["Long"], errors="coerce")
+    qis["Lat"] = pd.to_numeric(qis["Lat"], errors="coerce")
+    qis["Long"] = pd.to_numeric(qis["Long"], errors="coerce")
 
-deals["Latitude"] = pd.to_numeric(deals["Latitude"], errors="coerce")
-deals["Longitude"] = pd.to_numeric(deals["Longitude"], errors="coerce")
+    deals["Latitude"] = pd.to_numeric(deals["Latitude"], errors="coerce")
+    deals["Longitude"] = pd.to_numeric(deals["Longitude"], errors="coerce")
 
-# Remove invalid coordinates
-p0 = p0[p0.apply(lambda r: valid_coord(r["Latitude"], r["Longitude"]), axis=1)]
-qis = qis[qis.apply(lambda r: valid_coord(r["Lat"], r["Long"]), axis=1)]
-deals = deals[deals.apply(lambda r: valid_coord(r["Latitude"], r["Longitude"]), axis=1)]
+    p0 = p0[p0.apply(lambda r: valid_coord(r["Latitude"], r["Longitude"]), axis=1)]
+    qis = qis[qis.apply(lambda r: valid_coord(r["Lat"], r["Long"]), axis=1)]
+    deals = deals[deals.apply(lambda r: valid_coord(r["Latitude"], r["Longitude"]), axis=1)]
 
-# ---------------------------------------------------
-# Scoring functions
-# ---------------------------------------------------
+    return p0, qis, deals, darkstores
+
+
+p0, qis, deals, darkstores = load_data()
+
+
+# ------------------------------------------------
+# Scoring Functions
+# ------------------------------------------------
 
 def score_distance(distance):
 
@@ -187,9 +197,9 @@ def score_parking(val):
     return 4 if val == "Yes" else 2
 
 
-# ---------------------------------------------------
-# Sidebar inputs
-# ---------------------------------------------------
+# ------------------------------------------------
+# Sidebar Inputs
+# ------------------------------------------------
 
 st.sidebar.header("Site Inputs")
 
@@ -209,26 +219,35 @@ access_width = st.sidebar.selectbox(
 open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
 parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
 
-run = st.sidebar.button("Run Feasibility")
 
-# ---------------------------------------------------
+# ------------------------------------------------
+# Button with session state
+# ------------------------------------------------
+
+if st.sidebar.button("Run Feasibility"):
+
+    st.session_state["run_analysis"] = True
+
+
+# ------------------------------------------------
 # Run analysis
-# ---------------------------------------------------
+# ------------------------------------------------
 
-if run:
+if "run_analysis" in st.session_state:
 
     lat = convert_coord(lat_input)
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
+
         st.error("Invalid coordinates")
         st.stop()
 
     input_point = (lat, lon)
 
-    # ---------------------------
+    # --------------------------------
     # P0 nearby
-    # ---------------------------
+    # --------------------------------
 
     p0_results = []
 
@@ -244,9 +263,9 @@ if run:
             })
 
 
-    # ---------------------------
+    # --------------------------------
     # QIS
-    # ---------------------------
+    # --------------------------------
 
     qis_results = []
     nearest_qis = 999
@@ -266,9 +285,9 @@ if run:
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
 
-    # ---------------------------
+    # --------------------------------
     # Darkstores
-    # ---------------------------
+    # --------------------------------
 
     nearest_dark = 999
 
@@ -280,9 +299,9 @@ if run:
             nearest_dark = dist
 
 
-    # ---------------------------
-    # Deals nearby
-    # ---------------------------
+    # --------------------------------
+    # Deals
+    # --------------------------------
 
     deal_results = []
 
@@ -299,9 +318,10 @@ if run:
 
     deal_table = pd.DataFrame(deal_results)
 
-    # ---------------------------
+
+    # --------------------------------
     # Scoring
-    # ---------------------------
+    # --------------------------------
 
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
@@ -317,11 +337,12 @@ if run:
         parking_score*0.05
     )
 
-    normalized_score = weighted_score/5
+    normalized_score = weighted_score / 5
 
-    # ---------------------------
+
+    # --------------------------------
     # Result
-    # ---------------------------
+    # --------------------------------
 
     st.header("Feasibility Result")
 
@@ -329,14 +350,17 @@ if run:
 
     if normalized_score > 0.6:
         st.success("YES — Recommended")
+
     elif normalized_score >= 0.3:
         st.warning("Review Carefully")
+
     else:
         st.error("Reject")
 
-    # ---------------------------
+
+    # --------------------------------
     # Tables
-    # ---------------------------
+    # --------------------------------
 
     col1, col2 = st.columns(2)
 
@@ -359,9 +383,10 @@ if run:
 
         st.write("Nearest Darkstore:", round(nearest_dark,2),"km")
 
-    # ---------------------------
+
+    # --------------------------------
     # Map
-    # ---------------------------
+    # --------------------------------
 
     st.subheader("Map")
 
@@ -415,5 +440,7 @@ if run:
 
     st_folium(m, width=900, height=600)
 
+
 st.markdown("---")
 st.markdown("Created by Manul 🚀")
+
