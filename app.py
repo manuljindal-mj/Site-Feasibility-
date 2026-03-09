@@ -9,11 +9,11 @@ import re
 
 st.set_page_config(layout="wide")
 
-st.title("Site Feasibility Tool")
+st.title("EV Site Feasibility Tool")
 
-# ---------------------------------------------------------
-# Convert coordinates (Decimal or DMS)
-# ---------------------------------------------------------
+# ---------------------------------------------------
+# Convert coordinate (Decimal or DMS)
+# ---------------------------------------------------
 
 def convert_coord(coord):
 
@@ -41,9 +41,27 @@ def convert_coord(coord):
     return None
 
 
-# ---------------------------------------------------------
-# Load KMZ Darkstore data
-# ---------------------------------------------------------
+# ---------------------------------------------------
+# Validate coordinates
+# ---------------------------------------------------
+
+def valid_coord(lat, lon):
+
+    if pd.isna(lat) or pd.isna(lon):
+        return False
+
+    if lat < -90 or lat > 90:
+        return False
+
+    if lon < -180 or lon > 180:
+        return False
+
+    return True
+
+
+# ---------------------------------------------------
+# Load KMZ file
+# ---------------------------------------------------
 
 def load_kmz(file):
 
@@ -51,11 +69,11 @@ def load_kmz(file):
 
     with zipfile.ZipFile(file, 'r') as z:
 
-        for filename in z.namelist():
+        for name in z.namelist():
 
-            if filename.endswith(".kml"):
+            if name.endswith(".kml"):
 
-                with z.open(filename) as f:
+                with z.open(name) as f:
 
                     root = ET.parse(f).getroot()
 
@@ -67,17 +85,27 @@ def load_kmz(file):
 
                             lon, lat, *_ = coord.split(",")
 
-                            coords.append({
-                                "Latitude": float(lat),
-                                "Longitude": float(lon)
-                            })
+                            try:
+
+                                lat = float(lat)
+                                lon = float(lon)
+
+                                if valid_coord(lat, lon):
+
+                                    coords.append({
+                                        "Latitude": lat,
+                                        "Longitude": lon
+                                    })
+
+                            except:
+                                continue
 
     return pd.DataFrame(coords)
 
 
-# ---------------------------------------------------------
-# Load Data
-# ---------------------------------------------------------
+# ---------------------------------------------------
+# Load datasets
+# ---------------------------------------------------
 
 p0 = pd.read_csv("P0.csv")
 qis = pd.read_csv("QIS Locations.csv")
@@ -85,7 +113,7 @@ deals = pd.read_csv("deals.csv")
 
 darkstores = load_kmz("darkstores.kmz")
 
-# Clean columns
+# Clean column names
 p0.columns = p0.columns.str.strip()
 qis.columns = qis.columns.str.strip()
 deals.columns = deals.columns.str.strip()
@@ -100,14 +128,14 @@ qis["Long"] = pd.to_numeric(qis["Long"], errors="coerce")
 deals["Latitude"] = pd.to_numeric(deals["Latitude"], errors="coerce")
 deals["Longitude"] = pd.to_numeric(deals["Longitude"], errors="coerce")
 
-# Remove invalid rows
-p0 = p0.dropna(subset=["Latitude","Longitude"])
-qis = qis.dropna(subset=["Lat","Long"])
-deals = deals.dropna(subset=["Latitude","Longitude"])
+# Remove invalid coordinates
+p0 = p0[p0.apply(lambda r: valid_coord(r["Latitude"], r["Longitude"]), axis=1)]
+qis = qis[qis.apply(lambda r: valid_coord(r["Lat"], r["Long"]), axis=1)]
+deals = deals[deals.apply(lambda r: valid_coord(r["Latitude"], r["Longitude"]), axis=1)]
 
-# ---------------------------------------------------------
+# ---------------------------------------------------
 # Scoring functions
-# ---------------------------------------------------------
+# ---------------------------------------------------
 
 def score_distance(distance):
 
@@ -151,23 +179,17 @@ def score_access(val):
 
 def score_24(val):
 
-    if val == "Yes":
-        return 4
-    else:
-        return 2
+    return 4 if val == "Yes" else 2
 
 
 def score_parking(val):
 
-    if val == "Yes":
-        return 4
-    else:
-        return 2
+    return 4 if val == "Yes" else 2
 
 
-# ---------------------------------------------------------
-# Sidebar Inputs
-# ---------------------------------------------------------
+# ---------------------------------------------------
+# Sidebar inputs
+# ---------------------------------------------------
 
 st.sidebar.header("Site Inputs")
 
@@ -184,21 +206,14 @@ access_width = st.sidebar.selectbox(
     ["<10ft","10-20ft","20-30ft","30-40ft",">40ft"]
 )
 
-open_24 = st.sidebar.selectbox(
-    "24x7 Possible",
-    ["No","Yes"]
-)
-
-parking = st.sidebar.selectbox(
-    "Parking Available",
-    ["No","Yes"]
-)
+open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
+parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
 
 run = st.sidebar.button("Run Feasibility")
 
-# ---------------------------------------------------------
-# Run Analysis
-# ---------------------------------------------------------
+# ---------------------------------------------------
+# Run analysis
+# ---------------------------------------------------
 
 if run:
 
@@ -206,15 +221,14 @@ if run:
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
-
         st.error("Invalid coordinates")
         st.stop()
 
     input_point = (lat, lon)
 
-    # -------------------------------------
+    # ---------------------------
     # P0 nearby
-    # -------------------------------------
+    # ---------------------------
 
     p0_results = []
 
@@ -225,14 +239,14 @@ if run:
         if dist <= 1.5:
 
             p0_results.append({
-                "Location": row["Location"],
+                "Location": row.get("Location",""),
                 "Distance_km": round(dist,2)
             })
 
 
-    # -------------------------------------
-    # QIS nearest
-    # -------------------------------------
+    # ---------------------------
+    # QIS
+    # ---------------------------
 
     qis_results = []
     nearest_qis = 999
@@ -245,16 +259,16 @@ if run:
             nearest_qis = dist
 
         qis_results.append({
-            "QIS Name": row["QIS Name"],
+            "QIS": row.get("QIS Name",""),
             "Distance_km": round(dist,2)
         })
 
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
 
-    # -------------------------------------
-    # Darkstore proximity
-    # -------------------------------------
+    # ---------------------------
+    # Darkstores
+    # ---------------------------
 
     nearest_dark = 999
 
@@ -266,9 +280,9 @@ if run:
             nearest_dark = dist
 
 
-    # -------------------------------------
+    # ---------------------------
     # Deals nearby
-    # -------------------------------------
+    # ---------------------------
 
     deal_results = []
 
@@ -285,10 +299,9 @@ if run:
 
     deal_table = pd.DataFrame(deal_results)
 
-
-    # -------------------------------------
+    # ---------------------------
     # Scoring
-    # -------------------------------------
+    # ---------------------------
 
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
@@ -306,10 +319,9 @@ if run:
 
     normalized_score = weighted_score/5
 
-
-    # -------------------------------------
+    # ---------------------------
     # Result
-    # -------------------------------------
+    # ---------------------------
 
     st.header("Feasibility Result")
 
@@ -317,17 +329,14 @@ if run:
 
     if normalized_score > 0.6:
         st.success("YES — Recommended")
-
     elif normalized_score >= 0.3:
         st.warning("Review Carefully")
-
     else:
         st.error("Reject")
 
-
-    # -------------------------------------
+    # ---------------------------
     # Tables
-    # -------------------------------------
+    # ---------------------------
 
     col1, col2 = st.columns(2)
 
@@ -350,10 +359,9 @@ if run:
 
         st.write("Nearest Darkstore:", round(nearest_dark,2),"km")
 
-
-    # -------------------------------------
+    # ---------------------------
     # Map
-    # -------------------------------------
+    # ---------------------------
 
     st.subheader("Map")
 
@@ -405,8 +413,7 @@ if run:
             color="red"
         ).add_to(m)
 
-    st_folium(m,width=900,height=600)
-
+    st_folium(m, width=900, height=600)
 
 st.markdown("---")
-st.markdown("Built by Manul 🚀")
+st.markdown("Created by Manul 🚀")
