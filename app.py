@@ -11,9 +11,9 @@ st.set_page_config(layout="wide")
 
 st.title("EV Site Feasibility Tool")
 
-# ---------------------------------------------------
+# -------------------------------
 # Coordinate conversion
-# ---------------------------------------------------
+# -------------------------------
 
 def convert_coord(coord):
 
@@ -41,9 +41,9 @@ def convert_coord(coord):
     return None
 
 
-# ---------------------------------------------------
+# -------------------------------
 # Validate coordinates
-# ---------------------------------------------------
+# -------------------------------
 
 def valid_coord(lat, lon):
 
@@ -59,9 +59,9 @@ def valid_coord(lat, lon):
     return True
 
 
-# ---------------------------------------------------
-# Load KMZ Darkstores
-# ---------------------------------------------------
+# -------------------------------
+# Load Darkstores KMZ
+# -------------------------------
 
 def load_kmz(file):
 
@@ -109,9 +109,9 @@ def load_kmz(file):
     return pd.DataFrame(coords)
 
 
-# ---------------------------------------------------
+# -------------------------------
 # Load Data
-# ---------------------------------------------------
+# -------------------------------
 
 @st.cache_data
 def load_data():
@@ -119,7 +119,6 @@ def load_data():
     p0 = pd.read_csv("P0.csv")
     qis = pd.read_csv("QIS Locations.csv")
     deals = pd.read_csv("deals.csv")
-
     darkstores = load_kmz("darkstores.kmz")
 
     p0.columns = p0.columns.str.strip()
@@ -145,9 +144,9 @@ def load_data():
 p0, qis, deals, darkstores = load_data()
 
 
-# ---------------------------------------------------
+# -------------------------------
 # Scoring functions
-# ---------------------------------------------------
+# -------------------------------
 
 def score_distance(distance):
 
@@ -194,9 +193,9 @@ def score_binary(val):
     return 4 if val == "Yes" else 2
 
 
-# ---------------------------------------------------
+# -------------------------------
 # Sidebar Inputs
-# ---------------------------------------------------
+# -------------------------------
 
 st.sidebar.header("Site Inputs")
 
@@ -220,9 +219,9 @@ if st.sidebar.button("Run Feasibility"):
     st.session_state["run"] = True
 
 
-# ---------------------------------------------------
+# -------------------------------
 # Run Analysis
-# ---------------------------------------------------
+# -------------------------------
 
 if "run" in st.session_state:
 
@@ -230,16 +229,12 @@ if "run" in st.session_state:
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
-
         st.error("Invalid coordinates")
         st.stop()
 
     input_point = (lat, lon)
 
-    # -----------------------
     # P0 nearby
-    # -----------------------
-
     p0_results = []
 
     for _, row in p0.iterrows():
@@ -254,10 +249,7 @@ if "run" in st.session_state:
             })
 
 
-    # -----------------------
     # QIS nearest
-    # -----------------------
-
     qis_results = []
     nearest_qis = 999
 
@@ -276,10 +268,7 @@ if "run" in st.session_state:
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
 
-    # -----------------------
-    # Darkstores
-    # -----------------------
-
+    # Darkstore proximity
     nearest_dark = 999
     nearest_dark_name = None
 
@@ -293,10 +282,7 @@ if "run" in st.session_state:
             nearest_dark_name = row["Name"]
 
 
-    # -----------------------
     # Deals nearby
-    # -----------------------
-
     deal_results = []
 
     for _, row in deals.iterrows():
@@ -313,9 +299,9 @@ if "run" in st.session_state:
     deal_table = pd.DataFrame(deal_results)
 
 
-    # -----------------------
+    # -------------------------------
     # Scoring
-    # -----------------------
+    # -------------------------------
 
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
@@ -334,23 +320,30 @@ if "run" in st.session_state:
     normalized_score = weighted_score / 5
 
 
-    # -----------------------
+    # -------------------------------
     # Result
-    # -----------------------
+    # -------------------------------
 
     st.header("Feasibility Result")
 
     st.metric("Score", round(normalized_score,2))
 
-    if normalized_score > 0.5:
-        st.success("Feasible")
+    if normalized_score > 0.6:
+
+        st.success("Approved")
+
+    elif normalized_score >= 0.3:
+
+        st.warning("Feasible")
+
     else:
+
         st.error("Not Feasible")
 
 
-    # -----------------------
+    # -------------------------------
     # Tables
-    # -----------------------
+    # -------------------------------
 
     col1, col2 = st.columns(2)
 
@@ -380,9 +373,9 @@ if "run" in st.session_state:
         )
 
 
-    # -----------------------
+    # -------------------------------
     # Map
-    # -----------------------
+    # -------------------------------
 
     st.subheader("Map")
 
