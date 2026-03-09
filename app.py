@@ -3,18 +3,17 @@ import pandas as pd
 from geopy.distance import geodesic
 import folium
 from streamlit_folium import st_folium
-import re
-import xml.etree.ElementTree as ET
 import zipfile
-import io
+import xml.etree.ElementTree as ET
+import re
 
 st.set_page_config(layout="wide")
 
 st.title("EV Site Feasibility Tool")
 
-# ------------------------------------------------
-# Coordinate converter
-# ------------------------------------------------
+# ---------------------------------------------------------
+# Convert coordinates (Decimal or DMS)
+# ---------------------------------------------------------
 
 def convert_coord(coord):
 
@@ -42,9 +41,9 @@ def convert_coord(coord):
     return None
 
 
-# ------------------------------------------------
-# KMZ / KML Loader
-# ------------------------------------------------
+# ---------------------------------------------------------
+# Load KMZ Darkstore data
+# ---------------------------------------------------------
 
 def load_kmz(file):
 
@@ -52,50 +51,46 @@ def load_kmz(file):
 
     with zipfile.ZipFile(file, 'r') as z:
 
-        for name in z.namelist():
+        for filename in z.namelist():
 
-            if name.endswith(".kml"):
+            if filename.endswith(".kml"):
 
-                kml = z.read(name)
+                with z.open(filename) as f:
 
-                root = ET.fromstring(kml)
+                    root = ET.parse(f).getroot()
 
-                for elem in root.iter():
+                    for elem in root.iter():
 
-                    if "coordinates" in elem.tag:
+                        if "coordinates" in elem.tag:
 
-                        coord_text = elem.text.strip()
+                            coord = elem.text.strip()
 
-                        lon, lat, *_ = coord_text.split(",")
+                            lon, lat, *_ = coord.split(",")
 
-                        coords.append({
-                            "Latitude": float(lat),
-                            "Longitude": float(lon)
-                        })
+                            coords.append({
+                                "Latitude": float(lat),
+                                "Longitude": float(lon)
+                            })
 
     return pd.DataFrame(coords)
 
 
-# ------------------------------------------------
+# ---------------------------------------------------------
 # Load Data
-# ------------------------------------------------
+# ---------------------------------------------------------
 
 p0 = pd.read_csv("P0.csv")
 qis = pd.read_csv("QIS Locations.csv")
 deals = pd.read_csv("deals.csv")
 
-darkstores = load_kmz("Dark Stores Quick Commerce.kmz")
+darkstores = load_kmz("darkstores.kmz")
 
-
-# Clean column names
-
+# Clean columns
 p0.columns = p0.columns.str.strip()
 qis.columns = qis.columns.str.strip()
 deals.columns = deals.columns.str.strip()
 
-
 # Convert coordinates
-
 p0["Latitude"] = pd.to_numeric(p0["Latitude"], errors="coerce")
 p0["Longitude"] = pd.to_numeric(p0["Longitude"], errors="coerce")
 
@@ -105,15 +100,14 @@ qis["Long"] = pd.to_numeric(qis["Long"], errors="coerce")
 deals["Latitude"] = pd.to_numeric(deals["Latitude"], errors="coerce")
 deals["Longitude"] = pd.to_numeric(deals["Longitude"], errors="coerce")
 
-
+# Remove invalid rows
 p0 = p0.dropna(subset=["Latitude","Longitude"])
 qis = qis.dropna(subset=["Lat","Long"])
 deals = deals.dropna(subset=["Latitude","Longitude"])
 
-
-# ------------------------------------------------
+# ---------------------------------------------------------
 # Scoring functions
-# ------------------------------------------------
+# ---------------------------------------------------------
 
 def score_distance(distance):
 
@@ -129,7 +123,7 @@ def score_distance(distance):
         return 1
 
 
-def score_arterial(dist):
+def score_arterial(val):
 
     mapping = {
         ">1km":1,
@@ -139,10 +133,10 @@ def score_arterial(dist):
         "<100m":5
     }
 
-    return mapping[dist]
+    return mapping[val]
 
 
-def score_access(width):
+def score_access(val):
 
     mapping = {
         "<10ft":1,
@@ -152,26 +146,28 @@ def score_access(width):
         ">40ft":5
     }
 
-    return mapping[width]
+    return mapping[val]
 
 
-def score_24(open24):
+def score_24(val):
 
-    if open24 == "Yes":
+    if val == "Yes":
         return 4
-    return 2
+    else:
+        return 2
 
 
-def score_parking(p):
+def score_parking(val):
 
-    if p == "Yes":
+    if val == "Yes":
         return 4
-    return 2
+    else:
+        return 2
 
 
-# ------------------------------------------------
-# User Inputs
-# ------------------------------------------------
+# ---------------------------------------------------------
+# Sidebar Inputs
+# ---------------------------------------------------------
 
 st.sidebar.header("Site Inputs")
 
@@ -198,131 +194,126 @@ parking = st.sidebar.selectbox(
     ["No","Yes"]
 )
 
+run = st.sidebar.button("Run Feasibility")
 
-# ------------------------------------------------
+# ---------------------------------------------------------
 # Run Analysis
-# ------------------------------------------------
+# ---------------------------------------------------------
 
-if st.sidebar.button("Run Feasibility"):
+if run:
 
     lat = convert_coord(lat_input)
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
+
         st.error("Invalid coordinates")
         st.stop()
 
     input_point = (lat, lon)
 
-    # -----------------------------
-    # P0 analysis
-    # -----------------------------
+    # -------------------------------------
+    # P0 nearby
+    # -------------------------------------
 
     p0_results = []
 
     for _, row in p0.iterrows():
 
-        distance = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
+        dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
-        if distance <= 1.5:
+        if dist <= 1.5:
 
             p0_results.append({
                 "Location": row["Location"],
-                "Distance_km": round(distance,2)
+                "Distance_km": round(dist,2)
             })
 
-    # -----------------------------
-    # QIS
-    # -----------------------------
+
+    # -------------------------------------
+    # QIS nearest
+    # -------------------------------------
 
     qis_results = []
-
-    nearest_qis_distance = 999
+    nearest_qis = 999
 
     for _, row in qis.iterrows():
 
-        distance = geodesic(input_point,(row["Lat"],row["Long"])).km
+        dist = geodesic(input_point,(row["Lat"],row["Long"])).km
 
-        if distance < nearest_qis_distance:
-            nearest_qis_distance = distance
+        if dist < nearest_qis:
+            nearest_qis = dist
 
         qis_results.append({
-            "QIS": row["QIS Name"],
-            "Distance_km": round(distance,2)
+            "QIS Name": row["QIS Name"],
+            "Distance_km": round(dist,2)
         })
 
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
 
-    # -----------------------------
-    # Darkstores / Quick Commerce
-    # -----------------------------
+    # -------------------------------------
+    # Darkstore proximity
+    # -------------------------------------
 
-    nearest_darkstore = 999
+    nearest_dark = 999
 
     for _, row in darkstores.iterrows():
 
-        distance = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
+        dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
-        if distance < nearest_darkstore:
-            nearest_darkstore = distance
+        if dist < nearest_dark:
+            nearest_dark = dist
 
 
-    # -----------------------------
+    # -------------------------------------
     # Deals nearby
-    # -----------------------------
+    # -------------------------------------
 
     deal_results = []
 
     for _, row in deals.iterrows():
 
-        distance = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
+        dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
-        if distance <= 2:
+        if dist <= 2:
 
             deal_results.append({
                 "Deal": row.get("Deal Name",""),
-                "Distance": round(distance,2)
+                "Distance": round(dist,2)
             })
 
     deal_table = pd.DataFrame(deal_results)
 
 
-    # ------------------------------------------------
+    # -------------------------------------
     # Scoring
-    # ------------------------------------------------
+    # -------------------------------------
 
-    demand_score = score_distance(nearest_darkstore)
-
+    demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
-
     access_score = score_access(access_width)
-
     open_score = score_24(open_24)
-
     parking_score = score_parking(parking)
 
-
-    weighted_total = (
-
-        demand_score * 0.20 +
-        arterial_score * 0.15 +
-        access_score * 0.15 +
-        open_score * 0.10 +
-        parking_score * 0.05
+    weighted_score = (
+        demand_score*0.20 +
+        arterial_score*0.15 +
+        access_score*0.15 +
+        open_score*0.10 +
+        parking_score*0.05
     )
 
-    normalized_score = weighted_total / 5
+    normalized_score = weighted_score/5
 
 
-    # ------------------------------------------------
+    # -------------------------------------
     # Result
-    # ------------------------------------------------
+    # -------------------------------------
 
     st.header("Feasibility Result")
 
     st.metric("Normalized Score", round(normalized_score,2))
-
 
     if normalized_score > 0.6:
         st.success("YES — Recommended")
@@ -334,15 +325,15 @@ if st.sidebar.button("Run Feasibility"):
         st.error("Reject")
 
 
-    # ------------------------------------------------
+    # -------------------------------------
     # Tables
-    # ------------------------------------------------
+    # -------------------------------------
 
-    col1,col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
     with col1:
 
-        st.subheader("Nearby P0")
+        st.subheader("P0 within 1.5km")
         st.dataframe(pd.DataFrame(p0_results))
 
         st.subheader("Nearest QIS")
@@ -352,17 +343,17 @@ if st.sidebar.button("Run Feasibility"):
 
         st.subheader("Nearby Deals")
 
-        if not deal_table.empty:
-            st.dataframe(deal_table)
-        else:
+        if deal_table.empty:
             st.write("No deals nearby")
+        else:
+            st.dataframe(deal_table)
 
-        st.write("Nearest Darkstore:", round(nearest_darkstore,2),"km")
+        st.write("Nearest Darkstore:", round(nearest_dark,2),"km")
 
 
-    # ------------------------------------------------
-    # MAP
-    # ------------------------------------------------
+    # -------------------------------------
+    # Map
+    # -------------------------------------
 
     st.subheader("Map")
 
@@ -382,8 +373,7 @@ if st.sidebar.button("Run Feasibility"):
         fill_opacity=0.1
     ).add_to(m)
 
-
-    for _,row in p0.iterrows():
+    for _, row in p0.iterrows():
 
         folium.CircleMarker(
             [row["Latitude"],row["Longitude"]],
@@ -391,8 +381,7 @@ if st.sidebar.button("Run Feasibility"):
             color="green"
         ).add_to(m)
 
-
-    for _,row in qis.iterrows():
+    for _, row in qis.iterrows():
 
         folium.CircleMarker(
             [row["Lat"],row["Long"]],
@@ -400,8 +389,7 @@ if st.sidebar.button("Run Feasibility"):
             color="orange"
         ).add_to(m)
 
-
-    for _,row in darkstores.iterrows():
+    for _, row in darkstores.iterrows():
 
         folium.CircleMarker(
             [row["Latitude"],row["Longitude"]],
@@ -409,8 +397,7 @@ if st.sidebar.button("Run Feasibility"):
             color="purple"
         ).add_to(m)
 
-
-    for _,row in deals.iterrows():
+    for _, row in deals.iterrows():
 
         folium.CircleMarker(
             [row["Latitude"],row["Longitude"]],
@@ -418,8 +405,7 @@ if st.sidebar.button("Run Feasibility"):
             color="red"
         ).add_to(m)
 
-
-    st_folium(m, width=900, height=600)
+    st_folium(m,width=900,height=600)
 
 
 st.markdown("---")
