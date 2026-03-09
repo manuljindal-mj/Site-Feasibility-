@@ -9,11 +9,11 @@ import re
 
 st.set_page_config(layout="wide")
 
-st.title("Site Feasibility Tool")
+st.title("EV Site Feasibility Tool")
 
-# ------------------------------------------------
-# Convert coordinate (Decimal or DMS)
-# ------------------------------------------------
+# ---------------------------------------------------
+# Coordinate conversion
+# ---------------------------------------------------
 
 def convert_coord(coord):
 
@@ -41,9 +41,9 @@ def convert_coord(coord):
     return None
 
 
-# ------------------------------------------------
+# ---------------------------------------------------
 # Validate coordinates
-# ------------------------------------------------
+# ---------------------------------------------------
 
 def valid_coord(lat, lon):
 
@@ -59,58 +59,59 @@ def valid_coord(lat, lon):
     return True
 
 
-# ------------------------------------------------
-# Load KMZ file
-# ------------------------------------------------
+# ---------------------------------------------------
+# Load KMZ Darkstores
+# ---------------------------------------------------
 
 def load_kmz(file):
 
     coords = []
 
-    try:
+    with zipfile.ZipFile(file, 'r') as z:
 
-        with zipfile.ZipFile(file, 'r') as z:
+        for name in z.namelist():
 
-            for name in z.namelist():
+            if name.endswith(".kml"):
 
-                if name.endswith(".kml"):
+                with z.open(name) as f:
 
-                    with z.open(name) as f:
+                    root = ET.parse(f).getroot()
 
-                        root = ET.parse(f).getroot()
+                    current_name = None
 
-                        for elem in root.iter():
+                    for elem in root.iter():
 
-                            if "coordinates" in elem.tag:
+                        if "name" in elem.tag:
+                            current_name = elem.text
 
-                                coord = elem.text.strip()
+                        if "coordinates" in elem.tag:
 
-                                lon, lat, *_ = coord.split(",")
+                            coord = elem.text.strip()
 
-                                try:
+                            lon, lat, *_ = coord.split(",")
 
-                                    lat = float(lat)
-                                    lon = float(lon)
+                            try:
 
-                                    if valid_coord(lat, lon):
+                                lat = float(lat)
+                                lon = float(lon)
 
-                                        coords.append({
-                                            "Latitude": lat,
-                                            "Longitude": lon
-                                        })
+                                if valid_coord(lat, lon):
 
-                                except:
-                                    continue
+                                    coords.append({
+                                        "Name": current_name,
+                                        "Latitude": lat,
+                                        "Longitude": lon
+                                    })
 
-    except:
-        st.warning("KMZ file could not be loaded")
+                            except:
+                                continue
 
     return pd.DataFrame(coords)
 
 
-# ------------------------------------------------
+# ---------------------------------------------------
 # Load Data
-# ------------------------------------------------
+# ---------------------------------------------------
 
 @st.cache_data
 def load_data():
@@ -118,6 +119,7 @@ def load_data():
     p0 = pd.read_csv("P0.csv")
     qis = pd.read_csv("QIS Locations.csv")
     deals = pd.read_csv("deals.csv")
+
     darkstores = load_kmz("darkstores.kmz")
 
     p0.columns = p0.columns.str.strip()
@@ -143,9 +145,9 @@ def load_data():
 p0, qis, deals, darkstores = load_data()
 
 
-# ------------------------------------------------
-# Scoring Functions
-# ------------------------------------------------
+# ---------------------------------------------------
+# Scoring functions
+# ---------------------------------------------------
 
 def score_distance(distance):
 
@@ -187,19 +189,14 @@ def score_access(val):
     return mapping[val]
 
 
-def score_24(val):
+def score_binary(val):
 
     return 4 if val == "Yes" else 2
 
 
-def score_parking(val):
-
-    return 4 if val == "Yes" else 2
-
-
-# ------------------------------------------------
+# ---------------------------------------------------
 # Sidebar Inputs
-# ------------------------------------------------
+# ---------------------------------------------------
 
 st.sidebar.header("Site Inputs")
 
@@ -212,28 +209,22 @@ arterial_distance = st.sidebar.selectbox(
 )
 
 access_width = st.sidebar.selectbox(
-    "Width of Access Road",
+    "Access Road Width",
     ["<10ft","10-20ft","20-30ft","30-40ft",">40ft"]
 )
 
 open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
 parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
 
-
-# ------------------------------------------------
-# Button with session state
-# ------------------------------------------------
-
 if st.sidebar.button("Run Feasibility"):
+    st.session_state["run"] = True
 
-    st.session_state["run_analysis"] = True
 
+# ---------------------------------------------------
+# Run Analysis
+# ---------------------------------------------------
 
-# ------------------------------------------------
-# Run analysis
-# ------------------------------------------------
-
-if "run_analysis" in st.session_state:
+if "run" in st.session_state:
 
     lat = convert_coord(lat_input)
     lon = convert_coord(lon_input)
@@ -245,9 +236,9 @@ if "run_analysis" in st.session_state:
 
     input_point = (lat, lon)
 
-    # --------------------------------
+    # -----------------------
     # P0 nearby
-    # --------------------------------
+    # -----------------------
 
     p0_results = []
 
@@ -263,9 +254,9 @@ if "run_analysis" in st.session_state:
             })
 
 
-    # --------------------------------
-    # QIS
-    # --------------------------------
+    # -----------------------
+    # QIS nearest
+    # -----------------------
 
     qis_results = []
     nearest_qis = 999
@@ -285,23 +276,26 @@ if "run_analysis" in st.session_state:
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
 
-    # --------------------------------
+    # -----------------------
     # Darkstores
-    # --------------------------------
+    # -----------------------
 
     nearest_dark = 999
+    nearest_dark_name = None
 
     for _, row in darkstores.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
         if dist < nearest_dark:
+
             nearest_dark = dist
+            nearest_dark_name = row["Name"]
 
 
-    # --------------------------------
-    # Deals
-    # --------------------------------
+    # -----------------------
+    # Deals nearby
+    # -----------------------
 
     deal_results = []
 
@@ -319,15 +313,15 @@ if "run_analysis" in st.session_state:
     deal_table = pd.DataFrame(deal_results)
 
 
-    # --------------------------------
+    # -----------------------
     # Scoring
-    # --------------------------------
+    # -----------------------
 
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
     access_score = score_access(access_width)
-    open_score = score_24(open_24)
-    parking_score = score_parking(parking)
+    open_score = score_binary(open_24)
+    parking_score = score_binary(parking)
 
     weighted_score = (
         demand_score*0.20 +
@@ -340,27 +334,23 @@ if "run_analysis" in st.session_state:
     normalized_score = weighted_score / 5
 
 
-    # --------------------------------
+    # -----------------------
     # Result
-    # --------------------------------
+    # -----------------------
 
     st.header("Feasibility Result")
 
-    st.metric("Normalized Score", round(normalized_score,2))
+    st.metric("Score", round(normalized_score,2))
 
-    if normalized_score > 0.6:
-        st.success("YES — Recommended")
-
-    elif normalized_score >= 0.3:
-        st.warning("Review Carefully")
-
+    if normalized_score > 0.5:
+        st.success("Feasible")
     else:
-        st.error("Reject")
+        st.error("Not Feasible")
 
 
-    # --------------------------------
+    # -----------------------
     # Tables
-    # --------------------------------
+    # -----------------------
 
     col1, col2 = st.columns(2)
 
@@ -381,12 +371,18 @@ if "run_analysis" in st.session_state:
         else:
             st.dataframe(deal_table)
 
-        st.write("Nearest Darkstore:", round(nearest_dark,2),"km")
+        st.write(
+            "Nearest Darkstore:",
+            nearest_dark_name,
+            "| Distance:",
+            round(nearest_dark,2),
+            "km"
+        )
 
 
-    # --------------------------------
+    # -----------------------
     # Map
-    # --------------------------------
+    # -----------------------
 
     st.subheader("Map")
 
@@ -398,20 +394,15 @@ if "run_analysis" in st.session_state:
         icon=folium.Icon(color="blue")
     ).add_to(m)
 
-    folium.Circle(
-        location=[lat,lon],
-        radius=1500,
-        color="blue",
-        fill=True,
-        fill_opacity=0.1
-    ).add_to(m)
+    folium.Circle(location=[lat,lon],radius=1500,color="blue",fill=True,fill_opacity=0.1).add_to(m)
 
     for _, row in p0.iterrows():
 
         folium.CircleMarker(
             [row["Latitude"],row["Longitude"]],
             radius=5,
-            color="green"
+            color="green",
+            popup=row.get("Location","P0")
         ).add_to(m)
 
     for _, row in qis.iterrows():
@@ -419,7 +410,8 @@ if "run_analysis" in st.session_state:
         folium.CircleMarker(
             [row["Lat"],row["Long"]],
             radius=4,
-            color="orange"
+            color="orange",
+            popup=row.get("QIS Name","QIS")
         ).add_to(m)
 
     for _, row in darkstores.iterrows():
@@ -427,7 +419,8 @@ if "run_analysis" in st.session_state:
         folium.CircleMarker(
             [row["Latitude"],row["Longitude"]],
             radius=4,
-            color="purple"
+            color="purple",
+            popup=row["Name"]
         ).add_to(m)
 
     for _, row in deals.iterrows():
@@ -435,7 +428,8 @@ if "run_analysis" in st.session_state:
         folium.CircleMarker(
             [row["Latitude"],row["Longitude"]],
             radius=5,
-            color="red"
+            color="red",
+            popup=row.get("Deal Name","Deal")
         ).add_to(m)
 
     st_folium(m, width=900, height=600)
@@ -443,4 +437,3 @@ if "run_analysis" in st.session_state:
 
 st.markdown("---")
 st.markdown("Created by Manul 🚀")
-
