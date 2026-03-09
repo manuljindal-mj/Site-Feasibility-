@@ -81,7 +81,7 @@ def load_kmz(file):
 # ------------------------------------------------
 
 p0 = pd.read_csv("P0.csv")
-qis = pd.read_csv("QIS_Locations.csv")
+qis = pd.read_csv("QIS Locations.csv")
 deals = pd.read_csv("deals.csv")
 
 darkstores = load_kmz("Dark Stores Quick Commerce.kmz")
