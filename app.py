@@ -9,7 +9,7 @@ import re
 
 st.set_page_config(layout="wide")
 
-st.title("EV Site Feasibility Tool")
+st.title("Site Feasibility Tool")
 
 # ---------------------------------------------------------
 # Convert coordinates (Decimal or DMS)
