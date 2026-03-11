@@ -221,13 +221,24 @@ def score_binary(v):
 
 st.sidebar.header("Site Inputs")
 
+# Initialize session variables
 if "lat_auto" not in st.session_state:
     st.session_state.lat_auto = ""
 
 if "lon_auto" not in st.session_state:
     st.session_state.lon_auto = ""
 
-if st.sidebar.button("Use My Current Location 📍"):
+if "geo_requested" not in st.session_state:
+    st.session_state.geo_requested = False
+
+
+# Button to request location
+if st.sidebar.button("Get My Location 📍"):
+    st.session_state.geo_requested = True
+
+
+# If user requested location → call browser geolocation
+if st.session_state.geo_requested:
 
     loc = get_geolocation()
 
@@ -236,27 +247,21 @@ if st.sidebar.button("Use My Current Location 📍"):
         st.session_state.lat_auto = loc["coords"]["latitude"]
         st.session_state.lon_auto = loc["coords"]["longitude"]
 
-        st.sidebar.success("Location detected")
+        st.session_state.geo_requested = False
 
-lat_input = st.sidebar.text_input("Latitude", value=st.session_state.lat_auto)
-lon_input = st.sidebar.text_input("Longitude", value=st.session_state.lon_auto)
+        st.sidebar.success("Location captured")
 
-arterial_distance = st.sidebar.selectbox(
-    "Distance from Arterial Road",
-    [">1km","<1km","<500m","<250m","<100m"]
+
+# Inputs (auto populated if available)
+lat_input = st.sidebar.text_input(
+    "Latitude",
+    value=st.session_state.lat_auto
 )
 
-access_width = st.sidebar.selectbox(
-    "Access Road Width",
-    ["<10ft","10-20ft","20-30ft","30-40ft",">40ft"]
+lon_input = st.sidebar.text_input(
+    "Longitude",
+    value=st.session_state.lon_auto
 )
-
-open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
-parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
-
-if st.sidebar.button("Run Feasibility"):
-    st.session_state.run = True
-
 
 # ------------------------------------------------
 # RUN ANALYSIS
