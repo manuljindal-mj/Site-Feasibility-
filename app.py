@@ -223,20 +223,6 @@ def score_binary(val):
     return 4 if val == "Yes" else 2
 
 
-def suggested_qis(p0_count):
-
-    if p0_count <= 1:
-        return 0
-    elif p0_count <= 3:
-        return 1
-    elif p0_count <= 6:
-        return 2
-    elif p0_count <= 10:
-        return 3
-    else:
-        return 4
-
-
 # ------------------------------------------------
 # SIDEBAR
 # ------------------------------------------------
@@ -287,16 +273,13 @@ if st.session_state.run:
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
-
         st.error("Invalid coordinates")
         st.stop()
 
     input_point = (lat,lon)
 
-    # ---------------- P0 ----------------
-
+    # P0
     p0_results = []
-    p0_count = 0
 
     for _,row in p0.iterrows():
 
@@ -304,19 +287,13 @@ if st.session_state.run:
 
         if dist and dist <= 1.5:
 
-            p0_count += 1
-
             p0_results.append({
                 "Location":row.get("Location",""),
                 "Distance_km":round(dist,2)
             })
 
-
-    # ---------------- QIS ----------------
-
+    # QIS
     qis_results = []
-    existing_qis = 0
-    nearest_qis = None
 
     for _,row in qis.iterrows():
 
@@ -325,12 +302,6 @@ if st.session_state.run:
         if dist is None:
             continue
 
-        if dist <= 1.5:
-            existing_qis += 1
-
-        if nearest_qis is None or dist < nearest_qis:
-            nearest_qis = dist
-
         qis_results.append({
             "QIS":row.get("QIS Name",""),
             "Distance_km":round(dist,2)
@@ -338,9 +309,7 @@ if st.session_state.run:
 
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
-
-    # ---------------- DARKSTORES ----------------
-
+    # Darkstores
     nearest_dark = None
     nearest_dark_name = "Unknown"
 
@@ -356,9 +325,7 @@ if st.session_state.run:
             nearest_dark = dist
             nearest_dark_name = row.get("Name","Unknown")
 
-
-    # ---------------- DEALS ----------------
-
+    # Deals
     deal_results = []
 
     for _,row in deals.iterrows():
@@ -374,9 +341,7 @@ if st.session_state.run:
 
     deal_table = pd.DataFrame(deal_results)
 
-
-    # ---------------- SCORING ----------------
-
+    # Score
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
     access_score = score_access(access_width)
@@ -393,11 +358,6 @@ if st.session_state.run:
 
     normalized_score = weighted_score / 5
 
-
-    # ------------------------------------------------
-    # RESULTS
-    # ------------------------------------------------
-
     st.header("Feasibility Result")
 
     st.metric("Score",round(normalized_score,2))
@@ -409,22 +369,7 @@ if st.session_state.run:
     else:
         st.error("Not Feasible")
 
-
-    # ---------------- QIS Planning ----------------
-
-    recommended_qis = suggested_qis(p0_count)
-
-    st.subheader("QIS Planning")
-
-    col1,col2,col3 = st.columns(3)
-
-    col1.metric("P0 Demand Points",p0_count)
-    col2.metric("Existing QIS",existing_qis)
-    col3.metric("Suggested QIS",recommended_qis)
-
-
-    # ---------------- TABLES ----------------
-
+    # Tables
     colA,colB = st.columns(2)
 
     with colA:
@@ -449,60 +394,35 @@ if st.session_state.run:
                 f"Nearest Darkstore: {nearest_dark_name} | {round(nearest_dark,2)} km"
             )
 
-
-    # ------------------------------------------------
     # MAP
-    # ------------------------------------------------
-
     st.subheader("Map")
 
     m = folium.Map(location=[lat,lon],zoom_start=13)
 
-    folium.Marker(
-        [lat,lon],
-        popup="Input Site",
-        icon=folium.Icon(color="blue")
-    ).add_to(m)
+    folium.Marker([lat,lon],popup="Input Site",
+                  icon=folium.Icon(color="blue")).add_to(m)
 
-    folium.Circle(
-        [lat,lon],
-        radius=1500,
-        color="blue",
-        fill=True,
-        fill_opacity=0.1
-    ).add_to(m)
+    folium.Circle([lat,lon],radius=1500,
+                  color="blue",fill=True,fill_opacity=0.1).add_to(m)
 
     for _,row in p0.iterrows():
-        folium.CircleMarker(
-            [row["Latitude"],row["Longitude"]],
-            radius=5,
-            color="green"
-        ).add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],
+                            radius=5,color="green").add_to(m)
 
     for _,row in qis.iterrows():
-        folium.CircleMarker(
-            [row["Lat"],row["Long"]],
-            radius=4,
-            color="orange"
-        ).add_to(m)
+        folium.CircleMarker([row["Lat"],row["Long"]],
+                            radius=4,color="orange").add_to(m)
 
     for _,row in darkstores.iterrows():
-        folium.CircleMarker(
-            [row["Latitude"],row["Longitude"]],
-            radius=4,
-            color="purple",
-            popup=row.get("Name","Unknown")
-        ).add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],
+                            radius=4,color="purple",
+                            popup=row.get("Name","Unknown")).add_to(m)
 
     for _,row in deals.iterrows():
-        folium.CircleMarker(
-            [row["Latitude"],row["Longitude"]],
-            radius=5,
-            color="red"
-        ).add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],
+                            radius=5,color="red").add_to(m)
 
     st_folium(m,width=900,height=600)
-
 
 st.markdown("---")
 st.markdown("Created by Manul 🚀")
