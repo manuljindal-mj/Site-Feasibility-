@@ -222,93 +222,89 @@ def score_binary(v):
 # SIDEBAR INPUTS
 # ------------------------------------------------
 
+# ------------------------------------------------
+# SIDEBAR INPUTS
+# ------------------------------------------------
+
 st.sidebar.header("Site Inputs")
 
 # Initialize session state
-defaults = {
-    "lat_auto": "",
-    "lon_auto": "",
-    "geo_requested": False,
-    "arterial_distance": ">1km",
-    "access_width": "<10ft",
-    "open_24": "No",
-    "parking": "No"
-}
+if "lat" not in st.session_state:
+    st.session_state.lat = ""
 
-for key, val in defaults.items():
-    if key not in st.session_state:
-        st.session_state[key] = val
+if "lon" not in st.session_state:
+    st.session_state.lon = ""
+
+if "geo_requested" not in st.session_state:
+    st.session_state.geo_requested = False
 
 
 # ------------------------------------------------
-# GEOLOCATION
+# GEOLOCATION BUTTON
 # ------------------------------------------------
 
 if st.sidebar.button("Get My Location 📍"):
     st.session_state.geo_requested = True
 
+
+# Fetch browser location
 if st.session_state.geo_requested:
 
     loc = get_geolocation()
 
-    if loc:
+    if loc is not None:
 
-        st.session_state.lat_auto = loc["coords"]["latitude"]
-        st.session_state.lon_auto = loc["coords"]["longitude"]
+        st.session_state.lat = loc["coords"]["latitude"]
+        st.session_state.lon = loc["coords"]["longitude"]
 
         st.session_state.geo_requested = False
+
         st.sidebar.success("Location captured")
 
 
 # ------------------------------------------------
-# INPUT FIELDS
+# INPUT FIELDS (linked to session state)
 # ------------------------------------------------
 
-lat_input = st.sidebar.text_input(
+st.sidebar.text_input(
     "Latitude",
-    value=st.session_state.lat_auto,
-    key="lat_input"
+    key="lat"
 )
 
-lon_input = st.sidebar.text_input(
+st.sidebar.text_input(
     "Longitude",
-    value=st.session_state.lon_auto,
-    key="lon_input"
+    key="lon"
 )
 
 
 arterial_distance = st.sidebar.selectbox(
     "Distance from Arterial Road",
-    [">1km","<1km","<500m","<250m","<100m"],
-    key="arterial_distance"
+    [">1km","<1km","<500m","<250m","<100m"]
 )
 
 access_width = st.sidebar.selectbox(
     "Access Road Width",
-    ["<10ft","10-20ft","20-30ft","30-40ft",">40ft"],
-    key="access_width"
+    ["<10ft","10-20ft","20-30ft","30-40ft",">40ft"]
 )
 
 open_24 = st.sidebar.selectbox(
     "24x7 Possible",
-    ["No","Yes"],
-    key="open_24"
+    ["No","Yes"]
 )
 
 parking = st.sidebar.selectbox(
     "Parking Available",
-    ["No","Yes"],
-    key="parking"
+    ["No","Yes"]
 )
 
-
-# ------------------------------------------------
-# RUN BUTTON
-# ------------------------------------------------
 
 if st.sidebar.button("Run Feasibility"):
     st.session_state.run = True
 
+
+# These variables will now work everywhere
+lat_input = st.session_state.lat
+lon_input = st.session_state.lon
 # ------------------------------------------------
 # RUN ANALYSIS
 # ------------------------------------------------
