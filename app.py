@@ -6,10 +6,11 @@ from streamlit_folium import st_folium
 import zipfile
 import xml.etree.ElementTree as ET
 import re
+from streamlit_js_eval import get_geolocation
 
 st.set_page_config(layout="wide")
-st.title("Site Feasibility Tool")
 
+st.title("Site Feasibility Tool")
 
 # ------------------------------------------------
 # Coordinate conversion
@@ -28,7 +29,6 @@ def convert_coord(coord):
     match = re.match(pattern, coord)
 
     if match:
-
         deg, minutes, seconds, direction = match.groups()
 
         decimal = float(deg) + float(minutes)/60 + float(seconds)/3600
@@ -154,7 +154,6 @@ def load_data():
 
 p0, qis, deals, darkstores = load_data()
 
-
 # ------------------------------------------------
 # Scoring Functions
 # ------------------------------------------------
@@ -205,13 +204,34 @@ def score_binary(val):
 
 
 # ------------------------------------------------
-# Sidebar Inputs
+# Sidebar
 # ------------------------------------------------
 
 st.sidebar.header("Site Inputs")
 
-lat_input = st.sidebar.text_input("Latitude")
-lon_input = st.sidebar.text_input("Longitude")
+# GEOLOCATION BUTTON
+
+if st.sidebar.button("Use My Current Location 📍"):
+
+    location = get_geolocation()
+
+    if location:
+
+        st.session_state["lat_auto"] = location["coords"]["latitude"]
+        st.session_state["lon_auto"] = location["coords"]["longitude"]
+
+        st.sidebar.success("Location detected")
+
+
+lat_input = st.sidebar.text_input(
+    "Latitude",
+    value=st.session_state.get("lat_auto","")
+)
+
+lon_input = st.sidebar.text_input(
+    "Longitude",
+    value=st.session_state.get("lon_auto","")
+)
 
 arterial_distance = st.sidebar.selectbox(
     "Distance from Arterial Road",
@@ -226,12 +246,14 @@ access_width = st.sidebar.selectbox(
 open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
 parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
 
+
 if st.sidebar.button("Run Feasibility"):
+
     st.session_state["run"] = True
 
 
 # ------------------------------------------------
-# Run Analysis
+# RUN ANALYSIS
 # ------------------------------------------------
 
 if "run" in st.session_state:
@@ -240,31 +262,37 @@ if "run" in st.session_state:
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
+
         st.error("Invalid coordinates")
         st.stop()
 
-    input_point = (lat, lon)
+    input_point = (lat,lon)
 
-    # P0 analysis
+    # ------------------------------------------------
+    # P0 ANALYSIS
+    # ------------------------------------------------
+
     p0_results = []
 
-    for _, row in p0.iterrows():
+    for _,row in p0.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
         if dist <= 1.5:
 
             p0_results.append({
-                "Location": row.get("Location",""),
-                "Distance_km": round(dist,2)
+                "Location":row.get("Location",""),
+                "Distance_km":round(dist,2)
             })
 
+    # ------------------------------------------------
+    # QIS ANALYSIS
+    # ------------------------------------------------
 
-    # QIS analysis
-    qis_results = []
-    nearest_qis = 999
+    qis_results=[]
+    nearest_qis=999
 
-    for _, row in qis.iterrows():
+    for _,row in qis.iterrows():
 
         dist = geodesic(input_point,(row["Lat"],row["Long"])).km
 
@@ -272,18 +300,20 @@ if "run" in st.session_state:
             nearest_qis = dist
 
         qis_results.append({
-            "QIS": row.get("QIS Name",""),
-            "Distance_km": round(dist,2)
+            "QIS":row.get("QIS Name",""),
+            "Distance_km":round(dist,2)
         })
 
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
+    # ------------------------------------------------
+    # DARKSTORE
+    # ------------------------------------------------
 
-    # Darkstore analysis
-    nearest_dark = 999
-    nearest_dark_name = "Unknown"
+    nearest_dark=999
+    nearest_dark_name="Unknown"
 
-    for _, row in darkstores.iterrows():
+    for _,row in darkstores.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
@@ -292,25 +322,29 @@ if "run" in st.session_state:
             nearest_dark = dist
             nearest_dark_name = row.get("Name","Unknown")
 
+    # ------------------------------------------------
+    # DEALS
+    # ------------------------------------------------
 
-    # Deals analysis
-    deal_results = []
+    deal_results=[]
 
-    for _, row in deals.iterrows():
+    for _,row in deals.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
         if dist <= 2:
 
             deal_results.append({
-                "Deal": row.get("Deal Name",""),
-                "Distance": round(dist,2)
+                "Deal":row.get("Deal Name",""),
+                "Distance":round(dist,2)
             })
 
     deal_table = pd.DataFrame(deal_results)
 
+    # ------------------------------------------------
+    # SCORING
+    # ------------------------------------------------
 
-    # Score calculation
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
     access_score = score_access(access_width)
@@ -327,10 +361,13 @@ if "run" in st.session_state:
 
     normalized_score = weighted_score / 5
 
+    # ------------------------------------------------
+    # RESULT
+    # ------------------------------------------------
 
-    # Result
     st.header("Feasibility Result")
-    st.metric("Score", round(normalized_score,2))
+
+    st.metric("Score",round(normalized_score,2))
 
     if normalized_score > 0.6:
         st.success("Approved")
@@ -341,9 +378,11 @@ if "run" in st.session_state:
     else:
         st.error("Not Feasible")
 
+    # ------------------------------------------------
+    # TABLES
+    # ------------------------------------------------
 
-    # Tables
-    col1, col2 = st.columns(2)
+    col1,col2 = st.columns(2)
 
     with col1:
 
@@ -362,29 +401,62 @@ if "run" in st.session_state:
         else:
             st.dataframe(deal_table)
 
-        st.write("Nearest Darkstore:", nearest_dark_name, "| Distance:", round(nearest_dark,2), "km")
+        st.write("Nearest Darkstore:",nearest_dark_name,"| Distance:",round(nearest_dark,2),"km")
 
+    # ------------------------------------------------
+    # MAP
+    # ------------------------------------------------
 
-    # Map
     st.subheader("Map")
 
-    m = folium.Map(location=[lat,lon], zoom_start=13)
+    m = folium.Map(location=[lat,lon],zoom_start=13)
 
-    folium.Marker([lat,lon], popup="Input Site", icon=folium.Icon(color="blue")).add_to(m)
+    folium.Marker(
+        [lat,lon],
+        popup="Input Site",
+        icon=folium.Icon(color="blue")
+    ).add_to(m)
 
-    folium.Circle([lat,lon],radius=1500,color="blue",fill=True,fill_opacity=0.1).add_to(m)
+    folium.Circle(
+        [lat,lon],
+        radius=1500,
+        color="blue",
+        fill=True,
+        fill_opacity=0.1
+    ).add_to(m)
 
-    for _, row in p0.iterrows():
-        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=5,color="green").add_to(m)
+    for _,row in p0.iterrows():
 
-    for _, row in qis.iterrows():
-        folium.CircleMarker([row["Lat"],row["Long"]],radius=4,color="orange").add_to(m)
+        folium.CircleMarker(
+            [row["Latitude"],row["Longitude"]],
+            radius=5,
+            color="green"
+        ).add_to(m)
 
-    for _, row in darkstores.iterrows():
-        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=4,color="purple",popup=row.get("Name","Unknown")).add_to(m)
+    for _,row in qis.iterrows():
 
-    for _, row in deals.iterrows():
-        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=5,color="red").add_to(m)
+        folium.CircleMarker(
+            [row["Lat"],row["Long"]],
+            radius=4,
+            color="orange"
+        ).add_to(m)
+
+    for _,row in darkstores.iterrows():
+
+        folium.CircleMarker(
+            [row["Latitude"],row["Longitude"]],
+            radius=4,
+            color="purple",
+            popup=row.get("Name","Unknown")
+        ).add_to(m)
+
+    for _,row in deals.iterrows():
+
+        folium.CircleMarker(
+            [row["Latitude"],row["Longitude"]],
+            radius=5,
+            color="red"
+        ).add_to(m)
 
     st_folium(m,width=900,height=600)
 
