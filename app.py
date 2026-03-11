@@ -9,11 +9,10 @@ import re
 from streamlit_js_eval import get_geolocation
 
 st.set_page_config(layout="wide")
-
 st.title("Site Feasibility Tool")
 
 # ------------------------------------------------
-# Coordinate conversion
+# Coordinate Conversion
 # ------------------------------------------------
 
 def convert_coord(coord):
@@ -29,6 +28,7 @@ def convert_coord(coord):
     match = re.match(pattern, coord)
 
     if match:
+
         deg, minutes, seconds, direction = match.groups()
 
         decimal = float(deg) + float(minutes)/60 + float(seconds)/3600
@@ -42,7 +42,7 @@ def convert_coord(coord):
 
 
 # ------------------------------------------------
-# Validate coordinates
+# Coordinate Validation
 # ------------------------------------------------
 
 def valid_coord(lat, lon):
@@ -60,7 +60,7 @@ def valid_coord(lat, lon):
 
 
 # ------------------------------------------------
-# Load KMZ Darkstores
+# Load Darkstore KMZ
 # ------------------------------------------------
 
 def load_kmz(file):
@@ -111,12 +111,7 @@ def load_kmz(file):
     except:
         st.warning("KMZ could not be loaded")
 
-    df = pd.DataFrame(rows)
-
-    if "Name" not in df.columns:
-        df["Name"] = "Unknown"
-
-    return df
+    return pd.DataFrame(rows)
 
 
 # ------------------------------------------------
@@ -155,24 +150,42 @@ def load_data():
 p0, qis, deals, darkstores = load_data()
 
 # ------------------------------------------------
-# Scoring Functions
+# QIS Recommendation Logic
 # ------------------------------------------------
 
-def score_distance(distance):
+def suggested_qis(p0_count):
 
-    if distance < 0.25:
-        return 5
-    elif distance < 0.5:
-        return 4
-    elif distance < 1:
+    if p0_count <= 1:
+        return 0
+    elif p0_count <= 3:
+        return 1
+    elif p0_count <= 6:
+        return 2
+    elif p0_count <= 10:
         return 3
-    elif distance < 2:
+    else:
+        return 4
+
+
+# ------------------------------------------------
+# Scoring
+# ------------------------------------------------
+
+def score_distance(d):
+
+    if d < 0.25:
+        return 5
+    elif d < 0.5:
+        return 4
+    elif d < 1:
+        return 3
+    elif d < 2:
         return 2
     else:
         return 1
 
 
-def score_arterial(val):
+def score_arterial(v):
 
     mapping = {
         ">1km":1,
@@ -182,10 +195,10 @@ def score_arterial(val):
         "<100m":5
     }
 
-    return mapping[val]
+    return mapping[v]
 
 
-def score_access(val):
+def score_access(v):
 
     mapping = {
         "<10ft":1,
@@ -195,43 +208,38 @@ def score_access(val):
         ">40ft":5
     }
 
-    return mapping[val]
+    return mapping[v]
 
 
-def score_binary(val):
-
-    return 4 if val == "Yes" else 2
+def score_binary(v):
+    return 4 if v == "Yes" else 2
 
 
 # ------------------------------------------------
-# Sidebar
+# Sidebar Inputs
 # ------------------------------------------------
 
 st.sidebar.header("Site Inputs")
 
-# GEOLOCATION BUTTON
+if "lat_auto" not in st.session_state:
+    st.session_state.lat_auto = ""
+
+if "lon_auto" not in st.session_state:
+    st.session_state.lon_auto = ""
 
 if st.sidebar.button("Use My Current Location 📍"):
 
-    location = get_geolocation()
+    loc = get_geolocation()
 
-    if location:
+    if loc:
 
-        st.session_state["lat_auto"] = location["coords"]["latitude"]
-        st.session_state["lon_auto"] = location["coords"]["longitude"]
+        st.session_state.lat_auto = loc["coords"]["latitude"]
+        st.session_state.lon_auto = loc["coords"]["longitude"]
 
         st.sidebar.success("Location detected")
 
-
-lat_input = st.sidebar.text_input(
-    "Latitude",
-    value=st.session_state.get("lat_auto","")
-)
-
-lon_input = st.sidebar.text_input(
-    "Longitude",
-    value=st.session_state.get("lon_auto","")
-)
+lat_input = st.sidebar.text_input("Latitude", value=st.session_state.lat_auto)
+lon_input = st.sidebar.text_input("Longitude", value=st.session_state.lon_auto)
 
 arterial_distance = st.sidebar.selectbox(
     "Distance from Arterial Road",
@@ -246,10 +254,8 @@ access_width = st.sidebar.selectbox(
 open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
 parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
 
-
 if st.sidebar.button("Run Feasibility"):
-
-    st.session_state["run"] = True
+    st.session_state.run = True
 
 
 # ------------------------------------------------
@@ -262,42 +268,40 @@ if "run" in st.session_state:
     lon = convert_coord(lon_input)
 
     if lat is None or lon is None:
-
         st.error("Invalid coordinates")
         st.stop()
 
-    input_point = (lat,lon)
+    input_point = (lat, lon)
 
-    # ------------------------------------------------
-    # P0 ANALYSIS
-    # ------------------------------------------------
+    # ---------------- P0 ----------------
 
     p0_results = []
+    p0_count = 0
 
-    for _,row in p0.iterrows():
+    for _, row in p0.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
         if dist <= 1.5:
+
+            p0_count += 1
 
             p0_results.append({
                 "Location":row.get("Location",""),
                 "Distance_km":round(dist,2)
             })
 
-    # ------------------------------------------------
-    # QIS ANALYSIS
-    # ------------------------------------------------
+    # ---------------- QIS ----------------
 
-    qis_results=[]
-    nearest_qis=999
+    qis_results = []
+    existing_qis = 0
 
-    for _,row in qis.iterrows():
+    for _, row in qis.iterrows():
 
         dist = geodesic(input_point,(row["Lat"],row["Long"])).km
 
-        if dist < nearest_qis:
-            nearest_qis = dist
+        if dist <= 1.5:
+            existing_qis += 1
 
         qis_results.append({
             "QIS":row.get("QIS Name",""),
@@ -306,14 +310,12 @@ if "run" in st.session_state:
 
     qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
-    # ------------------------------------------------
-    # DARKSTORE
-    # ------------------------------------------------
+    # ---------------- Darkstore ----------------
 
-    nearest_dark=999
-    nearest_dark_name="Unknown"
+    nearest_dark = 999
+    nearest_dark_name = "Unknown"
 
-    for _,row in darkstores.iterrows():
+    for _, row in darkstores.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
@@ -322,13 +324,11 @@ if "run" in st.session_state:
             nearest_dark = dist
             nearest_dark_name = row.get("Name","Unknown")
 
-    # ------------------------------------------------
-    # DEALS
-    # ------------------------------------------------
+    # ---------------- Deals ----------------
 
-    deal_results=[]
+    deal_results = []
 
-    for _,row in deals.iterrows():
+    for _, row in deals.iterrows():
 
         dist = geodesic(input_point,(row["Latitude"],row["Longitude"])).km
 
@@ -341,9 +341,12 @@ if "run" in st.session_state:
 
     deal_table = pd.DataFrame(deal_results)
 
-    # ------------------------------------------------
-    # SCORING
-    # ------------------------------------------------
+    # ---------------- QIS Suggestion ----------------
+
+    recommended_qis = suggested_qis(p0_count)
+    qis_gap = recommended_qis - existing_qis
+
+    # ---------------- Scoring ----------------
 
     demand_score = score_distance(nearest_dark)
     arterial_score = score_arterial(arterial_distance)
@@ -359,7 +362,7 @@ if "run" in st.session_state:
         parking_score*0.05
     )
 
-    normalized_score = weighted_score / 5
+    normalized_score = weighted_score/5
 
     # ------------------------------------------------
     # RESULT
@@ -367,16 +370,33 @@ if "run" in st.session_state:
 
     st.header("Feasibility Result")
 
-    st.metric("Score",round(normalized_score,2))
+    st.metric("Score", round(normalized_score,2))
 
     if normalized_score > 0.6:
         st.success("Approved")
-
     elif normalized_score >= 0.3:
         st.warning("Feasible")
-
     else:
         st.error("Not Feasible")
+
+    # ------------------------------------------------
+    # QIS Planning
+    # ------------------------------------------------
+
+    st.subheader("QIS Planning")
+
+    c1,c2,c3 = st.columns(3)
+
+    c1.metric("P0 Demand Points", p0_count)
+    c2.metric("Existing QIS", existing_qis)
+    c3.metric("Suggested QIS", recommended_qis)
+
+    if qis_gap > 0:
+        st.info(f"Area can support {qis_gap} additional QIS")
+    elif qis_gap == 0:
+        st.success("QIS supply balanced")
+    else:
+        st.warning("Area already saturated")
 
     # ------------------------------------------------
     # TABLES
@@ -409,54 +429,23 @@ if "run" in st.session_state:
 
     st.subheader("Map")
 
-    m = folium.Map(location=[lat,lon],zoom_start=13)
+    m = folium.Map(location=[lat,lon], zoom_start=13)
 
-    folium.Marker(
-        [lat,lon],
-        popup="Input Site",
-        icon=folium.Icon(color="blue")
-    ).add_to(m)
+    folium.Marker([lat,lon],popup="Input Site",icon=folium.Icon(color="blue")).add_to(m)
 
-    folium.Circle(
-        [lat,lon],
-        radius=1500,
-        color="blue",
-        fill=True,
-        fill_opacity=0.1
-    ).add_to(m)
+    folium.Circle([lat,lon],radius=1500,color="blue",fill=True,fill_opacity=0.1).add_to(m)
 
     for _,row in p0.iterrows():
-
-        folium.CircleMarker(
-            [row["Latitude"],row["Longitude"]],
-            radius=5,
-            color="green"
-        ).add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=5,color="green").add_to(m)
 
     for _,row in qis.iterrows():
-
-        folium.CircleMarker(
-            [row["Lat"],row["Long"]],
-            radius=4,
-            color="orange"
-        ).add_to(m)
+        folium.CircleMarker([row["Lat"],row["Long"]],radius=4,color="orange").add_to(m)
 
     for _,row in darkstores.iterrows():
-
-        folium.CircleMarker(
-            [row["Latitude"],row["Longitude"]],
-            radius=4,
-            color="purple",
-            popup=row.get("Name","Unknown")
-        ).add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=4,color="purple",popup=row.get("Name","Unknown")).add_to(m)
 
     for _,row in deals.iterrows():
-
-        folium.CircleMarker(
-            [row["Latitude"],row["Longitude"]],
-            radius=5,
-            color="red"
-        ).add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=5,color="red").add_to(m)
 
     st_folium(m,width=900,height=600)
 
