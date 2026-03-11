@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 st.title("Site Feasibility Tool")
 
 # ------------------------------------------------
-# SESSION STATE INIT
+# SESSION STATE
 # ------------------------------------------------
 
 if "lat" not in st.session_state:
@@ -23,6 +23,7 @@ if "lon" not in st.session_state:
 
 if "geo_requested" not in st.session_state:
     st.session_state.geo_requested = False
+
 
 # ------------------------------------------------
 # Coordinate Conversion
@@ -73,7 +74,7 @@ def valid_coord(lat, lon):
 
 
 # ------------------------------------------------
-# Load Darkstore KMZ
+# LOAD DARKSTORE KMZ
 # ------------------------------------------------
 
 def load_kmz(file):
@@ -127,7 +128,7 @@ def load_kmz(file):
 
 
 # ------------------------------------------------
-# Load Data
+# LOAD DATA
 # ------------------------------------------------
 
 @st.cache_data
@@ -148,13 +149,19 @@ def load_data():
     deals["Latitude"] = pd.to_numeric(deals["Latitude"], errors="coerce")
     deals["Longitude"] = pd.to_numeric(deals["Longitude"], errors="coerce")
 
+    # remove invalid coordinates
+    p0 = p0.dropna(subset=["Latitude","Longitude"])
+    qis = qis.dropna(subset=["Lat","Long"])
+    deals = deals.dropna(subset=["Latitude","Longitude"])
+
     return p0, qis, deals, darkstores
 
 
 p0, qis, deals, darkstores = load_data()
 
+
 # ------------------------------------------------
-# QIS Recommendation
+# QIS RECOMMENDATION
 # ------------------------------------------------
 
 def suggested_qis(p0_count):
@@ -229,7 +236,6 @@ if st.sidebar.button("Get My Location 📍"):
     st.session_state.geo_requested = True
 
 
-# Fetch location
 if st.session_state.geo_requested:
 
     loc = get_geolocation()
@@ -258,8 +264,8 @@ access_width = st.sidebar.selectbox(
 open_24 = st.sidebar.selectbox("24x7 Possible", ["No","Yes"])
 parking = st.sidebar.selectbox("Parking Available", ["No","Yes"])
 
-
 run = st.sidebar.button("Run Feasibility")
+
 
 # ------------------------------------------------
 # RUN ANALYSIS
@@ -293,6 +299,7 @@ if run:
                 "Distance_km":round(dist,2)
             })
 
+
     # QIS
     existing_qis = 0
 
@@ -303,7 +310,8 @@ if run:
         if dist <= 1.5:
             existing_qis += 1
 
-    # Darkstore
+
+    # DARKSTORE
     nearest_dark = 999
     nearest_dark_name = "Unknown"
 
@@ -316,9 +324,10 @@ if run:
             nearest_dark = dist
             nearest_dark_name = row.get("Name","Unknown")
 
+
     recommended_qis = suggested_qis(p0_count)
 
-    # Score
+
     score = (
         score_distance(nearest_dark)*0.20 +
         score_arterial(arterial_distance)*0.15 +
@@ -329,7 +338,7 @@ if run:
 
 
     # ------------------------------------------------
-    # RESULTS
+    # RESULT
     # ------------------------------------------------
 
     st.header("Feasibility Result")
@@ -342,6 +351,10 @@ if run:
     else:
         st.error("Not Feasible")
 
+
+    # ------------------------------------------------
+    # QIS PLANNING
+    # ------------------------------------------------
 
     st.subheader("QIS Planning")
 
@@ -360,23 +373,30 @@ if run:
 
     m = folium.Map(location=[lat,lon], zoom_start=13)
 
-    folium.Marker([lat,lon], popup="Input Site", icon=folium.Icon(color="blue")).add_to(m)
+    folium.Marker([lat,lon],popup="Input Site",
+                  icon=folium.Icon(color="blue")).add_to(m)
 
-    folium.Circle([lat,lon],radius=1500,color="blue",fill=True,fill_opacity=0.1).add_to(m)
+    folium.Circle([lat,lon],radius=1500,
+                  color="blue",fill=True,fill_opacity=0.1).add_to(m)
 
     for _,row in p0.iterrows():
-        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=4,color="green").add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],
+                            radius=4,color="green").add_to(m)
 
     for _,row in qis.iterrows():
-        folium.CircleMarker([row["Lat"],row["Long"]],radius=4,color="orange").add_to(m)
+        folium.CircleMarker([row["Lat"],row["Long"]],
+                            radius=4,color="orange").add_to(m)
 
     for _,row in darkstores.iterrows():
-        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=4,color="purple").add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],
+                            radius=4,color="purple").add_to(m)
 
     for _,row in deals.iterrows():
-        folium.CircleMarker([row["Latitude"],row["Longitude"]],radius=4,color="red").add_to(m)
+        folium.CircleMarker([row["Latitude"],row["Longitude"]],
+                            radius=4,color="red").add_to(m)
 
     st_folium(m,width=900,height=600)
+
 
 st.markdown("---")
 st.markdown("Created by Manul 🚀")
