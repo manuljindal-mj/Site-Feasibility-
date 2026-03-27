@@ -5,8 +5,8 @@ WMQISXM1V1-00089,IOCL Auto Yard,"DEL_IOC_Auto-Yard, Jasola Vihar",IOCL,Auto Yard
 WMQISXM1V1-00094,Medical College,"CAL_PVT_K.M. Apartment, Velliparamba",Private,Kozhikoda,Calicut,Kerala,South,11.269885,75.839507
 WMQISXM1V1-00095,Kazhakoottam,"TVD_PVT_Technopark Campus, Kazhakkoottam",Private,"Pulinthanam Lane,",Trivandrum,Kerala,South,8.5651499,76.8785611
 WMQISXM1V1-00091,Budh Vihar/ Sultanpuri,"DEL_PVT_Harsh Dev Park, Budh Vihar",Private,Budh Vihar,Delhi,Delhi,North,28.714337,77.084686
-WMQISXM1V1-00109,Private (New Yelahanka),"BLR_PVT_Udaya Layout, Yelahanka",Private,New Yehlanka,Bengaluru,Karnataka,South,13.097303,77.576711
 WMQISXM1V1-00103,Sector 29 Faridabad,"FDB_PVT_Bhoor Colony, Old Faridabad",Private,Old Faridabad Sabzi Mandi,Faridabad,Haryana,North,28.4281264,77.3225272
+WMQISXM1V1-00109,Private (New Yelahanka),"BLR_PVT_Udaya Layout, Yelahanka",Private,New Yehlanka,Bengaluru,Karnataka,South,13.097303,77.576711
 WMQISXM1V1-00099,Mundka,"DEL_PVT_West Cabin Block, Mundka",Private,Metro Station,Delhi,Delhi,North,28.683376,77.030912
 WMQISXM1V1-00081,Mankav,"CAL_IOC_Mankavu, Thiruvannur",IOCL, Mini Bypass Rd,Calicut,Kerala,South,11.233617,75.803352
 WMQISXM1V1-00105,BECIL (Sapna Cinema),"DEL_BEC_Sapna Cinema, East of Kailash",BECIL,Lala Lajpat Nagar,Delhi,Delhi,North,28.5591021,77.2465663
@@ -44,17 +44,16 @@ WMQISXM1V1-00159,Indraprastha 2,DEL_DTL_Indraprastha Metro station,DTL,Indrapras
 WMQISXM1V1-00151,Sector22/Udyog Vihar,"GUR_PVT_Phase4,Udyog ViharSector18",Private,Mullahera,Gurugram,Haryana,North,28.501995,77.067433
 WMQISXM1V1-00161,Delhi Diesel,"DEL_IOC_Diesels, Yamuna Vihar, Shahdara",IOCL,Near gokul escape,Delhi,Delhi,North,28.70279,77.26609
 WMQISXM1V1-00157,LIBRA FILLING STATION,"DEL_IOC_Libra-Filling-Station, Azadpur",IOCL,Dehli Karnal Raod,Delhi,Delhi,North,28.721768,77.165309
-WMQISXM1V1-00165,KR Puram,"BLR_PVT_Bhattarahalli, KR Puram",Private,KR Puram,Bengaluru,Karnataka,South,13.0220799,77.7095966
 WMQISXM1V1-00171,Dwarka Mor Metro Parking 2,DEL_DTL_Dwarka Mor Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.618761,77.033409
 WMQISXM1V1-00169,Kair 2,DEL_DTL_Kair,DTL,BRPL ,Delhi,Delhi,North,28.61882,76.930195
 WMQISXM1V1-00170,Shubhash Nagar Metro Parking  2,DEL_DTL_Shubhash Nagar Metro Station,DTL,BRPL ,Delhi,Delhi,North,28.640928,77.105056
 WMQISXM1V1-00168,Vasant vihar 2,"DEL_DTL_CGHS Colony, Vasant Vihar",DTL,Vasant vihar ,Delhi,Delhi,North,28.55759,77.162533
 WMQISXM1V1-00167,Shadipur Depot 2,DEL_DTL_Shadipur Post,DTL,BYPL ,Delhi,Delhi,North,28.65348,77.15571
-WMQISXM1V1-00195,COCO KR Puram II 1,"BLR_IOC_Coco-KR-Puram, Singayyanapalya",IOCL,Mahadevapura,Bengaluru,Karnataka,South,13.000115,77.68708166
+WMQISXM1V1-00165,KR Puram,"BLR_PVT_Bhattarahalli, KR Puram",Private,KR Puram,Bengaluru,Karnataka,South,13.0220799,77.7095966
 WMQISXM1V1-00133,"Shakthi Fuels, Edapally","KOC_IOC_Shakti-Fuel, Edapally, Ernakulam",IOCL,"Changampuzha Park, Edapally",Kochi,Kerala,South,10.012253,76.302952
+WMQISXM1V1-00195,COCO KR Puram II 1,"BLR_IOC_Coco-KR-Puram, Singayyanapalya",IOCL,Mahadevapura,Bengaluru,Karnataka,South,13.000115,77.68708166
 WMQISXM1V1-00179,I.P. Extension,"DEL_BYP_I.P.Extension, West Vinod Nagar",BYPL,Narwana Road,Delhi,Delhi,North,28.62566,77.30835
 WMQISXM1V1-00185,Karkardooma,"DEL_BYP_Vishwas Nagar, Shahdara",BYPL,Karkardooma,Delhi,Delhi,North,28.65528,77.29795
-WMQISXM1V1-00192,SMPL Plant-1,"BLR_SMP_SUNM office, Doddanekkundi",SMPL,Dudanekhundi,Bengaluru,Karnataka,South,12.977114,77.70653
 WMQISXM1V1-00193,SMPL Plant-2,"BLR_SMP_SUNM office, Doddanekkundi",SMPL,Dudanekhundi,Bengaluru,Karnataka,South,12.977114,77.70653
 WMQISXM1V1-00175,Rajendra Place-BYPL,"DEL_BYP_Rajendra Place, Block 13",BYPL,Rajendra Place,Delhi,Delhi,North,28.643384,77.175902
 WMQISXM1V1-00182,Uttam Nagar west Metro Parking 1,DEL_DTL_Uttam Nagar West Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.621556,77.055414
@@ -63,11 +62,11 @@ WMQISXM1V1-00177,MAA ANAND MAI SERV.STN.,"DEL_IOC_Maa-Anand-Mai-Service-Station,
 WMQISXM1V1-00181,Uttam Nagar East Metro Parking 1,DEL_DTL_Uttam Nagar East Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.624221,77.064835
 WMQISXM1V1-00184,Uttam Nagar East Metro Parking 2,DEL_DTL_Uttam Nagar East Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.624221,77.064835
 WMQISXM1V1-00176,Shankar Road,"DEL_BYP_Shankar Rd, New Rajinder Nagar",BYPL,Shankar Road,Delhi,Delhi,North,28.636072,77.184568
-WMQISXM1V1-00500,IOCL-Bengaluru-HSR-2,"BLR_IOC_HSR Layout, Agara Village",IOCL,HSR layout,Bengaluru,Karnataka,South,12.9215,77.64467
 WMQISXM1V1-00178,JAI BANGLAMUKHI ECO FUEL STN.,"DEL_IOC_Jai-Banglamukhi-Eco-Fuel, Pitampura",IOCL,Pitampura,Delhi,Delhi,North,28.688734,77.104843
 WMQISXM1V1-00180,MANGAL PETRO-1,"DEL_IOC_Mangal Petro, West Enclave, Pitampura",IOCL,Pitampura,Delhi,Delhi,North,28.688816,77.104702
 WMQISXM1V1-00191,Bindapur Terminal 1,"DEL_DTL_Uttam Nagar, Bindapur",DTL,BRPL ,Delhi,Delhi,North,28.608414,77.066024
 WMQISXM1V1-00201,Jumpstart Autoelectric,CDG_RFP_Makhan Majra,DCO,Mauli Jagran,Chandigarh,Punjab,North,30.689542,76.81599
+WMQISXM1V1-00500,IOCL-Bengaluru-HSR-2,"BLR_IOC_HSR Layout, Agara Village",IOCL,HSR layout,Bengaluru,Karnataka,South,12.9215,77.64467
 WMQISXM1V1-00138,Madhav Fuels 1,"DEL_IOC_Madhav-Fuels, Chetan Vihar",IOCL,Najfgarh,Delhi,Delhi,North,28.6083603,76.9531635
 WMQISXM1V1-00162,MAHENDRA,"DEL_IOC_Mahendra, Vishwas Nagar, Shahdara",IOCL,Shahdara,Delhi,Delhi,North,28.662,77.30089
 WMQISXM1V1-00215,Bindapur Terminal 2,"DEL_DTL_Uttam Nagar, Bindapur",DTL,BRPL ,Delhi,Delhi,North,28.608414,77.066024
@@ -90,44 +89,43 @@ WMQISXM1V1-00248,IOC COCO SECTOR 19 DWARKA,DEL_IOC_Coco-Dwarka-Sector-19,IOCL,So
 WMQISXM1V1-00254,AUTOFUEL 1,"DEL_IOC_Autofuel, Pitampura",IOCL,TELEPHONE EXCH PITAMPURA ,Delhi,Delhi,North,28.68852,77.11297
 WMQISXM1V1-00255,AUTOFUEL-2,"DEL_IOC_Autofuel, Pitampura",IOCL,TELEPHONE EXCH PITAMPURA ,Delhi,Delhi,North,28.68852,77.11297
 WMQISXM1V1-00242,Naharpur 2,"GUR_PVT_Guru Nanak Complex, Near Anaj Mandi",Private,Naharpur,Gurugram,Haryana,North,28.441985,77.016062
-WMQISXM1V1-00270,Saroor Nagar ,"HYD_PVT_Trimurthi Colony, Saroor Nagar",Private,Saroor Nagar Lake,Hyderabad,Telangana,South,17.354111,78.532781
 WMQISXM1V1-00263,Narela - IOCL Har Sreenath 1,"DEL_IOC_Haar-Shreenath-Narella, sector A7, Narela",IOCL,Narela,Delhi,Delhi,North,28.847158,77.099431
 WMQISXM1V1-00239,BSES corporate,DEL_BYP_BSES corporate Annexe Office_Karkardooma,BYPL,Karkardooma,Delhi,Delhi,North,28.66182,77.29975
 WMQISXM1V1-00267,Shubhash Nagar Metro Parking  3,DEL_DTL_Shubhash Nagar Metro Station,DTL,BRPL ,Delhi,Delhi,North,28.640928,77.105056
 WMQISXM1V1-00238,Shahadara,"DEL_BYP_GT Rd,Shahdara",BYPL,GT road Shahdara,Delhi,Delhi,North,28.6760901,77.309675
 WMQISXM1V1-00257,Nand Nagri,"DEL_BYP_West Jyoti Nagar, Nand Nagri",BYPL,Nand Nagri,Delhi,Delhi,North,28.6924845,77.303919
 WMQISXM1V1-00260,Anaj Mandi 1,"GUR_PVT_Anaj Mandi, Hari Nagar",Private,Raj Nagar,Gurugram,Haryana,North,28.448345,77.020148
-WMQISXM1V1-00304,Magadi Road,"BLR_PVT_Bhuvaneshwari Nagar, Binnipete",Private,Magadi Road,Bengaluru,Karnataka,South,12.970399,77.559193
 WMQISXM1V1-00244,Dwarka 1,DEL_DTL_Dwarka Metro station,DTL,BRPL ,Delhi,Delhi,North,28.616569,77.023656
 WMQISXM1V1-00245,Dwarka 2,DEL_DTL_Dwarka Metro station,DTL,BRPL ,Delhi,Delhi,North,28.616569,77.023656
 WMQISXM1V1-00252,Krishna Nagar,"DEL_BYP_Block J, Krishna Nagar,",BYPL,Krishna Nagar,Delhi,Delhi,North,28.65888,77.28635
-WMQISXM1V1-00295,Konarkunte Cross,"BLR_PVT_Vallabha Nagar, Bikasipura",Private,Konarkunte,Bengaluru,Karnataka,South,12.889313,77.556311
+WMQISXM1V1-00304,Magadi Road,"BLR_PVT_Bhuvaneshwari Nagar, Binnipete",Private,Magadi Road,Bengaluru,Karnataka,South,12.970399,77.559193
 WMQISXM1V1-00271,Shadipur 1,DEL_DTL_Vishwavidyalaya Metro station,DTL,TPDDL ,Delhi,Delhi,North,28.650781,77.158524
 WMQISXM1V1-00265,Janakpuri East Metro Parking 1,DEL_DTL_Janakpuri East Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.633473,77.08791
 WMQISXM1V1-00230,Sagar Automobiles,"NOI_IOC_Sagar-Automobiles, Block A, Sector 15",IOCL,Sector-15 Noida,Noida,UP,North,28.583849,77.3112
 WMQISXM1V1-00292,Jail Road,"CAL_PVT_Chintavalap School Cross Rd, Palayam",Private,Sabha school cross road,Calicut,Kerala,South,11.252985,75.789513
 WMQISXM1V1-00272,Shadipur 2,DEL_DTL_Vishwavidyalaya Metro station,DTL,TPDDL ,Delhi,Delhi,North,28.650781,77.158524
 WMQISXM1V1-00266,Janakpuri East Metro Parking 2,DEL_DTL_Janakpuri East Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.633473,77.08791
+WMQISXM1V1-00295,Konarkunte Cross,"BLR_PVT_Vallabha Nagar, Bikasipura",Private,Konarkunte,Bengaluru,Karnataka,South,12.889313,77.556311
 WMQISXM1V1-00519,Arekere- Bangalore,"BLR_PVT_BTS Layout Main Rd, Arekere",Private,Arekere,Bengaluru,Karnataka,South,12.8867344,77.6085295
-WMQISXM1V1-00520,Hegde Nagar,"BLR_PVT_Hegde nagar, Police Quarters",Private,Sri Subramanya Swamy devasthana,Bengaluru,Karnataka,South,13.0726234,77.636312
 WMQISXM1V1-00251,"Karawal Nagar, Near Gokul Puri",DEL_BYP_Near Gokul Puri Police Station,BYPL,Yamuna Vihar,Delhi,Delhi,North,28.702436,77.279101
+WMQISXM1V1-00520,Hegde Nagar,"BLR_PVT_Hegde nagar, Police Quarters",Private,Sri Subramanya Swamy devasthana,Bengaluru,Karnataka,South,13.0726234,77.636312
 WMQISXM1V1-00261,Sector 31 Gurugram 1,"GUR_PVT_Uniworld City, Sector 30",Private,Silokhara,Gurugram,Haryana,North,28.45945,77.05636
 WMQISXM1V1-00279,Sector 83,GUR_PVT_Sector 83,Private,Sikohpur,Gurugram,Haryana,North,28.38921,76.97443
 WMQISXM1V1-00282,Adarsh Service Station,"GZB_IOC_Adarsh-Service-Station, Lohia Nagar",IOCL,Lohia Nagar,Ghaziabad,UP,North,28.673879,77.430181
 WMQISXM1V1-00241,Chaudhary Automobiles,"NOI_IOC_Chaudhary-Automobiles, Hosiery Complex",IOCL,Yakubpur,Noida,UP,North,28.534656,77.40413
 WMQISXM1V1-00526,JP Nagar_Pvt_1,"BLR_PVT_Hub_Puttenahalli,JP Nagar",Private,JP Nagar,Bengaluru,Karnataka,South,12.89321982,77.58404202
 WMQISXM1V1-00537,SINGASANDRA,"BLR_PVT_Earappa Reddy Layout, Agrahara",Private,Near NV health Care,Bengaluru,Karnataka,South,12.871638,77.6610968
-WMQISXM1V1-00540,Amar Service Station,"BLR_IOC_Amar-Service-Station, Marathahalli",IOCL,Marathahalli,Bengaluru,Karnataka,South,12.9553566,77.6911116
 WMQISXM1V1-00258,Sector 72 Gurugram 1,"GUR_PVT_Fazilpur Jharsa, Sector 71",Private,Fazilpur,Gurugram,Haryana,North,28.41346,77.02447
+WMQISXM1V1-00540,Amar Service Station,"BLR_IOC_Amar-Service-Station, Marathahalli",IOCL,Marathahalli,Bengaluru,Karnataka,South,12.9553566,77.6911116
 WMQISXM1V1-00299,SHRADDHA FUELS,"DEL_IOC_Shraddha-Fuels, Fatehpur Beri",IOCL,South Delhi,Delhi,Delhi,North,28.4497,77.184
 WMQISXM1V1-00310,NAGARBHAVI,"BLR_PVT_D-Group Layout, Srigandada Kaval",Private,NAGARBHAVI,Bengaluru,Karnataka,South,12.970112,77.498663
 WMQISXM1V1-00508,BEE GEE MOTORS,"DEL_IOC_Bee-Gee-Motors, Narela",IOCL,DSIDC Complex NARELA,Delhi,Delhi,North,28.83677,77.097332
 WMQISXM1V1-00511,Indraprastha 3,DEL_DTL_Indraprastha Metro station,DTL,BYPL ,Delhi,Delhi,North,28.620485,77.249458
 WMQISXM1V1-00311,Esteem Mall,"BLR_PVT_Maheswari Nagar, T. Dasarahalli",Private,Near Esteem Mall,Bengaluru,Karnataka,South,13.047671,77.597992
-WMQISXM1V1-00547,Koramangala 5th Block,"BLR_PVT_Koramangala, 5th-Block",Private,17th C Main Road Kormangala,Bengaluru,Karnataka,South,12.935309,77.620449
-WMQISXM1V1-00334,RAMAMURTHY NAGAR,BLR_PVT_Ramamurthy Nagar,Private,RAMAMURTHY NAGAR,Bengaluru,Karnataka,South,13.0214215,77.6721855
 WMQISXM1V1-00515,Dwarka 3,DEL_DTL_Dwarka Metro station,DTL,BRPL ,Delhi,Delhi,North,28.616569,77.023656
 WMQISXM1V1-00513,Uttam Nagar East Metro Parking 3,DEL_DTL_Uttam Nagar East Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.624221,77.064835
+WMQISXM1V1-00547,Koramangala 5th Block,"BLR_PVT_Koramangala, 5th-Block",Private,17th C Main Road Kormangala,Bengaluru,Karnataka,South,12.935309,77.620449
+WMQISXM1V1-00334,RAMAMURTHY NAGAR,BLR_PVT_Ramamurthy Nagar,Private,RAMAMURTHY NAGAR,Bengaluru,Karnataka,South,13.0214215,77.6721855
 WMQISXM1V1-00514,Uttam Nagar west Metro Parking 3,DEL_DTL_Uttam Nagar West Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.621556,77.055414
 WMQISXM1V1-00512,Janakpuri East Metro Parking 3,DEL_DTL_Janakpuri East Metro Parking,DTL,BRPL ,Delhi,Delhi,North,28.633473,77.08791
 WMQISXM1V1-00280,Tikri Petro 1,"DEL_IOC_Tikri-Petro, Saharanpur, Tyagi Vihar",IOCL,Tikri Border,Delhi,Delhi,North,28.68644,76.98583
@@ -137,58 +135,57 @@ WMQISXM1V1-00326,Sector 72 Gurugram 2,"GUR_PVT_Fazilpur Jharsa, Sector 71",Priva
 WMQISXM1V1-00546,Sector 31 Gurugram 2,"GUR_PVT_Uniworld City, Sector 30",Private,Silokhara,Gurugram,Haryana,North,28.45945,77.05636
 WMQISXM1V1-00317,New Shirke Company,"PUN_PVT_Shravasti Nagar, Ghorpadi",Private,Amazon UNPN-2,Pune,Maharashtra,West,18.528941,73.905466
 WMQISXM1V1-00301,BLR-Bhadrappa Layout,"BLR_PVT_Tatanagar, Devinagar",Private,Tata Nagar,Bengaluru,Karnataka,South,13.058677,77.573386
-WMQISXM1V1-00555,Chamarajapet,"BLR_PVT_KG nagar main Rd, RK Mutt layout",Private,Kampegowda Nagar,Bengaluru,Karnataka,South,12.950808,77.563748
 WMQISXM1V1-00363,Raj Nagar 1,"GZB_PVT_ P & T Colony, Raj Nagar",Private,Raj Nagar,Ghaziabad,UP,North,28.674248,77.442612
+WMQISXM1V1-00555,Chamarajapet,"BLR_PVT_KG nagar main Rd, RK Mutt layout",Private,Kampegowda Nagar,Bengaluru,Karnataka,South,12.950808,77.563748
 WMQISXM1V1-00365,Noida Sector 142,NOI_PVT_Sector 142,Private,Sector 142,Noida,UP,North,28.501533,77.417891
 WMQISXM1V1-00367,Noida Sector 142 2,NOI_PVT_Sector 142,Private,Sector 142,Noida,UP,North,28.501533,77.417891
 WMQISXM1V1-00342,Sector 10-Gurugram 2,"GUR_PVT_Kadipur Village, Sector 10",Private,Kadipur Village,Gurugram,Haryana,North,28.45189,77.00178
-WMQISXM1V1-00559,Bull Temple,"BLR_PVT_Hanumanthnagar, Banashankari",Private,Basavanagudi,Bengaluru,Karnataka,South,12.942328,77.564256
-WMQISXM1V1-00384,HSR 1st Sector,"BLR_PVT_1st Sector, HSR Layout",Private,HSR layout,Bengaluru,Karnataka,South,12.91846,77.648715
 WMQISXM1V1-00366,IOCL-Delhi-Welcome-Motors-Saket2,"DEL_IOC_Welcome-Motors-Saket, Pushp Vihar",IOCL,Saket,Delhi,Delhi,North,28.52777,77.21549
 WMQISXM1V1-00354,IOCL-Delhi-Welcome-Motors-Saket 3,"DEL_IOC_Welcome-Motors-Saket, Pushp Vihar",IOCL,Saket,Delhi,Delhi,North,28.52777,77.21549
 WMQISXM1V1-00285,Swarna E connect,"DEL_RFP_Krishna Colony, Hastsal",Private,Uttamnagar,Delhi,Delhi,North,28.63504,77.06129
+WMQISXM1V1-00559,Bull Temple,"BLR_PVT_Hanumanthnagar, Banashankari",Private,Basavanagudi,Bengaluru,Karnataka,South,12.942328,77.564256
+WMQISXM1V1-00384,HSR 1st Sector,"BLR_PVT_1st Sector, HSR Layout",Private,HSR layout,Bengaluru,Karnataka,South,12.91846,77.648715
 WMQISXM1V1-00332,Uttarakhand Enclave 1,"DEL_PVT_Garhi Khasru, Burari",Private,Burari,Delhi,Delhi,North,28.770011,77.188987
 WMQISXM1V1-00558,BLR-KOTHNUR,"BLR_PVT_Classic Orchards Layout, Kothnur",Private,Kothnur Main Road,Bengaluru,Karnataka,South,12.870056,77.583636
 WMQISXM1V1-00560,BLR-Malleswaram,"BLR_PVT_Muneshwara Block, KB Nagar",Private,Yalappa Garden,Bengaluru,Karnataka,South,12.997546,77.57583
 WMQISXM1V1-00390,Huskur Gate,BLR_PVT_Agrahara Huskur Gate,Private,Huskur Fruit Market,Bengaluru,Karnataka,South,12.841683,77.689436
-WMQISXM1V1-00563,COCO KR Puram II 2,"BLR_IOC_Coco-KR-Puram, Singayyanapalya",IOCL,Mahadevapura,Bengaluru,Karnataka,South,13.00012,77.68708
 WMQISXM1V1-00391, COCO Prabhadevi,MUM_IOC_COCO-Prabhadevi,IOCL,Shree Siddhivinayaka,Mumbai,Maharashtra,West,19.01885116,72.8311744
+WMQISXM1V1-00563,COCO KR Puram II 2,"BLR_IOC_Coco-KR-Puram, Singayyanapalya",IOCL,Mahadevapura,Bengaluru,Karnataka,South,13.00012,77.68708
+WMQISXM1V1-00372,Shadipur 3,DEL_DTL_Vishwavidyalaya Metro station,DTL,TPDDL ,Delhi,Delhi,North,28.650781,77.158524
 WMQISXM1V1-00569,Budigere 2,"BLR_PVT_Sannatammanahalli, Katamnallur",Private,Budigere,Bengaluru,Karnataka,South,13.0518137,77.7595926
 WMQISXM1V1-00561,Yashwanthapura,"BLR_PVT_Mahalakshmi Layout, Yashwanthapura",Private,Ullas Theater,Bengaluru,Karnataka,South,13.019003,77.551716
-WMQISXM1V1-00372,Shadipur 3,DEL_DTL_Vishwavidyalaya Metro station,DTL,TPDDL ,Delhi,Delhi,North,28.650781,77.158524
 WMQISXM1V1-00340,Dwarka sector-9 -1,"DEL_DTL_Dwarka, Sector 9",DTL,Dwarka,Delhi,Delhi,North,28.573822,77.065052
 WMQISXM1V1-00341,Dwarka sector-9 -2,"DEL_DTL_Dwarka, Sector 9",DTL,Dwarka,Delhi,Delhi,North,28.573822,77.065052
 WMQISXM1V1-00371,Gurugram Sector 74 A,"GUR_PVT_Sector 36, Mohammadpur Jharsa",Private,Kadipur Village,Gurugram,Haryana,North,28.41531,76.99125
-WMQISXM1V1-00335,BLR-HEBBAL NEW,BLR_PVT_Kaval Bairasandra,Private,RT Nagar,Bengaluru,Karnataka,South,13.019229,77.607822
-WMQISXM1V1-00389,BTM 2nd Stage,"BLR_PVT_BTM layout, 2nd stage",Private,BTM layout,Bengaluru,Karnataka,South,12.909409,77.610821
 WMQISXM1V1-00373,Dwarka sector 11-1,"DEL_DTL_Dwarka, Sector 11",DTL,Dwarka,Delhi,Delhi,North,28.587155,77.04841
 WMQISXM1V1-00377,Dwarka sector 11-2,"DEL_DTL_Dwarka, Sector 11",DTL,Dwarka,Delhi,Delhi,North,28.587155,77.04841
 WMQISXM1V1-00323,Rajouri Garden 1,"DEL_BRP_Block J, Rajouri Garden",BRPL,Rajouri Garden,Delhi,Delhi,North,28.638381,77.120865
 WMQISXM1V1-00324,Rajouri Garden 2,"DEL_BRP_Block J, Rajouri Garden",BRPL,Rajouri Garden,Delhi,Delhi,North,28.638381,77.120865
+WMQISXM1V1-00335,BLR-HEBBAL NEW,BLR_PVT_Kaval Bairasandra,Private,RT Nagar,Bengaluru,Karnataka,South,13.019229,77.607822
 WMQISXM1V1-00582,Kengeri Bus Terminal,BLR_BMR_Kengeri-Bus-Terminal Metro station,BMRCL,Mailasandra,Bengaluru,Karnataka,South,12.914299,77.48694
 WMQISXM1V1-00444,Bommanahalli,"BLR_PVT_Dr Bhim Rao Ambedkar St, Bommanahalli",Private,Bommanahalli,Bengaluru,Karnataka,South,12.906223,77.628599
 WMQISXM1V1-00581,HEBBAL Cholanayakanahalli,"BLR_PVT_Chamundi Nagar, Hebbal",Private,Venkataswamappa Layout,Bengaluru,Karnataka,South,13.031634,77.598871
-WMQISXM1V1-00562,Jayanagar 4th T Block,BLR_PVT_Jayanagara 9th Block,Private,Jayanagar,Bengaluru,Karnataka,South,12.9188373,77.5908508
-WMQISXM1V1-00583,Shivajinagar Jewellery Street,"BLR_PVT_Jewellers St, Shivajinagar",Private,Shivajinagar,Bengaluru,Karnataka,South,12.985451,77.608708
-WMQISXM1V1-00587,Yadiyur Lake,"BLR_PVT_Thyagaraja Nagar, Basavanagudi",Private,Shivajinagar,Bengaluru,Karnataka,South,12.931012,77.570162
 WMQISXM1V1-00380,BRPL- Nehru Place 1,DEL_BRP_Nehru Place,BRPL,Nehru Place,Delhi,Delhi,North,28.54832,77.25464
 WMQISXM1V1-00402,Narela - IOCL Har Sreenath 2,"DEL_IOC_Haar-Shreenath-Narella, sector A7, Narela",IOCL,Narela,Delhi,Delhi,North,28.847158,77.099431
 WMQISXM1V1-00383,BRPL- Nehru Place 2,DEL_BRP_Nehru Place,BRPL,Nehru Place,Delhi,Delhi,North,28.54832,77.25464
-WMQISXM1V1-00584,Mysore road,BLR_BMR_Mysore road Metro station,BMRCL,Mysore road,Bengaluru,Karnataka,South,12.946048,77.53035
+WMQISXM1V1-00562,Jayanagar 4th T Block,BLR_PVT_Jayanagara 9th Block,Private,Jayanagar,Bengaluru,Karnataka,South,12.9188373,77.5908508
+WMQISXM1V1-00583,Shivajinagar Jewellery Street,"BLR_PVT_Jewellers St, Shivajinagar",Private,Shivajinagar,Bengaluru,Karnataka,South,12.985451,77.608708
+WMQISXM1V1-00587,Yadiyur Lake,"BLR_PVT_Thyagaraja Nagar, Basavanagudi",Private,Shivajinagar,Bengaluru,Karnataka,South,12.931012,77.570162
 WMQISXM1V1-00379,Nurpur,GUR_PVT_Nurpur,Private,Noorpur,Gurugram,Haryana,North,28.38793,77.03962
 WMQISXM1V1-00413,Raj Nagar 2,"GZB_PVT_ P & T Colony, Raj Nagar",Private,Raj Nagar,Ghaziabad,UP,North,28.674248,77.442612
-WMQISXM1V1-00532,BMRCL-Attiguppe,BLR_BMR_Attiguppe Metro  station,BMRCL,Attiguppe metro station,Bengaluru,Karnataka,South,12.96237,77.53419
-WMQISXM1V1-00589,Hosa Road,BLR_PVT_AECS Layout - A Block,Private,Singsandara,Bengaluru,Karnataka,South,12.877896,77.649372
+WMQISXM1V1-00584,Mysore road,BLR_BMR_Mysore road Metro station,BMRCL,Mysore road,Bengaluru,Karnataka,South,12.946048,77.53035
 WMQISXM1V1-00401,BHARAT SERVICE STATION,"DEL_IOC_BHARAT-SERVICE-STATION, GT Karnal Rd",IOCL,SINGHU BORDER G.T. KARNAL ROAD,Delhi,Delhi,North,28.854283,77.124719
 WMQISXM1V1-00412,Madhav Fuels 2,"DEL_IOC_Madhav-Fuels, Chetan Vihar",IOCL,Najafgarh,Delhi,Delhi,North,28.6083603,76.9531635
+WMQISXM1V1-00532,BMRCL-Attiguppe,BLR_BMR_Attiguppe Metro  station,BMRCL,Attiguppe metro station,Bengaluru,Karnataka,South,12.96237,77.53419
+WMQISXM1V1-00589,Hosa Road,BLR_PVT_AECS Layout - A Block,Private,Singsandara,Bengaluru,Karnataka,South,12.877896,77.649372
 WMQISXM1V1-00429,JP Nagar 1st Stage,"BLR_PVT_JP Nagar, 2nd Phase",Private,JP Nagar,Bengaluru,Karnataka,South,12.913209,77.592558
 WMQISXM1V1-00590,Mangammanapalya,"BLR_PVT_Popular Colony, Mangammanapalya",Private,ITI Layout,Bengaluru,Karnataka,South,12.900781,77.635794
 WMQISXM1V1-00425,Makanpur Indrapuram 1,"GZB_PVT_Biharipura, Nai Basti Dundahera",Private,Indirapuram,Ghaziabad,UP,North,28.638223,77.431092
 WMQISXM1V1-00426,Makanpur Indrapuram 2,"GZB_PVT_Biharipura, Nai Basti Dundahera",Private,Indirapuram,Ghaziabad,UP,North,28.638223,77.431092
-WMQISXM1V1-00592,BMRCL-Vijaynagar,BLR_BMR_Vijaynagar Metro station,BMRCL,Vijay Nagar Metro,Bengaluru,Karnataka,South,12.97028,77.537275
-WMQISXM1V1-00588,Sunkadakatte,"BLR_PVT_Vidyamanya Nagar, Sunkadakatte",Private,Vigneshwaranagara,Bengaluru,Karnataka,South,12.992822,77.50013
 WMQISXM1V1-00419,BRPL- Nehru Place 3,DEL_BRP_Nehru Place,BRPL,Nehru Place,Delhi,Delhi,North,28.54832,77.25464
 WMQISXM1V1-00418,Rajendra Place 3,DEL_DTL_Rajendra Place Metro station,DTL,BYPL ,Delhi,Delhi,North,28.642741,77.177471
+WMQISXM1V1-00592,BMRCL-Vijaynagar,BLR_BMR_Vijaynagar Metro station,BMRCL,Vijay Nagar Metro,Bengaluru,Karnataka,South,12.97028,77.537275
+WMQISXM1V1-00588,Sunkadakatte,"BLR_PVT_Vidyamanya Nagar, Sunkadakatte",Private,Vigneshwaranagara,Bengaluru,Karnataka,South,12.992822,77.50013
 WMQISXM1V1-00397,Sector 22 - Gurugram,"GUR_PVT_Molahera,Sector 22",Private,Sector 22,Gurugram,Haryana,North,28.507572,77.064762
 WMQISXM1V1-00396,Sector 34_ Gurugram,"GUR_PVT_Block A, Sector 34",Private,Sector 34,Gurugram,Haryana,North,28.42565,77.00841
 WMQISXM1V1-00591,RT Nagar Dinnur Road,"BLR_PVT_RT-Nagar, Dinnur Rd",Private,RT Nagar,Bengaluru,Karnataka,South,13.024825,77.598729
@@ -197,20 +194,18 @@ WMQISXM1V1-00597,National College,BLR_BMR_National college Metro station,BMRCL,N
 WMQISXM1V1-00300,Patel Nagar 1,DEL_DTL_Patel Nagar Metro Station,DTL,TPDDL ,Delhi,Delhi,North,28.644676,77.169145
 WMQISXM1V1-00302,Patel Nagar 2,DEL_DTL_Patel Nagar Metro Station,DTL,TPDDL ,Delhi,Delhi,North,28.644676,77.169145
 WMQISXM1V1-00527,K.B. ENTERPRISES_ Panipat 1,"PNP_RFP_Swastika Rd, Netaji Colony",DCO,Panipat,Panipat,Haryana,North,29.3843905,76.9728755
-WMQISXM1V1-00436,Shakurpur,DEL_PVT_Shakurpur,Private,Shakurpur,Delhi,Delhi,North,28.684728,77.1412953
+WMQISXM1V1-00395,Gurugram Sector 24,"GUR_PVT_DLF Phase 3, Sector 24",Private,Nathupura,Gurugram,HARYANA,North,28.486798,77.096278
 WMQISXM1V1-00595,BMRCL-J P Nagar,BLR_BMR_JP Nagar Metro station,BMRCL,Jayprakash Nagar,Bengaluru,Karnataka,South,12.907716,77.573336
 WMQISXM1V1-00596,OMBR Layout,"BLR_PVT_OMBR layout, Banaswadi",Private,Singsandara,Bengaluru,Karnataka,South,13.01076,77.65184
-WMQISXM1V1-00395,Gurugram Sector 24,"GUR_PVT_DLF Phase 3, Sector 24",Private,Nathupura,Gurugram,HARYANA,North,28.486798,77.096278
-WMQISXM1V1-00594,Ganganagar,"BLR_PVT_3rd Cross Rd, Ganganagar",Private,RT Nagar,Bengaluru,Karnataka,South,13.02393,77.587967
 WMQISXM1V1-00548,Patel Nagar 3,DEL_DTL_Patel Nagar Metro Station,DTL,TPDDL ,Delhi,Delhi,North,28.644676,77.169145
 WMQISXM1V1-00320,Sector 44-Chandigarh,"CDG_PVT_Sector 45, Burari",Private,Burail,Chandigarh,Punjab,North,30.7053688,76.762864
+WMQISXM1V1-00594,Ganganagar,"BLR_PVT_3rd Cross Rd, Ganganagar",Private,RT Nagar,Bengaluru,Karnataka,South,13.02393,77.587967
+WMQISXM1V1-00566,K B Eneterprises 2,"PNP_RFP_Swastika Rd, Netaji Colony",DCO,Panipat,Panipat,Haryana,North,29.3843905,76.9728755
 WMQISXM1V1-00600,Majestic,BLR_BMR_Majestic Metro station,BMRCL,Majestic,Bengaluru,Karnataka,South,12.97604,77.571139
 WMQISXM1V1-00598,MG Road,"BLR_PVT_Murphy Rd, Halasuru",Private,Jaya Raj Nagar,Bengaluru,Karnataka,South,12.981848,77.62463
-WMQISXM1V1-00566,K B Eneterprises 2,"PNP_RFP_Swastika Rd, Netaji Colony",DCO,Panipat,Panipat,Haryana,North,29.3843905,76.9728755
-WMQISXM1V1-00593,Yashwanthapura Goutam Nagar,"BLR_PVT_Goutham Nagar, Yashwanthapura",Private,Yeshwanthpura,Bengaluru,Karnataka,South,13.023051,77.544461
 WMQISXM1V1-00427,Noida Sector 55,"NOI_PVT_Block D, Sector 55",Private,Sector 55,Noida,UP,North,28.601958,77.348648
 WMQISXM1V1-00440,Om Sai Filling Station,"NOI_IOC_Om Sai Filling Station, Gaur city 2",IOCL,Sec 16,Noida,UP,North,28.617648,77.419243
-WMQISXM1V1-00370,Chander Vihar,"DEL_PVT_Chander Vihar, Nilothi",Private,Chander Vihar,Delhi,Delhi,North,28.655268,77.06349
+WMQISXM1V1-00593,Yashwanthapura Goutam Nagar,"BLR_PVT_Goutham Nagar, Yashwanthapura",Private,Yeshwanthpura,Bengaluru,Karnataka,South,13.023051,77.544461
 WMQISXM1V1-00362,Loni,"GZB_PVT_Loni Dehat, Bagh Ranap",Private,Loni,Ghaziabad,UP,North,28.744502,77.302422
 WMQISXM1V1-00601,Singaianapalya,"BLR_KZM_Maheswari Nagar, Mahadevapura",Kazam,MahadevPura,Bengaluru,Karnataka,South,12.995978,77.692317
 WMQISXM1V1-00355,PARAS AUTOMOBILES,"DEL_IOC_PARAS-AUTOMOBILES, Bijwasan",IOCL,Delhi,Delhi,Delhi,North,28.531327,77.062801
@@ -219,8 +214,8 @@ WMQISXM1V1-00605,SMPL Plant-3,"BLR_SMP_SUNM office, Doddanekkundi",SMPL,Dudanekh
 WMQISXM1V1-00604,Haralur,"BLR_PVT_ Lakedew Residency, Haralur",Private,Haralur,Bengaluru,Karnataka,South,12.901109,77.661746
 WMQISXM1V1-00603,HSR Somasunder Palya,,Private,HSR layout,Bengaluru,Karnataka,South,12.89799,77.65262
 WMQISXM1V1-00609,Marathahalli,"BLR_PVT_5thCross,Rd Marathahalli",Private,Marathahalli,Bengaluru,Karnataka,South,12.954511,77.69841
-WMQISXM1V1-00602,HSR Agara,,Private,HSR layout,Bengaluru,Karnataka,South,12.921405,77.649975
 WMQISXM1V1-00489,Kapra/Sainikpuri,"HYD_PVT_Kalyan Gardens, Chandragiri Colony",Private,Kapra,Hyderabad,Telangana,South,17.500601,78.539632
+WMQISXM1V1-00602,HSR Agara,,Private,HSR layout,Bengaluru,Karnataka,South,12.921405,77.649975
 WMQISXM1V1-00460,HEBBAL Baptist,"BLR_PVT_Ayyappa Layout, Hebbal",Private,Hebbal,Bengaluru,Karnataka,South,13.036823,77.593624
 WMQISXM1V1-00606,HSR Somasunder Palya 2,,Private,HSR layout,Bengaluru,Karnataka,South,12.898162,77.651974
 WMQISXM1V1-00481,Thanisandra,"BLR_PVT_Amam Enclave Layout, Ashwath Nagar",Private,Sinthan Nagar,Bengaluru,Karnataka,South,13.050146,77.634154
@@ -231,7 +226,6 @@ WMQISXM1V1-00456,Bowenpally,"HYD_PVT_Dhanalaxmi Colony, Bowenpally",Private,Secu
 WMQISXM1V1-00410,Supreme Court 1,DEL_DTL_Supreme Court Metro Station,DTL,BRPL ,Delhi,Delhi,North,28.623953,77.241308
 WMQISXM1V1-00486,Supreme Court 2,DEL_DTL_Supreme Court Metro Station,DTL,BRPL ,Delhi,Delhi,North,28.623953,77.241308
 WMQISXM1V1-00487,Supreme Court 3,DEL_DTL_Supreme Court Metro Station,DTL,BRPL ,Delhi,Delhi,North,28.623953,77.241308
-WMQISXM1V1-00571,Nahar Pur_ Rohini,"DEL_PVT_Naharpur, Rohini",Private,Rohini,Delhi,Delhi,North,28.705051,77.113798
 WMQISXM1V1-00447,Pratap nagar 1,DEL_DTL_Pratap Nagar Metro Station,DTL,TPDDL ,Delhi,Delhi,North,28.667085,77.198482
 WMQISXM1V1-00452,Vishwavidayalya parking 1,DEL_DTL_Vishwavidayalya Metro station parking,DTL,TPDDL ,Delhi,Delhi,North,28.69491,77.212915
 WMQISXM1V1-00448,Pratap nagar 2,DEL_DTL_Pratap Nagar Metro Station,DTL,TPDDL ,Delhi,Delhi,North,28.667085,77.198482
@@ -245,11 +239,11 @@ WMQISXM1V1-00536,The Janak Cinema-3,"DEL_BRP_Janak Cinema, Janakpuri",BRPL,Janak
 WMQISXM1V1-00578,Ramesh Nagar,"DEL_PVT_Ratan Park, Ramesh Nagar",Private,Ramesh Nagar,Delhi,Delhi,North,28.65467,77.13251
 WMQISXM1V1-00454,Kaushambi,"GZB_PVT_EDM mall Rd, Kaushambi",Private,GDA Market-Kaushambi,Ghaziabad,UP,North,28.640957,77.320549
 WMQISXM1V1-00455,SUMAN PETROLIUM,"GZB_IOC_SUMAN PETROLIUM, Vaishali",IOCL,Vaishali,Ghaziabad,UP,North,28.636068,77.329856
-WMQISXM1V1-02012,YELAHANKA Vishal Mart,"BLR_PVT_KHB Colony, Yelahanka New Town",Private,Yelahanka,Bengaluru,Karnataka,South,13.108,77.57751
 WMQISXM1V1-02014,Moulali,"HYD_PVT_Eshwar Nagar Colony, Moula Ali",Private,Moulali Road,Hyderabad,Telangana,South,17.462277,78.560169
+WMQISXM1V1-02012,YELAHANKA Vishal Mart,"BLR_PVT_KHB Colony, Yelahanka New Town",Private,Yelahanka,Bengaluru,Karnataka,South,13.108,77.57751
 WMQISXM1V1-00483,Devarabisanahalli,"BLR_PVT_ Devarabisanahalli, Bellandur",Private,Devarabisanahalli,Bengaluru,Karnataka,South,12.928271,77.686014
-WMQISXM1V1-00458,Multi Overseas India Pvt Ltd,PAN_FRN_Industrial area phase 1,Franchise,Panchkula,Panchkula,Haryana,North,30.66916,76.846887
 WMQISXM1V1-00475,Sahibabad,,Private,Shyam Park Extension,Ghaziabad,UP,North,28.678256,77.363843
+WMQISXM1V1-00458,Multi Overseas India Pvt Ltd,PAN_FRN_Industrial area phase 1,Franchise,Panchkula,Panchkula,Haryana,North,30.66916,76.846887
 WMQISXM1V1-00450,Tis hazari 1,DEL_DTL_Tis Hazari Metro Station,DTL,Tis hazari  Metri Station,Delhi,Delhi,North,28.667392,77.215304
 WMQISXM1V1-00451,Tis hazari 2,DEL_DTL_Tis Hazari Metro Station,DTL,Tis hazari  Metri Station,Delhi,Delhi,North,28.667392,77.215304
 WMQISXM1V1-00439,Abhishek filling Point,"GZB_IOC_Abhishek-Fill-Point, Raj nagar",IOCL,Raj Nagar,Ghaziabad,UP,North,28.676492,77.442344
@@ -274,10 +268,10 @@ WMQISXM1V1-00350,BRPL - M Block Market 1,"DEL_BRP_Block M, Greater Kailash",BRPL
 WMQISXM1V1-02002,Sharda Sharma 1,"GZB_FRN_Near Hari mandir, Nandgram Rd",Franchise,Ghooka Ghaziabad,Ghaziabad,UP,North,28.677501,77.4162269
 WMQISXM1V1-00522,BRPL - Mohan Singh Market-1,"DEL_BRP_Mohan Singh Market, INA",BRPL,INA Market,Delhi,Delhi,North,28.57362,77.211061
 WMQISXM1V1-00102,BRPL - Mohan Singh Market-2,"DEL_BRP_Mohan Singh Market, INA",BRPL,INA Market,Delhi,Delhi,North,28.57362,77.211061
-WMQISXM1V1-02023,E Chakra,"BLR_FRN_Upkar layout, Whitefield",Franchise,Whitefield,Bengaluru,Karnataka,South,12.9857,77.745
 WMQISXM1V1-02003,Noida sec 22 -Megha Sisodiya 1,"NOI_FRN_Sector 22, Block D, Chaura",Franchise,sector-22,Noida,UP,North,28.59738,77.349338
-WMQISXM1V1-02006,Rahul Verma -Vasundhara 2,"GZB_FRN_Prahlad Garhi Village, Vasundhara",Franchise,Ghaziabad,Ghaziabad,UP,North,28.656031,77.351756
+WMQISXM1V1-02023,E Chakra,"BLR_FRN_Upkar layout, Whitefield",Franchise,Whitefield,Bengaluru,Karnataka,South,12.9857,77.745
 WMQISXM1V1-02007,Bhim Nagar,"GUR_PVT_Mauji Wala Kuan Rd, Dayanand Colony",Private,Dayanand Colony,Gurugram,Haryana,North,28.473175,77.020564
+WMQISXM1V1-02006,Rahul Verma -Vasundhara 2,"GZB_FRN_Prahlad Garhi Village, Vasundhara",Franchise,Ghaziabad,Ghaziabad,UP,North,28.656031,77.351756
 WMQISXM1V1-02001,S. PERIYASAMY ,"DEL_FRN_Mayur vihar phase I, Trilokpuri",Franchise,"Patparganj,",Delhi,Delhi,North,28.6076733,77.3075447
 WMQISXM1V1-02009,TPDDL-Jahangirpuri 1,DEL_TPO_Bhalswa Jahangirpuri,Tata Power,Jahangirpuri,Delhi,Delhi,North,28.72649094,77.173188
 WMQISXM1V1-00088,Narain Singh_ Bamnoli-2,"DEL_PVT_Sector 28, Dwarka",Private,Bamnoli,Delhi,Delhi,North,28.547645,77.035428
@@ -289,8 +283,8 @@ WMQISXM1V1-00399,Patel Nagar/Karol Bagh,"DEL_PVT_New Patel Nagar, Shadipur",Priv
 WMQISXM1V1-00494,Vishnu Kumar Aggarwal 1,"DEL_FRN_Raghubir Nagar, Tagor Garden ext.",Franchise,Tagore Garden,Delhi,Delhi,North,28.654322,77.113672
 WMQISXM1V1-00495,Vishnu Kumar Aggarwal 2,"DEL_FRN_Raghubir Nagar, Tagor Garden ext.",Franchise,Tagore Garden,Delhi,Delhi,North,28.654322,77.113672
 WMQISXM1V1-00573,Narain Service Station,"FDB_IOC_Narain-Service-Station, Karkhana Bagh",IOCL,Karkhana Bagh,Faridabad,Haryana,North,28.424724,77.309441
-WMQISXM1V1-00101,Vijay Kumar Bansal & Anita Bansal 1,"DEL_FRN_Old Anarkali, Krishna Nagar",Franchise,Krishna Nagar,Delhi,Delhi,North,28.65489,77.28931
 WMQISXM1V1-02011,Sector 59 Mamura-Noida,"NOI_PVT_Mamura, Sector 66",Private,Sector 66,Noida,UP,North,28.601627,77.372975
+WMQISXM1V1-00101,Vijay Kumar Bansal & Anita Bansal 1,"DEL_FRN_Old Anarkali, Krishna Nagar",Franchise,Krishna Nagar,Delhi,Delhi,North,28.65489,77.28931
 WMQISXM1V1-00567,Jheel,"DEL_PVT_Pandit Park, Krishna Nagar",Private,Jheel Khurenja,Delhi,Delhi,North,28.654852,77.277938
 WMQISXM1V1-00478,IMT Manesar_ Sector 85,"GUR_PVT_IMT Manesar, Sector-85",Private,Sector 85,Gurugram,Haryana,North,28.40809,76.95606
 WMQISXM1V1-02028,Sree Sai Veera Service Station,"HYD_IOC_Rethibowli, Mehdipatnam",IOCL,Toli chowki,Hyderabad,Telangana,South,17.3954,78.43083
@@ -302,8 +296,8 @@ WMQISXM1V1-02026,SURAJMUKHI ASSOCIATES & DEVELOPERS 1,"DEL_FRN_Sector 32, Rohini
 WMQISXM1V1-02004,CM enterprises Janakpuri,"DEL_IOC_CM-Enterprises, Janakpuri",IOCL,Janakpuri,Delhi,Delhi,North,28.62956,77.07884
 WMQISXM1V1-02066,IOCL - Tyagi Petroleum,"DEL_IOC_Tyagi-Petroleum, Mundka",IOCL,Ghevra Rohtak Road,Delhi,Delhi,North,28.684705,76.999519
 WMQISXM1V1-02056,Pritam singh,"GZB_FRN_Block D, Nehru Nagar III",Franchise,Ghaziabad,Ghaziabad,UP,North,28.65947,77.444954
-WMQISXM1V1-00393,Arshdeep Singh Karwal 1,"DEL_FRN_Shindi colony, Naraina",Franchise,Delhi,Delhi,Delhi,North,28.624399,77.135937
 WMQISXM1V1-02042,JAI SAI MOTORS OKHLA,"DEL_IOC_JAI-SAI-MOTORS, OKHLA",IOCL,Delhi,Delhi,Delhi,North,28.527728,77.272826
+WMQISXM1V1-00393,Arshdeep Singh Karwal 1,"DEL_FRN_Shindi colony, Naraina",Franchise,Delhi,Delhi,Delhi,North,28.624399,77.135937
 WMQISXM1V1-02029,IOCL - Motor Ad Hoc,"DEL_IOC_Motor-Ad-Hoc, Library Ave, Pusa",IOCL,Pusa,Delhi,Delhi,North,28.64056,77.17341
 WMQISXM1V1-02054,Singhal Home Appliances,"GGN_FRN_Anamika Enclave, Sector 14",Franchise,Main Mehrauli Raod,Gurugram,HARYANA,North,28.46585,77.039988
 WMQISXM1V1-00570,Gaurav Chauhan 1,"NOI_FRN_Stellar greens, Sector 44",Franchise,Noida Sector - 44,Noida,UP,North,28.559828,77.345725
@@ -313,9 +307,9 @@ WMQISXM1V1-00234,Reisal Petro Service Station,"DEL_IOC_Reisal-Petro-Service-Stat
 WMQISXM1V1-02084,MAHAVIR BROTHER'S KSK,"GUR_IOC_MAHAVIR BROTHERS, KSK",IOCL,KAKROLA,Gurugram,Haryana,North,28.395893,76.918127
 WMQISXM1V1-00339,"D-1,Vasant Kunj - South Delhi1","DEL_BRP_Shanti Kunj B Block, Kishangarh",BRPL, Vasant Kunj ,Delhi,Delhi,North,28.5102,77.167631
 WMQISXM1V1-00349,"D-1,Vasant Kunj - South Delhi2","DEL_BRP_Shanti Kunj B Block, Kishangarh",BRPL, Vasant Kunj ,Delhi,Delhi,North,28.5102,77.167631
-WMQISXM1V1-00553,Sukhra Cars ,"BLR_GOM_Upkar Layout, Whitefield",GoMechanic,Chiklasandra,Bengaluru,Karnataka,South,12.914589,77.543948
-WMQISXM1V1-00414,Sunil Yadav 1,"GGN_FRN_Basai Enclave,Sector37C",Franchise,Basai Enclave II ,Gurugram,Haryana,North,28.452711,76.994072
 WMQISXM1V1-00484,TOP FUEL,"GZB_IOC_TOP FUEL, Gopal Nagar",IOCL,Gopal Nagar,Ghaziabad,UP,North,28.666717,77.422456
+WMQISXM1V1-00414,Sunil Yadav 1,"GGN_FRN_Basai Enclave,Sector37C",Franchise,Basai Enclave II ,Gurugram,Haryana,North,28.452711,76.994072
+WMQISXM1V1-00553,Sukhra Cars ,"BLR_GOM_Upkar Layout, Whitefield",GoMechanic,Chiklasandra,Bengaluru,Karnataka,South,12.914589,77.543948
 WMQISXM1V1-02071,IOCL-COCO JRO,"NOI_IOC_COCO JRO, Ecotech-II, Udyog Vihar",IOCL,Greater Noida,Noida,UP,North,28.496483,77.486464
 WMQISXM1V1-02032,IOCL-AKAASH AUTO CENTRE,"DEL_IOC_AKAASH-AUTO-CENTRE, Swasthya Vihar",IOCL,Laxmi Nagar,Delhi,Delhi,North,28.640264,77.28516
 WMQISXM1V1-00097,Chattarpur 1,DEL_DMR_Chhatarpur Metro station,DMRC,Chattarpur Metro,Delhi,Delhi,North,28.507877,77.175431
@@ -357,25 +351,25 @@ WMQISXM1V1-02010,Gaurav Chauhan 2,"NOI_FRN_Stellar greens, Sector 44",Franchise,
 WMQISXM1V1-02057,Narain Singh_ Bamnoli-1,"DEL_PVT_Sector 28, Dwarka",Private,Bamnoli,Delhi,Delhi,North,28.547645,77.035428
 WMQISXM1V1-02081,IOCL-Delhi-Dwaraka-Scorpio,"DEL_IOC_Dwaraka-Scorpio, Sector 18A, Kakrola",IOCL,Dwarka sector 12,Delhi,Delhi,North,28.5908357,77.0370097
 WMQISXM1V1-02063,IOCL-Gurugram-Vijay,"GUR_IOC_Vijay, Shivaji Nagar, Sector 11",IOCL,Rajiv Chowk,Gurugram,Haryana,North,28.45433,77.02943
-WMQISXM1V1-02087,Arshdeep Singh Karwal 2,"DEL_FRN_Shindi colony, Naraina",Franchise, NARAINA VIHAR,Delhi,Delhi,North,28.624399,77.135937
 WMQISXM1V1-00276,Sikanderpur Metro Station 1,GUR_STQ_Sikanderpur Metro Station,STATIQ,Sikanderpur,Gurugram,HARYANA,North,28.48142,77.092535
 WMQISXM1V1-00358,Sikanderpur Metro Station 2,GUR_STQ_Sikanderpur Metro Station,STATIQ,Sikanderpur,Gurugram,HARYANA,North,28.48142,77.092535
+WMQISXM1V1-02087,Arshdeep Singh Karwal 2,"DEL_FRN_Shindi colony, Naraina",Franchise, NARAINA VIHAR,Delhi,Delhi,North,28.624399,77.135937
 WMQISXM1V1-00187,IOCL-Faridabad-Metro Road,"FDB_IOC_Metro-Road, Aravalli Golf course",IOCL,Dussera ground,Faridabad,Haryana,North,28.39015,77.29393
 WMQISXM1V1-00376,IOCL-Gurugram-Fuel-Junction,"GUR_IOC_Fuel-Junction, DLF Cyber City",IOCL,DLF cyber city,Gurugram,Haryana,North,28.48933,77.09109
 WMQISXM1V1-00369,IOCL-Gurugram-GolfExGas,"GUR_IOC_GolfExGas, Sector 62",IOCL,Sector 62,Gurugram,Haryana,North,28.41293,77.07855
 WMQISXM1V1-00421,Govindpuri Metro Station 1,DEL_STQ_Govindpuri Metro Station,STATIQ,Govindpuri,Delhi,Delhi,North,28.544366,77.264706
 WMQISXM1V1-02076,Charu Goel  & Chetan Goel 1,"NOI_FRN_Chaukhandi, Basi Bahuddin Nagar",Franchise,Noida,Noida,UP,North,28.60182,77.39409
-WMQISXM1V1-02077,Charu Goel  & Chetan Goel 2,"NOI_FRN_Chaukhandi, Basi Bahuddin Nagar",Franchise,Noida,Noida,UP,North,28.60182,77.39409
 WMQISXM1V1-00150,Govindpuri Metro Station 2,DEL_STQ_Govindpuri Metro Station,STATIQ,Govindpuri,Delhi,Delhi,North,28.544366,77.264706
 WMQISXM1V1-02082,IOCL-Noida-Major-Anurag,"NOI_IOC_Major Anurag, E block, Sector 63",IOCL,Sector 52,Noida,UP,North,28.59325,77.37247
+WMQISXM1V1-02077,Charu Goel  & Chetan Goel 2,"NOI_FRN_Chaukhandi, Basi Bahuddin Nagar",Franchise,Noida,Noida,UP,North,28.60182,77.39409
 WMQISXM1V1-02080,"IOCL Shankar Automobiles, Gole Market","DEL_IOC_Shankar-Automobiles, Gole-Market",IOCL,Bhai Vir Singh Marg,Delhi,Delhi,North,28.63123703,77.2057096
 WMQISXM1V1-02103,DMRC-Rohini Sec.18 2,DEL_DMR_Rohini Metro station,DMRC,Rohin Metro Station,Delhi,Delhi,North,28.738848,77.139738
 WMQISXM1V1-02104,IOCL-Delhi-Moolchand,"DEL_IOC_Moolchand, Vasant Vihar",IOCL,Vasant vihar,Delhi,Delhi,North,28.5578333,77.1632176
+WMQISXM1V1-00576,BYPL-NAND NAGRI-Dhalao-1,"DEL_BYP_Nand Nagri, Mandoli",BYPL,NEAR AKHARA NAND NAGRI,Delhi,Delhi,North,28.69385,77.310534
 WMQISXM1V1-00557,IOCL-Bengaluru-HAL-Madhu,"BLR_IOC_HAL-Madhu, old Airport Rd",IOCL,Indra nagar,Bengaluru,Karnataka,South,12.95992,77.64572
 WMQISXM1V1-00525,IOCL-Bengaluru-Koramangala-Kaveri,BLR_IOC_Koramangala-Kaveri,IOCL,Koramangla,Bengaluru,Karnataka,South,12.94534,77.61863
-WMQISXM1V1-00576,BYPL-NAND NAGRI-Dhalao-1,"DEL_BYP_Nand Nagri, Mandoli",BYPL,NEAR AKHARA NAND NAGRI,Delhi,Delhi,North,28.69385,77.310534
-WMQISXM1V1-02044,Spark Motors (Nitin Gupta) 2,"DEL_FRN_Madipur JJ colony, Block A",Franchise, JJ Colony Madipur,Delhi,Delhi,North,28.674935,77.119194
 WMQISXM1V1-02052,24 SEVEN FILLING STATION,"GUR_IOC_Nirvana County, Sector 50",IOCL,BADSHAHPUR,Gurugram,HARYANA,North,28.41014,77.06592
+WMQISXM1V1-02044,Spark Motors (Nitin Gupta) 2,"DEL_FRN_Madipur JJ colony, Block A",Franchise, JJ Colony Madipur,Delhi,Delhi,North,28.674935,77.119194
 WMQISXM1V1-00337,Hulimavu,"BLR_PVT_Tejaswini Nagar, Ph 2",Private,Nandi Citadel,Bengaluru,Karnataka,South,12.8611216,77.6046119
 WMQISXM1V1-00446,Kudlugate,"BLR_PVT_Kudlu Gate, AECS Layout ",Private,AECS Layout,Bengaluru,Karnataka,South,12.8856652,77.6472462
 WMQISXM1V1-02083,IOCL-Panchkula-Natraj,"PAN_IOC_Natraj, Dhakoli",IOCL,Sector 20,Panchkula,Haryana,North,30.66147,76.84479
@@ -398,8 +392,8 @@ WMQISXM1V1-00580,Dabirpura,"HYD_IRS_Bommanvadi Colony, Dabeerpura ",Indian Rail
 WMQISXM1V1-02100,Sourabh Bhatia,,Franchise,sector 68,Noida,UP,North,28.601699,77.39402
 WMQISXM1V1-02064,Huppuguda ,HYD_IRS_Railway Station Huppuguda,Indian Railways,Huppuguda ,Hyderabad,Telangana,South,17.34143804,78.48235143
 WMQISXM1V1-02048,Mayapuri Depot 1,DEL_DTL_Mayapuri Depot,DTL,BRPL ,Delhi,Delhi,North,28.63638,77.13007
-WMQISXM1V1-02095,AS Malhotra  Vaishali Sector -4,"GZB_FRN_Vaishali extension, Sector 4",Franchise,Ghaziabad,Ghaziabad,UP,North,28.65054,77.34295315
 WMQISXM1V1-02043,Mayapuri Depot 2,DEL_DTL_Mayapuri Depot,DTL,BRPL ,Delhi,Delhi,North,28.63638,77.13007
+WMQISXM1V1-02095,AS Malhotra  Vaishali Sector -4,"GZB_FRN_Vaishali extension, Sector 4",Franchise,Ghaziabad,Ghaziabad,UP,North,28.65054,77.34295315
 WMQISXM1V1-02106,Falakunuma ,"HYD_IRS_Yadgiri Nagar, Falaknuma",Indian Railways,Falakunuma ,Hyderabad,Telangana,South,17.332716,78.475685
 WMQISXM1V1-02061,AS Malhotra  Vaishali Sector -4 (2),"GZB_FRN_Vaishali extension, Sector 4",Franchise,Ghaziabad,Ghaziabad,UP,North,28.65054,77.34295315
 WMQISXM1V1-00549,IOCL-Bengaluru-HSR 1,"BLR_IOC_HSR Layout, Agara Village",IOCL,HSR layout,Bengaluru,Karnataka,South,12.9215,77.64467
@@ -424,8 +418,8 @@ WMQISXM1V1-00122,Chandigarh Gas Company,CDG_PVT_Khudda Lahora,Private,KUDDA JASS
 WMQISXM1V1-00218,"Sector 41, Chandigarh","CDG_PVT_Buterla Village, Sector 41",Private,Sector 41,Chandigarh,Chandigarh,North,30.731384,76.739271
 WMQISXM1V1-00409,TRS Commercials1,"DEL_FRN_Khichripur Rd, Kalyanpuri",Franchise,East Vinod Nagar,Delhi,Delhi,North,28.623472,77.310104
 WMQISXM1V1-00474,TRS Commercials2,"DEL_FRN_Khichripur Rd, Kalyanpuri",Franchise,East Vinod Nagar,Delhi,Delhi,North,28.623472,77.310104
-WMQISXM1V1-00507,JP Nagar_Pvt_2,"BLR_PVT_Hub_Puttenahalli,JP Nagar",Private,JP nagar,Bengaluru,Karnataka,South,12.89321982,77.58404202
 WMQISXM1V1-00510,Akshay Rathi ,"DEL_FRN_Rathi chowk, Rohini",Franchise,shahbad,Delhi,Delhi,North,28.74496761,77.09794828
+WMQISXM1V1-00507,JP Nagar_Pvt_2,"BLR_PVT_Hub_Puttenahalli,JP Nagar",Private,JP nagar,Bengaluru,Karnataka,South,12.89321982,77.58404202
 WMQISXM1V1-00543,Harvinder Kumar 1,"DEL_FRN_Block M, Raghubir Nagar",Franchise,RAGHUBIR NAGAR,Delhi,Delhi,North,28.654031,77.113751
 WMQISXM1V1-00124,Charu Goel  & Chetan Goel 3,"NOI_FRN_Chaukhandi, Basi Bahuddin Nagar",Franchise,Noida,Noida,UP,North,28.60182,77.39409
 WMQISXM1V1-02040,Raj Rani,"DEL_FRN_Kirari Extension, Nangloi",Franchise,Nangloi,Delhi,Delhi,North,28.684142,77.065373
@@ -446,8 +440,8 @@ WMQISXM1V1-00207,Aasha enterprises ( Rajwanti ),"DEL_FRN_P1 Street, Budh Vihar,P
 WMQISXM1V1-00432,Vikas Rana,"NOI_FRN_
 Chaura Raghunathpur, Block D",Franchise,Sector 22,Noida,UP,North,28.597444,77.348618
 WMQISXM1V1-00386,HARE KRISHNA FUELS,"DEL_IOC_Hare Krishna Fuels, Mehrauli",IOCL,MEHRAULI,Delhi,Delhi,North,28.49504,77.15094
-WMQISXM1V1-00117,MP Fuels- Kudlu gate,"BLR_IOC_MP fuels, Kudlu gate",IOCL,Kudlugate,Bengaluru,Karnataka,South,12.8934,77.6506
 WMQISXM1V1-00368,MANGAL PETRO-2,"DEL_IOC_Mangal Petro, West Enclave, Pitampura",IOCL,Pitampura,Delhi,Delhi,North,28.688816,77.104702
+WMQISXM1V1-00117,MP Fuels- Kudlu gate,"BLR_IOC_MP fuels, Kudlu gate",IOCL,Kudlugate,Bengaluru,Karnataka,South,12.8934,77.6506
 WMQISXM1V1-00236,BRPL - M block Market 3,"DEL_BRP_Block M, Greater Kailash",BRPL,"GK-II, M-Block Market",Delhi,Delhi,North,28.532402,77.242656
 WMQISXM1V1-00160,BRPL-Paschim Vihar East 2,"DEL_BRP_Shiva Enclave, Paschim Vihar",BRPL,Paschim Vihar East,Delhi,delhi,North,28.677235,77.111966
 WMQISXM1V1-00306,BRPL - Mohan Singh Market 3,"DEL_BRP_Mohan Singh Market, INA",BRPL,INA Market,Delhi,Delhi,North,28.57362,77.211061
@@ -469,27 +463,27 @@ WMQISXM1V1-00403,Millennium City Centre Gurugram1,GGN_STQ_Millennium City Centre
 WMQISXM1V1-00404,Millennium City Centre Gurugram2,GGN_STQ_Millennium City Centre Metro,STATIQ,Gurugram,Gurugram,HARYANA,North,28.45854,77.07176
 WMQISXM1V1-00277,GAUTAMPURI 1,"DEL_BYPL_Kaithwara Jagjivan Nagar, Shahdara",BYPL,Delhi,Delhi,Delhi,North,28.678465,77.257801
 WMQISXM1V1-00227,GAUTAMPURI 2,"DEL_BYPL_Kaithwara Jagjivan Nagar, Shahdara",BYPL,Delhi,Delhi,Delhi,North,28.678465,77.257801
-WMQISXM1V1-02022,Powerpod- Bellandur-1,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
-WMQISXM1V1-00023,Powerpod- Bellandur-2,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
 WMQISXM1V1-00485,BMR Enterprises,DEL_RFP_Karawal Nagar,Franchise,KARAWAL NAGAR,Delhi,Delhi,North,28.732764,77.260403
 WMQISXM1V1-00501,Askara,DEL_FRN_JJ Colony_Bawana,Franchise,Delhi,Delhi,Delhi,North,28.807512,77.051096
 WMQISXM1V1-00528,BMR Enterprises,DEL_RFP_Karawal Nagar,Franchise,KARAWAL NAGAR,Delhi,Delhi,North,28.732764,77.260403
+WMQISXM1V1-02022,Powerpod- Bellandur-1,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
+WMQISXM1V1-00023,Powerpod- Bellandur-2,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
 WMQISXM1V1-00470,Seelampur Metro Station,DEL_STQ_Seelampur Metro-Station,STATIQ,Seelampur Delhi,Delhi,Delhi,North,28.67055,77.26646
 WMQISXM1V1-00387,Seelampur Metro Station,DEL_STQ_Seelampur Metro-Station,STATIQ,Seelampur Delhi,Delhi,Delhi,North,28.67055,77.26646
 WMQISXM1V1-00417,Dharampal Yadav 2,"DEL_FRN_Sector 18, Rohini",Franchise,Rohini Sector 18,Delhi,Delhi,North,28.740156,77.139758
 WMQISXM1V1-00529,Powerpod- Yeswantpur-1,"BLR_PPD_Industrial Suburb, Yeswanthpur",Power pod,Yeshwanthpura,Bengaluru,Karnataka,South,"13.02349547	",77.54125245
-WMQISXM1V1-00435,Rahul Yadav,"GUR_FRN_Sector 18, Sarhaul",Franchise,Gurugram-Sector 18,Gurugram,Haryana,North,28.48588,77.07115
 WMQISXM1V1-00253,SALOCHNA FILLING STATION,"DEL_IOC_Salochna Filling station,Tyagi Vihar",IOCL,GHEVRA,Delhi,Delhi,North,28.68966,76.99373
-WMQISXM1V1-00053,Powerpod- Bellandur-3,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
+WMQISXM1V1-00435,Rahul Yadav,"GUR_FRN_Sector 18, Sarhaul",Franchise,Gurugram-Sector 18,Gurugram,Haryana,North,28.48588,77.07115
 WMQISXM1V1-00313,Yashpal Singh,DEL_FRN_Peer Baba Basti_Jaitpur,Franchise,Badarpur,Delhi,Delhi,North,28.508537,77.329905
 WMQISXM1V1-00344,Anycar Mobilty Solutions Pvt Ltd,GUR_FRN_Laxman Vihar Ind. Area,Franchise,Gurugram,Gurugram,HARYANA,North,28.48533,77.01114
+WMQISXM1V1-00053,Powerpod- Bellandur-3,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
 WMQISXM1V1-00284,Anycar Mobilty Solutions Pvt Ltd2,GUR_FRN_Laxman Vihar Ind. Area,Franchise,Gurugram,Gurugram,HARYANA,North,28.48533,77.01114
 WMQISXM1V1-00538,Hybrid Fleet Management Pvt Ltd.2,"DEL_FRN_Uday vihar 2, Kamruddin Nagar",Franchise,Nilothi Extn,Delhi,Delhi,North,28.65922,77.06479
 WMQISXM1V1-00471,GAZIPUR DAIRY FARM,DEL_BYP_Metro Depot_Ghazipur,BYPL,DALLUPURA,Delhi,Delhi,North,28.62646,77.32124
 WMQISXM1V1-00291,GAZIPUR DAIRY FARM,DEL_BYP_Metro Depot_Ghazipur,BYPL,DALLUPURA,Delhi,Delhi,North,28.62646,77.32124
 WMQISXM1V1-00154,BRPL-Paschim Vihar East 3,"DEL_BRP_Shiva Enclave, Paschim Vihar",BRPL,Paschim Vihar East,Delhi,delhi,North,28.677235,77.111966
-WMQISXM1V1-02019,Powerpod- Yeswantpur-2,"BLR_PPD_Industrial Suburb, Yeswanthpur",Power pod,Yeswanthpura,Bengaluru,Karnataka,South,13.02349547,77.54125245
 WMQISXM1V1-00516,Arora Battery and Motors 3,"DEL_FRN_Sector 3, Rohini",Franchise,Rohini,Delhi,Delhi,North,28.704765,77.107268
+WMQISXM1V1-02019,Powerpod- Yeswantpur-2,"BLR_PPD_Industrial Suburb, Yeswanthpur",Power pod,Yeswanthpura,Bengaluru,Karnataka,South,13.02349547,77.54125245
 WMQISXM1V1-00290,Vishnu Kumar Aggarwal 3,"DEL_FRN_Raghubir Nagar, Tagor Garden ext.",Franchise,Tagore Garden,Delhi,Delhi,North,28.654322,77.113672
 WMQISXM1V1-00430,Pinkey,"DEL_FRN_Old Anarkali, Ram Nagar",Franchise,Aram park,Delhi,Delhi,North,28.653504,77.288495
 WMQISXM1V1-00356,Whole Star 1,"SNP_FRN_Industrial area, near Ashok nagar",Franchise, Inderpuri ,Sonipat,HARYANA,North,28.986242,77.025686
@@ -500,9 +494,9 @@ WMQISXM1V1-00345,Harvinder Kumar 2,"DEL_FRN_Block M, Raghubir Nagar",Franchise,R
 WMQISXM1V1-00048,Millennium City Centre Gurugram3,GGN_STQ_Millennium City Centre Metro,STATIQ,Gurugram,Gurugram,HARYANA,North,28.45854,77.07176
 WMQISXM1V1-00012,Mayapuri Depot 3,DEL_DTL_Mayapuri Depot,DTL,BRPL ,Delhi,Delhi,North,28.63638,77.13007
 WMQISXM1V1-00121,Gurvinder Kaur,"GZB_FRN_Galek chand, Nehru Nagar III",Franchise,Ghandhi Nagar,Ghaziabad,UP,North,28.657277,77.439725
-WMQISXM1V1-00294,ELECTRONIC CITY-Green Drive ,"BLR_FRN_Veer Sandra, Electronic City",Franchise,Electronic City ,Bengaluru,Karnataka,South,12.836549,77.678243
 WMQISXM1V1-00008,IOCL-AKAASH AUTO CENTRE 2,"DEL_IOC_AKAASH-AUTO-CENTRE, Swasthya Vihar",IOCL,Laxmi Nagar,Delhi,Delhi,North,28.640264,77.28516
 WMQISXM1V1-00328,IOCL - Motor Ad Hoc2,"DEL_IOC_Motor-Ad-Hoc, Library Ave, Pusa",IOCL,Pusa,Delhi,Delhi,North,28.64056,77.17341
+WMQISXM1V1-00294,ELECTRONIC CITY-Green Drive ,"BLR_FRN_Veer Sandra, Electronic City",Franchise,Electronic City ,Bengaluru,Karnataka,South,12.836549,77.678243
 WMQISXM1V1-00434,Aman Fill Point2,"DEL_IOC_Aman-Fill-Point, Mayur vihar Ph I",IOCL,East Delhi,Delhi,Delhi,North,28.6216833,77.30175
 WMQISXM1V1-00464,ISBT Kashmiri Gate,"DEL_DTI_ISBT, Kashmiri Gate",DTIDC,Kashmiri Gate,Delhi,Delhi,North,28.66877,77.22891
 WMQISXM1V1-00308,Aasha enterprises 1 ( Ram Prakash Dalal),"DEL_FRN_P1 Street, Budh Vihar,Phase 1",Franchise,Pooth Kalan,Delhi,Delhi,North,28.710639,77.086711
@@ -536,19 +530,19 @@ WMQISXM1V1-00646,Powerpod- Hoodi-1,BLR_PPD_Kundalahalli_Main_Rd_Hoodi,Power pod,
 WMQISXM1V1-00647,Powerpod- Hoodi-2,BLR_PPD_Kundalahalli_Main_Rd_Hoodi,Power pod,Mahadevpura,Bengaluru,Karnataka,South,12.98416085,77.71148888
 WMQISXM1V1-00648,Powerpod- Hoodi-3,BLR_PPD_Kundalahalli_Main_Rd_Hoodi,Power pod,Mahadevpura,Bengaluru,Karnataka,South,12.98416085,77.71148888
 WMQISXM1V1-00638,Pattandur Aghrahara(ITPL),BLR_BMR_Pattandur_Aghrahara_ Metro_station,BMRCL,ITPL,Bengaluru,Karnataka,South,12.987613,77.738211
-WMQISXM1V1-00651,Hope Farm Channasandra,BLR_BMR_Hope_Farm_Channasandra_Metro_Station,BMRCL,Hope Farm,Bengaluru,Karnataka,South,12.98793,77.75409
 WMQISXM1V1-00642,Lakdikapul -1,HYD_IRS_Lakdikapul,Indian Railways,Lakdikapul ,Hyderabad,Telangana,South,17.40206,78.48401
 WMQISXM1V1-00644,Lakdikapul -2,HYD_IRS_Lakdikapul,Indian Railways,Lakdikapul ,Hyderabad,Telangana,South,17.40206,78.48401
+WMQISXM1V1-00651,Hope Farm Channasandra,BLR_BMR_Hope_Farm_Channasandra_Metro_Station,BMRCL,Hope Farm,Bengaluru,Karnataka,South,12.98793,77.75409
 WMQISXM1V1-00650,Sri Sathya Sai Hospital ,BLR_BMR_Sri_Sathya_sai_Hospital_ Metro_station,BMRCL,Whitefield,Bengaluru,Karnataka,South,12.98102,77.72762
 WMQISXM1V1-00652,Kundalahalli,BLR_BMR_Kundalahalli_ Metro_station,BMRCL,Brookefield,Bengaluru,Karnataka,South,12.977461,77.715761
 WMQISXM1V1-00639,Hoodi Junction,BLR_BMR_Hoodi_ Metro_station,BMRCL,Hoodi,Bengaluru,Karnataka,South,12.98873,77.71127
 WMQISXM1V1-00649,Garudhachar Palaya,BLR_BMR_Garudhachar_Palaya_ Metro_station,BMRCL,Hoodi,Bengaluru,Karnataka,South,12.99356,77.70376
 WMQISXM1V1-00627,Seethramplaya,BLR_BMR_Seethramplaya_ Metro_station,BMRCL,Mahadevpura,Bengaluru,Karnataka,South,12.98092,77.70887
-WMQISXM1V1-00664,KR Puram,BLR_BMR_KR_Puram_ Metro_station,BMRCL,Krishnarajapuram,Bengaluru,Karnataka,South,12.99999,77.67794
-WMQISXM1V1-00662,Konankunte Cross,BLR_BMR_Konankunte_Cross_ Metro_station,BMRCL,Konankunte,Bengaluru,Karnataka,South,12.884722,77.552778
 WMQISXM1V1-00658,Kukatpalli 1,HYD_PVT_Hub_Kukatpally,Hub-Private,KPHB,Hyderabad,Telangana,South,17.478526,78.430365
 WMQISXM1V1-00660,Kukatpalli 2,HYD_PVT_Hub_Kukatpally,Hub-Private,KPHB,Hyderabad,Telangana,South,17.478526,78.430365
 WMQISXM1V1-00661,Kukatpalli 3,HYD_PVT_Hub_Kukatpally,Hub-Private,KPHB,Hyderabad,Telangana,South,17.478526,78.430365
+WMQISXM1V1-00664,KR Puram,BLR_BMR_KR_Puram_ Metro_station,BMRCL,Krishnarajapuram,Bengaluru,Karnataka,South,12.99999,77.67794
+WMQISXM1V1-00662,Konankunte Cross,BLR_BMR_Konankunte_Cross_ Metro_station,BMRCL,Konankunte,Bengaluru,Karnataka,South,12.884722,77.552778
 WMQISXM1V1-00654,Srinagar Colony_Yusufguda Metro,HYD_PVT_Hub_Srinagar Colony_Yusufguda Metro,Hub-Private,Srinagar Colony,Hyderabad,Telangana,South,17.434068,78.43613
 WMQISXM1V1-00655,Srinagar Colony_Yusufguda Metro,HYD_PVT_Hub_Srinagar Colony_Yusufguda Metro,Hub-Private,Srinagar Colony,Hyderabad,Telangana,South,17.434068,78.43613
 WMQISXM1V1-00656,Srinagar Colony_Yusufguda Metro,HYD_PVT_Hub_Srinagar Colony_Yusufguda Metro,Hub-Private,Srinagar Colony,Hyderabad,Telangana,South,17.434068,78.43613
@@ -573,17 +567,17 @@ WMQISXM1V1-00704,Suchitra Centre Halt 3,HYD_IRS_Suchitra_Centre_Halt,Indian Rail
 WMQISXM1V1-00671,Borbanda 1,HYD_IRS_Borbanda,Indian Railways,Borbanda,Hyderabad,Telangana,South,17.45939391,78.40786453
 WMQISXM1V1-00675,Borbanda 2,HYD_IRS_Borbanda,Indian Railways,Borbanda,Hyderabad,Telangana,South,17.45939391,78.40786453
 WMQISXM1V1-00657,Lakdikapul -3,HYD_IRS_Lakdikapul,Indian Railways,Lakdikapul ,Hyderabad,Telangana,South,17.40206,78.48401
-WMQISXM1V1-00688,Powerpod- Thannisandra-4,"BLR_PPD_P&T layout,Thannisandra",Power pod,Thannisandra,Bengaluru,Karnataka,South,13.06079539,77.6288544
-WMQISXM1V1-00714,Powerpod- Thannisandra-5,"BLR_PPD_P&T layout,Thannisandra",Power pod,Thannisandra,Bengaluru,Karnataka,South,13.06079539,77.6288544
 WMQISXM1V1-00325,ONRAY FUELS 1,GUR_IOC_ONRAY_FUELS,IOCL,SECTOR 104,Gurugram,Haryana,North,28.48444,77.00015
 WMQISXM1V1-00228,ONRAY FUELS 2,GUR_IOC_ONRAY_FUELS,IOCL,SECTOR 104,Gurugram,Haryana,North,28.48444,77.00015
+WMQISXM1V1-00688,Powerpod- Thannisandra-4,"BLR_PPD_P&T layout,Thannisandra",Power pod,Thannisandra,Bengaluru,Karnataka,South,13.06079539,77.6288544
+WMQISXM1V1-00714,Powerpod- Thannisandra-5,"BLR_PPD_P&T layout,Thannisandra",Power pod,Thannisandra,Bengaluru,Karnataka,South,13.06079539,77.6288544
 WMQISXM1V1-00691,Neredmet Halt 1,HYD_IRS_Neredmet_Halt,Indian Railways,AS Rao Nagar,Hyderabad,Telangana,South,17.47882232,78.53611749
 WMQISXM1V1-00698,Neredmet Halt 2,HYD_IRS_Neredmet_Halt,Indian Railways,AS Rao Nagar,Hyderabad,Telangana,South,17.47882232,78.53611749
 WMQISXM1V1-00679,Hitech City 1,HYD_IRS_Hitech_City,Indian Railways,Hitech City,Hyderabad,Telangana,South,17.47052754,78.38468766
 WMQISXM1V1-00689,Hitech City 2,HYD_IRS_Hitech_City,Indian Railways,Hitech City,Hyderabad,Telangana,South,17.47052754,78.38468766
+WMQISXM1V1-02059,Sharda Sharma 2,"GZB_FRN_Near Hari mandir, Nandgram Rd",Franchise,Ghooka Ghaziabad,Ghaziabad,UP,North,28.6769359,77.41705
 WMQISXM1V1-00715,Powerpod- Bellandur-4,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
 WMQISXM1V1-00717,Powerpod- Bellandur-5,"BLR_PPD_Bellandur Railway Station Rd, Panathur",Power pod,Panathur,Bengaluru,Karnataka,South,12.94017477,77.70561583
-WMQISXM1V1-02059,Sharda Sharma 2,"GZB_FRN_Near Hari mandir, Nandgram Rd",Franchise,Ghooka Ghaziabad,Ghaziabad,UP,North,28.6769359,77.41705
 WMQISXM1V1-00686,COCO-Madhapur 1,HYD_IOC_COCO_Madhapur,IOCL,Madhapur,Hyderabad,Telangana,South,17.44076,78.391396
 WMQISXM1V1-00659,Neredmet Halt 3,HYD_IRS_Neredmet_Halt,Indian Railways,AS Rao Nagar,Hyderabad,Telangana,South,17.47882232,78.53611749
 WMQISXM1V1-00156,Geeta Petro Station 1,GUR_IOC_Geeta Petro,IOCL,PATAUDI CHOWK,Gurugram,Haryana,North,28.457269,77.004654
@@ -647,14 +641,14 @@ WMQISXM1V1-00636,James Street,HYD_IRS_James Street,Indian Railways,Karbala Maida
 WMQISXM1V1-00718,ADITYA SERVICE STATION,"WRL_IOC_ADITYA,SERVICE STATION",IOCL,Warangal,Warangal,Telangana,South,17.98924,79.61684
 WMQISXM1V1-00719,ADITYA SERVICE STATION,"WRL_IOC_ADITYA,SERVICE STATION",IOCL,Warangal,Warangal,Telangana,South,17.98924,79.61684
 WMQISXM1V1-00709,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
-WMQISXM1V1-00735,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
-WMQISXM1V1-00736,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
-WMQISXM1V1-00737,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
 WMQISXM1V1-00240,RAJASTHAN HIGHWAY SERVICE,"JPR_IOC_Rajasthan,Highway Service",IOCL,AGRA ROAD TRANSPORT NAGAR,Jaipur,Rajasthan,North,26.906257,75.842778
 WMQISXM1V1-00028,Govind Nagar West 1,JPR_PVT_Hub_Jal Mahal,Hub-Private,Govind Nagar West,Jaipur,Rajasthan,North,26.948923,75.841468
 WMQISXM1V1-00033,Govind Nagar West 2,JPR_PVT_Hub_Jal Mahal,Hub-Private,Govind Nagar West,Jaipur,Rajasthan,North,26.948923,75.841468
 WMQISXM1V1-00034,Govind Nagar West 3,JPR_PVT_Hub_Jal Mahal,Hub-Private,Govind Nagar West,Jaipur,Rajasthan,North,26.948923,75.841468
 WMQISXM1V1-00035,Govind Nagar West 4,JPR_PVT_Hub_Jal Mahal,Hub-Private,Govind Nagar West,Jaipur,Rajasthan,North,26.948923,75.841468
+WMQISXM1V1-00735,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
+WMQISXM1V1-00736,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
+WMQISXM1V1-00737,Horamavu-Private Hub,"BLR_PVT_Hub_Khane RD,Horamavu",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.039139,77.67305
 WMQISXM1V1-00058,ARORA ENTERPRISES 4,"DEL_FRN_Sector 24, Rohini",Franchise, ROHINI,Delhi,Delhi,North,28.729868,77.091049
 WMQISXM1V1-00036,Shastri Nagar 1,"JPR_PVT_Hub_Sahra Marg,ShastriNagar",Hub-Private,Shastri Nagar,Jaipur,Rajasthan,North,26.953091,75.794039
 WMQISXM1V1-00064,Shastri Nagar 2,"JPR_PVT_Hub_Sahra Marg,ShastriNagar",Hub-Private,Shastri Nagar,Jaipur,Rajasthan,North,26.953091,75.794039
@@ -663,9 +657,6 @@ WMQISXM1V1-00062,Shastri Nagar 4,"JPR_PVT_Hub_Sahra Marg,ShastriNagar",Hub-Priva
 WMQISXM1V1-00733,SREE BHALAJIE ENTERPRISES,"BLR_IOC_SREE BHALAJIE,ENTERPRISES",IOCL,BANSAWADI,Bengaluru,Karnataka,South,13.014797,77.661934
 WMQISXM1V1-00734,SREE BHALAJIE ENTERPRISES,"BLR_IOC_SREE BHALAJIE,ENTERPRISES",IOCL,BANSAWADI,Bengaluru,Karnataka,South,13.014797,77.661934
 WMQISXM1V1-00705,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
-WMQISXM1V1-00713,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
-WMQISXM1V1-00725,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
-WMQISXM1V1-00739,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
 WMQISXM1V1-00329,SHIV SHAKTI PETRO,"GUR_IOC_Shiv Shakti,Petro",IOCL,Sikanderpur,Gurugram,Haryana,North,28.397882,76.958672
 WMQISXM1V1-00072,RK Ashram Marg,DEL_DMR_RK Ashram,DMRC,Gate-3 Side Adjcent to pump Room- RK Ashram Marg Metro Parking Dehli-,Delhi,Delhi,North,28.639422,77.207984
 WMQISXM1V1-00078,Delhi Automobile,"DEL_IOC_Delhi Automobile,SartiaVihar",IOCL,JASOLA,Delhi,Delhi,North,28.538081,77.290193
@@ -677,6 +668,9 @@ WMQISXM1V1-00668,Khairatabad ,HYD_IRS_Khairatabad,Indian Railways,Indiranagar,Hy
 WMQISXM1V1-00643,MIYAPUR J.AUTO,"HYD_IOC_Miyapur,J Auto",IOCL,Miyapur,Hyderabad,Telangana,South,17.49617,78.37366
 WMQISXM1V1-00666,MIYAPUR J.AUTO,"HYD_IOC_Miyapur,J Auto",IOCL,Miyapur,Hyderabad,Telangana,South,17.49617,78.37366
 WMQISXM1V1-00663,Neredmet Halt 4,HYD_IRS_Neredmet_Halt,Indian Railways,AS Rao Nagar,Hyderabad,Telangana,South,17.47882232,78.53611749
+WMQISXM1V1-00713,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
+WMQISXM1V1-00725,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
+WMQISXM1V1-00739,HSR Industrial Area,"BLR_PVT_Hub_5thcross,HSR Layout",Hub-Private,HSR,Bengaluru,Karnataka,South,12.892037,77.647464
 WMQISXM1V1-00623,AMCO Layout - Hebbal,"BLR_PVT_Hub_AMCO Layout,Hebbal",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.05215,77.579794
 WMQISXM1V1-00711,AMCO Layout - Hebbal,"BLR_PVT_Hub_AMCO Layout,Hebbal",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.05215,77.579794
 WMQISXM1V1-00726,AMCO Layout - Hebbal,"BLR_PVT_Hub_AMCO Layout,Hebbal",Hub-Private,Hebbal,Bengaluru,Karnataka,South,13.05215,77.579794
@@ -721,15 +715,15 @@ WMQISXM1V1-01020,TPDDL-Jahangirpuri 3,DEL_TPO_Bhalswa Jahangirpuri,Tata Power,Ja
 WMQISXM1V1-00066,Aasha enterprises 2 ( Ram Prakash Dalal),"DEL_FRN_P1 Street, Budh Vihar,Phase 1",Franchise,Pooth Kalan,Delhi,Delhi,North,28.710639,77.086711
 WMQISXM1V1-00071,Aasha enterprises 3 (Ram Prakash Dalal),"DEL_FRN_P1 Street, Budh Vihar,Phase 1",Franchise,Pooth Kalan,Delhi,Delhi,North,28.710639,77.086711
 WMQISXM1V1-00055,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
-WMQISXM1V1-00753,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
-WMQISXM1V1-00756,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
-WMQISXM1V1-00761,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
 WMQISXM1V1-01018,AA Cup 1,"DEL_FRN_Street No3,Sagarpur",Franchise,Delhi,Delhi,Delhi,North,28.60556,77.10385
 WMQISXM1V1-01019,AA Cup 2,"DEL_FRN_Street No3,Sagarpur",Franchise,Delhi,Delhi,Delhi,North,28.60556,77.10385
 WMQISXM1V1-00057,Patel Nagar 3,DEL_STQ_Patel Nagar Metro Station,STATIQ,Patel Nagar Metro,Delhi,Delhi,North,28.64500363,77.16922808
 WMQISXM1V1-00069,Aman 3 ( Surjeet Singh),"GZB_FRN_Palika,Bazar GTRd",Franchise,Ghaziabad,Ghaziabad,UP,North,28.657347,77.432213
 WMQISXM1V1-00070,Aman 4 ( Tanya kaur ),"GZB_FRN_Palika,Bazar GTRd",Franchise,Ghaziabad,Ghaziabad,UP,North,28.657347,77.432213
 WMQISXM1V1-00640,Bhudevinagar Halt 4,HYD_IRS_Bhudevinagar_Halt,Indian Railways,Alwal,Hyderabad,Telangana,South,17.49332425,78.50191249
+WMQISXM1V1-00753,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
+WMQISXM1V1-00756,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
+WMQISXM1V1-00761,Banaswadi Railway Station,"BLR_IRS_Bansawadi,Railway station",Indian Railways,BANSAWADI,Bengaluru,Karnataka,South,13.0061076,77.62820696
 WMQISXM1V1-00774,KAVYA AGENCIES,"CHE_IOC_Kavya,Agencies Koyambedu",IOCL,Koyambedu,Chennai,TamilNadu,South,13.0648,80.197765
 WMQISXM1V1-00776,KAVYA AGENCIES,"CHE_IOC_Kavya,Agencies Koyambedu",IOCL,Koyambedu,Chennai,TamilNadu,South,13.0648,80.197765
 WMQISXM1V1-00752,Lalaguda Halt Station,"HYD_IRS_Lalaguda Halt,Station",Indian Railways,Lalaguda,Hyderabad,Telangana,South,17.44096932,78.52478765
@@ -753,9 +747,6 @@ WMQISXM1V1-00692,Whitefield Hub - Bangalore,"BLR_PVT_Hub_Whitefield,Immadihalli 
 WMQISXM1V1-00694,Whitefield Hub - Bangalore,"BLR_PVT_Hub_Whitefield,Immadihalli Main Rd1stCross",Hub-Private,Whitefield,Bengaluru,Karnataka,South,12.969104,77.7508498
 WMQISXM1V1-00615,Whitefield Hub - Bangalore,"BLR_PVT_Hub_Whitefield,Immadihalli Main Rd1stCross",Hub-Private,Whitefield,Bengaluru,Karnataka,South,12.969104,77.7508498
 WMQISXM1V1-00696,KFCSC -BANGALORE 1,BLR_IOC_BANASHANKARI KFCSC,IOCL,Banasankari,Bengaluru,Karnataka,South,12.917118,77.574135
-WMQISXM1V1-00068,KFCSC -BANGALORE 2,BLR_IOC_BANASHANKARI KFCSC,IOCL,Banasankari,Bengaluru,Karnataka,South,12.917118,77.574135
-WMQISXM1V1-00770,GOKUL FUEL POINT,"BLR_IOC_GOKUL,FuelPoint KoppaRd",IOCL,Begur,Bengaluru,Karnataka,South,12.862369,77.614726
-WMQISXM1V1-00771,GOKUL FUEL POINT,"BLR_IOC_GOKUL,FuelPoint KoppaRd",IOCL,Begur,Bengaluru,Karnataka,South,12.862369,77.614726
 WMQISXM1V1-01038,Pal Automobile 1,"GZB_FRN_Sanjay Nagar,Sector23",Franchise,"Sanjay Nagar, Ghaziabad",Ghaziabad,UP,North,28.69129,77.458041
 WMQISXM1V1-01040,Pal Automobile 2,"GZB_FRN_Sanjay Nagar,Sector23",Franchise,"Sanjay Nagar, Ghaziabad",Ghaziabad,UP,North,28.69129,77.458041
 WMQISXM1V1-01034,Neeta Bhatia 1,NOI_FRN_Sector 44,Franchise,Sec-44 Noida ,Noida,UP,North,28.555819,77.344503
@@ -768,7 +759,9 @@ WMQISXM1V1-01010,Chandanagar,"HYD_IRS_Chandanagar,Station",Indian Railways,Chand
 WMQISXM1V1-01011,Chandanagar,"HYD_IRS_Chandanagar,Station",Indian Railways,Chandanagar,Hyderabad,Telangana,South,17.487256,78.332635
 WMQISXM1V1-01012,Chandanagar,"HYD_IRS_Chandanagar,Station",Indian Railways,Chandanagar,Hyderabad,Telangana,South,17.487256,78.332635
 WMQISXM1V1-01013,Chandanagar,"HYD_IRS_Chandanagar,Station",Indian Railways,Chandanagar,Hyderabad,Telangana,South,17.487256,78.332635
-WMQISXM1V1-00080,Budigere 1,"BLR_PVT_Sannatammanahalli, Katamnallur",Private,Budigere,Bengaluru,Karnataka,South,13.051814,77.759593
+WMQISXM1V1-00068,KFCSC -BANGALORE 2,BLR_IOC_BANASHANKARI KFCSC,IOCL,Banasankari,Bengaluru,Karnataka,South,12.917118,77.574135
+WMQISXM1V1-00770,GOKUL FUEL POINT,"BLR_IOC_GOKUL,FuelPoint KoppaRd",IOCL,Begur,Bengaluru,Karnataka,South,12.862369,77.614726
+WMQISXM1V1-00771,GOKUL FUEL POINT,"BLR_IOC_GOKUL,FuelPoint KoppaRd",IOCL,Begur,Bengaluru,Karnataka,South,12.862369,77.614726
 WMQISXM1V1-00044,Zakir Khan 1,"JPR_FRN_Sadwa Mod,Jaisinghpura",Franchise, Jaisinghpura ,Jaipur,Rajasthan,North,26.9601,75.86708
 WMQISXM1V1-00045,Zakir Khan 2,"JPR_FRN_Sadwa Mod,Jaisinghpura",Franchise, Jaisinghpura ,Jaipur,Rajasthan,North,26.9601,75.86708
 WMQISXM1V1-01037,BRPL - Pushp Vihar 4,"DEL_BRP_Punjab Transport Service, Pushp Vihar",BRPL,Pushp Vihar,Delhi,Delhi,North,28.521086,77.227395
@@ -782,16 +775,17 @@ WMQISXM1V1-00783,"Railway Degree College, South lallaguda","HYD_IRS_Tarnaka,RDC"
 WMQISXM1V1-00784,"Railway Degree College, South lallaguda","HYD_IRS_Tarnaka,RDC",Indian Railways,Lalaguda,Hyderabad,Telangana,South,17.42845,78.527333
 WMQISXM1V1-00785,"Railway Degree College, South lallaguda","HYD_IRS_Tarnaka,RDC",Indian Railways,Lalaguda,Hyderabad,Telangana,South,17.42845,78.527333
 WMQISXM1V1-00786,"Railway Degree College, South lallaguda","HYD_IRS_Tarnaka,RDC",Indian Railways,Lalaguda,Hyderabad,Telangana,South,17.42845,78.527333
+WMQISXM1V1-00080,Budigere 1,"BLR_PVT_Sannatammanahalli, Katamnallur",Private,Budigere,Bengaluru,Karnataka,South,13.051814,77.759593
 WMQISXM1V1-01071,Electronic City- GS Palya,"BLR_PVT_Hub_Electronic City,GSPalya",Hub-Private,Electronic City ,Bengaluru,Karnataka,South,12.853097,77.67448
 WMQISXM1V1-01072,Electronic City- GS Palya,"BLR_PVT_Hub_Electronic City,GSPalya",Hub-Private,Electronic City ,Bengaluru,Karnataka,South,12.853097,77.67448
 WMQISXM1V1-00789,Electronic City- GS Palya,"BLR_PVT_Hub_Electronic City,GSPalya",Hub-Private,Electronic City ,Bengaluru,Karnataka,South,12.853097,77.67448
-WMQISXM1V1-00052,SREE SHAKTHI FILLING STATION,"BLR_IOC_SREE SHAKTHI,FILLING",IOCL,DODDAKALASANDRA,Bengaluru,Karnataka,South,12.883914,77.550896
-WMQISXM1V1-00116,SRI RAJARAJESWARI FILLING STATION,"BLR_IOC_SRI RAJARAJESWARI,FILLING",IOCL,Nayandhanhalli,Bengaluru,Karnataka,South,12.93821,77.52199
 WMQISXM1V1-00778,Thirumayilai,CHE_IRS_Thirumayilai MRTS,Indian Railways,Mylapore,Chennai,TamilNadu,South,13.03488598,80.26697808
 WMQISXM1V1-00779,Thirumayilai,CHE_IRS_Thirumayilai MRTS,Indian Railways,Mylapore,Chennai,TamilNadu,South,13.03488598,80.26697808
 WMQISXM1V1-01025,KOTTURPURAM (KTPM) Railway Station,CHE_IRS_KOTTURPURAM  MRTS,Indian Railways,Kotturpuram,Chennai,TamilNadu,South,13.013778,80.2481959
 WMQISXM1V1-01026,KOTTURPURAM (KTPM) Railway Station,CHE_IRS_KOTTURPURAM  MRTS,Indian Railways,Kotturpuram,Chennai,TamilNadu,South,13.013778,80.2481959
 WMQISXM1V1-01036,BRPL-Motibagh 4,"DEL_BRP_Sector 8, RK Puram",BRPL,Motibagh,Delhi,Delhi,North,28.57263,77.16953
+WMQISXM1V1-00052,SREE SHAKTHI FILLING STATION,"BLR_IOC_SREE SHAKTHI,FILLING",IOCL,DODDAKALASANDRA,Bengaluru,Karnataka,South,12.883914,77.550896
+WMQISXM1V1-00116,SRI RAJARAJESWARI FILLING STATION,"BLR_IOC_SRI RAJARAJESWARI,FILLING",IOCL,Nayandhanhalli,Bengaluru,Karnataka,South,12.93821,77.52199
 WMQISXM1V1-01014,FILVEL STATION,"HYD_IRS_Filvel,Station Saroornagar",IOCL,Saroornagar,Hyderabad,Telangana,South,17.349311,78.553534
 WMQISXM1V1-01016,FILVEL STATION,"HYD_IRS_Filvel,Station Saroornagar",IOCL,Saroornagar,Hyderabad,Telangana,South,17.349311,78.553534
 WMQISXM1V1-01027,THIRUVANMIYUR (TYMR) Railway Station,"CHE_IRS_THIRUVANMIYUR,Railway Station",Indian Railways,Thiruvanmiyur,Chennai,TamilNadu,South,12.989378,80.2511327
@@ -808,8 +802,6 @@ WMQISXM1V1-00685,"Sudharshan fuel station,Electronic city","BLR_IOC_Sudharshan,f
 WMQISXM1V1-00701,"Sudharshan fuel station,Electronic city","BLR_IOC_Sudharshan,fuel station",IOCL,Electronic City,Bengaluru,Karnataka,South,12.855515,77.663508
 WMQISXM1V1-00773,Yelahanka Railway Station,"BLR_IRS_Yelahanka,Railway station",Indian Railways,Yelankha,Bengaluru,Karnataka,South,13.1051369,77.5918951
 WMQISXM1V1-00780,Yelahanka Railway Station,"BLR_IRS_Yelahanka,Railway station",Indian Railways,Yelankha,Bengaluru,Karnataka,South,13.1051369,77.5918951
-WMQISXM1V1-00781,Yelahanka Railway Station,"BLR_IRS_Yelahanka,Railway station",Indian Railways,Yelankha,Bengaluru,Karnataka,South,13.1051369,77.5918951
-WMQISXM1V1-00074,Yelahanka Railway Station,"BLR_IRS_Yelahanka,Railway station",Indian Railways,Yelankha,Bengaluru,Karnataka,South,13.1051369,77.5918951
 WMQISXM1V1-01041,Neeta Bhatia 3,NOI_FRN_Sector 44,Franchise,Sec-44 Noida ,Noida,Up,North,28.555819,77.344503
 WMQISXM1V1-01042,Neeta Bhatia 4,NOI_FRN_Sector 44,Franchise,Sec-44 Noida ,Noida,Up,North,28.555819,77.344503
 WMQISXM1V1-01044,HELLO FUELS 1,"GGN_IOC_Hello Fuels,Sector86",IOCL,Sector 86,Gurugram,Haryana,North,28.40576,76.94376
@@ -826,6 +818,8 @@ WMQISXM1V1-00794,"Warangal (Darga Road, NIT Campus","WRL_PVT_Hub_NIT Campus,Darg
 WMQISXM1V1-00792,"Warangal (Darga Road, NIT Campus","WRL_PVT_Hub_NIT Campus,DargaRd",Hub-Private,Warangal,Warangal,Telangana,South,17.977474,79.534528
 WMQISXM1V1-00795,ADAMBAKKAM CO-OP BUILDING SL(TNHCF),"CHE_IOC_ADAMBAKKAM,Building Society",IOCL,Adambakkam,Chennai,TamilNadu,South,12.979648,80.201394
 WMQISXM1V1-00797,ADAMBAKKAM CO-OP BUILDING SL(TNHCF),"CHE_IOC_ADAMBAKKAM,Building Society",IOCL,Adambakkam,Chennai,TamilNadu,South,12.979648,80.201394
+WMQISXM1V1-00781,Yelahanka Railway Station,"BLR_IRS_Yelahanka,Railway station",Indian Railways,Yelankha,Bengaluru,Karnataka,South,13.1051369,77.5918951
+WMQISXM1V1-00074,Yelahanka Railway Station,"BLR_IRS_Yelahanka,Railway station",Indian Railways,Yelankha,Bengaluru,Karnataka,South,13.1051369,77.5918951
 WMQISXM1V1-00801,Saidapet Railway Station,"CHE_IRS_Saidapet,Railway Station",Indian Railways,Saidapet,Chennai,TamilNadu,South,13.02394545,80.22391758
 WMQISXM1V1-00802,Saidapet Railway Station,"CHE_IRS_Saidapet,Railway Station",Indian Railways,Saidapet,Chennai,TamilNadu,South,13.02394545,80.22391758
 WMQISXM1V1-01021,"Adarsh Nagar Colony, Nagole","HYD_FRN_RoadNo4,Sai Nagar",Franchise,Nagole,Hyderabad,Telangana,South,17.36615,78.558813
@@ -848,9 +842,9 @@ WMQISXM1V1-00283,BRPL - M block Market 4,"DEL_BRP_Block M, Greater Kailash",BRPL
 WMQISXM1V1-00098,BRPL-Paschim Vihar East 4,"DEL_BRP_Shiva Enclave, Paschim Vihar",BRPL,Paschim Vihar East,Delhi,delhi,North,28.677235,77.111966
 WMQISXM1V1-01054,Abhinav 1,"JPR_FRN_Kedia PalaceRd,Murlipura",Franchise,Murlipura,Jaipur,Rajasthan,North,26.9707219,75.7660257
 WMQISXM1V1-01055,Abhinav 2,"JPR_FRN_Kedia PalaceRd,Murlipura",Franchise,Murlipura,Jaipur,Rajasthan,North,26.9707219,75.7660257
-WMQISXM1V1-00767,BHAGIRATHI SERVICE STATION,"BLR_IOC_BHAGIRATHI,SERVICE STATION",IOCL,Old Madras,Bengaluru,Karnataka,South,13.019458,77.708029
 WMQISXM1V1-01065,Tata Power (Mangolpuri) 2,"DEL_TPO_Mangolpuri,RIICO Phase1",Tata Power,Industrial Area,Delhi,Delhi,North,28.687259,77.082775
 WMQISXM1V1-01061,TRS Commercials-Faridabad 1,"FDB_FRN_Baselwa Colony,GaliNo1",Franchise,"By pass road,",Faridabad,Haryana,North,28.428372,77.326958
+WMQISXM1V1-00767,BHAGIRATHI SERVICE STATION,"BLR_IOC_BHAGIRATHI,SERVICE STATION",IOCL,Old Madras,Bengaluru,Karnataka,South,13.019458,77.708029
 WMQISXM1V1-01074,AMAR SERVICE STATION ASIFNAGAR,"HYD_IRS_Amar SS,Asifnagar",IOCL,Asifnagar,Hyderabad,Telangana,South,17.39069,78.45019
 WMQISXM1V1-01076,AMAR SERVICE STATION ASIFNAGAR,"HYD_IRS_Amar SS,Asifnagar",IOCL,Asifnagar,Hyderabad,Telangana,South,17.39069,78.45019
 WMQISXM1V1-01073,Allapur (Near Madhapur 100 Ft Road),"HYD_PVT_Hub_NRR Puram,Borabanda",Hub-Private,Madhapur,Hyderabad,Telangana,South,17.45292,78.407605
@@ -864,9 +858,9 @@ WMQISXM1V1-01060,Dahar-Ka-Balaji 3,"JPR_IRS_Dahar Ka,Balaji",Indian Railways,Jai
 WMQISXM1V1-01062,Dahar-Ka-Balaji 4,"JPR_IRS_Dahar Ka,Balaji",Indian Railways,Jaipur,Jaipur,Rajasthan,North,26.94493467,75.76623442
 WMQISXM1V1-01081,Patparganj Market 1,DEL_BYPL_Patparganj Market,BYPL,Patparganj,Delhi,Delhi,North,28.61834,77.28697
 WMQISXM1V1-01082,Patparganj Market 2,DEL_BYPL_Patparganj Market,BYPL,Patparganj,Delhi,Delhi,North,28.61834,77.28697
-WMQISXM1V1-00550,SHREE HARI SERVICE STATION,"BLR_IOC_Shree Hari,Veerupakshapura",IOCL,VIDYANARAYANAPURA,Bengaluru,Karnataka,South,13.06518,77.57096167
 WMQISXM1V1-00820,Chintadripet Railway Station,CHE_IRS_Chintadripet Railway Station,Indian Railways,Chintadripet,Chennai,TamilNadu,South,13.07372934,80.27377869
 WMQISXM1V1-00821,Chintadripet Railway Station,CHE_IRS_Chintadripet Railway Station,Indian Railways,Chintadripet,Chennai,TamilNadu,South,13.07372934,80.27377869
+WMQISXM1V1-00550,SHREE HARI SERVICE STATION,"BLR_IOC_Shree Hari,Veerupakshapura",IOCL,VIDYANARAYANAPURA,Bengaluru,Karnataka,South,13.06518,77.57096167
 WMQISXM1V1-01047,Patparganj Market 3,DEL_BYPL_Patparganj Market,BYPL,Patparganj,Delhi,Delhi,North,28.61834,77.28697
 WMQISXM1V1-00817,Egmore Railway Station,"CHE_IRS_Egmore,Railway Station",Indian Railways,Egmore,Chennai,TamilNadu,South,13.07798714,80.26199142
 WMQISXM1V1-00824,Egmore Railway Station,"CHE_IRS_Egmore,Railway Station",Indian Railways,Egmore,Chennai,TamilNadu,South,13.07798714,80.26199142
@@ -1176,9 +1170,9 @@ WMQISXM1V1-00940,BLR_PVT_BTM 4th Stage _Mahesh kumar,"BLR_PVT_Hub_BTM 4th Stage,
 WMQISXM1V1-00964,Golden Sands (NIBM),PUN_PVT_Golden Sands_NIBM,Private,Kondhwa,Pune,Maharashtra,West,18.4687237,73.9004042
 WMQISXM1V1-00976,Golden Sands (NIBM),PUN_PVT_Golden Sands_NIBM,Private,Kondhwa,Pune,Maharashtra,West,18.4687237,73.9004042
 WMQISXM1V1-00958,Golden Sands (NIBM),PUN_PVT_Golden Sands_NIBM,Private,Kondhwa,Pune,Maharashtra,West,18.4687237,73.9004042
-WMQISXM1V1-01234,ZIRAKPUR_ABPDEVELOPERS,MOH_PVT_Hub_ZIRAKPUR_ABPDEVELOPERS,Hub-Pvt,Mohali,Mohali,Punjab,North,30.630314,76.822726
+WMQISXM1V1-01234,ZIRAKPUR_ABPDEVELOPERS,MOH_PVT_Hub_ZIRAKPUR_ABPDEVELOPERS,Hub-Private,Mohali,Mohali,Punjab,North,30.630314,76.822726
 WMQISXM1V1-01245,M/S VARDHMAN PETROLEUM,GZB_IOC_VARDHMAN PETROLEUM,IOCL,Ghaziabad,Ghaziabad,UP,North,28.715439,77.461558
-WMQISXM1V1-01236,ZIRAKPUR_ABPDEVELOPERS,MOH_PVT_Hub_ZIRAKPUR_ABPDEVELOPERS,Hub-Pvt,Mohali,Mohali,Punjab,North,30.630314,76.822726
+WMQISXM1V1-01236,ZIRAKPUR_ABPDEVELOPERS,MOH_PVT_Hub_ZIRAKPUR_ABPDEVELOPERS,Hub-Private,Mohali,Mohali,Punjab,North,30.630314,76.822726
 WMQISXM1V1-01246,M/S VARDHMAN PETROLEUM,GZB_IOC_VARDHMAN PETROLEUM,IOCL,Ghaziabad,Ghaziabad,UP,North,28.715439,77.461558
 WMQISXM1V1-00908,BHARATHI RAGHAVA FUELS ADHOC,"VJD_IOC_BHARATHI RAGHAVA FUELS,Eluru Road",IOCL,Eluru Road,Vijayawada,Andhra,South,16.515867,80.638614
 WMQISXM1V1-00928,BHARATHI RAGHAVA FUELS ADHOC,"VJD_IOC_BHARATHI RAGHAVA FUELS,Eluru Road",IOCL,Eluru Road,Vijayawada,Andhra,South,16.515867,80.638614
@@ -1239,10 +1233,10 @@ WMQISXM1V1-02132,COCO_Mangammanapalya_Vijay,BLR_PVT_Hub_COCO_Mangammanapalya_Vij
 WMQISXM1V1-02134,COCO_Mangammanapalya_Vijay,BLR_PVT_Hub_COCO_Mangammanapalya_Vijay,Hub-Private,Mangamanpalaya,Bengaluru,Karnataka,South,12.9013685,77.6443418
 WMQISXM1V1-02136,COCO_Mangammanapalya_Vijay,BLR_PVT_Hub_COCO_Mangammanapalya_Vijay,Hub-Private,Mangamanpalaya,Bengaluru,Karnataka,South,12.9013685,77.6443418
 WMQISXM1V1-02155,COCO_Mangammanapalya_Vijay,BLR_PVT_Hub_COCO_Mangammanapalya_Vijay,Hub-Private,Mangamanpalaya,Bengaluru,Karnataka,South,12.9013685,77.6443418
-WMQISXM1V1-01278,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Pvt,Noida,Noida,UP,North,28.55276,77.44225
-WMQISXM1V1-01279,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Pvt,Noida,Noida,UP,North,28.55276,77.44225
-WMQISXM1V1-01280,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Pvt,Noida,Noida,UP,North,28.55276,77.44225
-WMQISXM1V1-01281,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Pvt,Noida,Noida,UP,North,28.55276,77.44225
+WMQISXM1V1-01278,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Private,Noida,Noida,UP,North,28.55276,77.44225
+WMQISXM1V1-01279,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Private,Noida,Noida,UP,North,28.55276,77.44225
+WMQISXM1V1-01280,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Private,Noida,Noida,UP,North,28.55276,77.44225
+WMQISXM1V1-01281,JALPURA_MAHESH KUMAR,NOI_PVT_Hub_JALPURA_MAHESH KUMAR,Hub-Private,Noida,Noida,UP,North,28.55276,77.44225
 WMQISXM1V1-00992,"CHEMBUR_BHOIR
 ","MUM_PVT_CHEMBUR_BHOIR
 ",Private,Chembur,Mumbai,Maharashtra,West,19.05084,72.91036
@@ -1314,10 +1308,10 @@ WMQISXM1V1-01325,RRM LOGISTICS PRIVATE LIMITED,GGN_FRN_RRM_LOGISTICS_PRIVATE_LIM
 WMQISXM1V1-01326,RRM LOGISTICS PRIVATE LIMITED,GGN_FRN_RRM_LOGISTICS_PRIVATE_LIMITED,Franchise,Hero Honda Chowk,Gurugram,Haryana,North,28.43606,77.00923
 WMQISXM1V1-01327,RRM LOGISTICS PRIVATE LIMITED,GGN_FRN_RRM_LOGISTICS_PRIVATE_LIMITED,Franchise,Hero Honda Chowk,Gurugram,Haryana,North,28.43606,77.00923
 WMQISXM1V1-01274,K.B Enterprises-Ashram Road,PNP_FRN_K.B Enterprises_Ashram Road,Franchise,Ashram Road,Panipat,Haryana,North,29.39098,76.962296
-WMQISXM1V1-02217,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
-WMQISXM1V1-02218,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
-WMQISXM1V1-02211,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
-WMQISXM1V1-02210,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
+WMQISXM1V1-02217,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub-Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
+WMQISXM1V1-02218,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub-Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
+WMQISXM1V1-02211,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub-Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
+WMQISXM1V1-02210,KONDAPUR_KONERU SHYAM BABU,HYD_PVT_HUB_KONDAPUR_KONERU SHYAM BABU,Hub-Private,Kondapur,Hyderabad,Telangana,South,17.47232,78.34124
 WMQISXM1V1-02228,Borivali West,MUM_MMMOCL_Borivali West,MMMOCL,Borivali,Mumbai,Maharashtra,West,19.231498,72.84101
 WMQISXM1V1-02229,Borivali West,MUM_MMMOCL_Borivali West,MMMOCL,Borivali,Mumbai,Maharashtra,West,19.231498,72.84101
 WMQISXM1V1-02235,"PUN_PVT_RAVET_NILESH 
@@ -1357,10 +1351,10 @@ WMQISXM1V1-02226,Seegahalli_Ashok,BLR_PVT_HUB_Seegahalli_Ashok,Hub-Private,Seega
 WMQISXM1V1-02225,Seegahalli_Ashok,BLR_PVT_HUB_Seegahalli_Ashok,Hub-Private,Seegahalli,Bengaluru,Karnataka,South,13.015896,77.766816
 WMQISXM1V1-02223,Seegahalli_Ashok,BLR_PVT_HUB_Seegahalli_Ashok,Hub-Private,Seegahalli,Bengaluru,Karnataka,South,13.015896,77.766816
 WMQISXM1V1-02179,Seegahalli_Ashok,BLR_PVT_HUB_Seegahalli_Ashok,Hub-Private,Seegahalli,Bengaluru,Karnataka,South,13.015896,77.766816
-WMQISXM1V1-02234,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Pvt,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
-WMQISXM1V1-02236,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Pvt,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
-WMQISXM1V1-02239,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Pvt,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
-WMQISXM1V1-02240,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Pvt,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
+WMQISXM1V1-02234,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Private,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
+WMQISXM1V1-02236,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Private,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
+WMQISXM1V1-02239,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Private,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
+WMQISXM1V1-02240,PVT_KPR COLONY MANIKONDA,HYD_PVT_HUB_KPR COLONY MANIKONDA,Hub-Private,Manikonda,Hyderabad,Hyderabad,South,17.39808,78.376865
 WMQISXM1V1-02247,Doddanekundi_Kapil,BLR_PVT_HUB_Doddankundi_Kapil,Hub-Private,AGS Colony,Bengaluru,Karnataka,South,12.970612,77.6948695
 WMQISXM1V1-02246,Doddanekundi_Kapil,BLR_PVT_HUB_Doddankundi_Kapil,Hub-Private,AGS Colony,Bengaluru,Karnataka,South,12.970612,77.6948695
 WMQISXM1V1-02244,Doddanekundi_Kapil,BLR_PVT_HUB_Doddankundi_Kapil,Hub-Private,AGS Colony,Bengaluru,Karnataka,South,12.970612,77.6948695
@@ -1405,9 +1399,8 @@ WMQISXM1V1-01295,Sirsi Road-Engineers Colony,JPR_PVT_Sirsi Road-Engineers Colony
 WMQISXM1V1-01296,Sirsi Road-Engineers Colony,JPR_PVT_Sirsi Road-Engineers Colony,Private,Jothwara,Jaipur,Rajasthan,North,26.922708,75.722184
 WMQISXM1V1-01354,Durgapura Railway Station,JPR_IRS_Durgapura_Railway_Station,Railways,Durgapura,Jaipur,Rajasthan,North,26.852143,75.786387
 WMQISXM1V1-01355,Durgapura Railway Station,JPR_IRS_Durgapura_Railway_Station,Railways,Durgapura,Jaipur,Rajasthan,North,26.852143,75.786387
-WMQISXM1V1-02196,Mogappaire_Dinesh Babu​,CHE_PVT_HUB_Mogappaire_Dinesh_Babu​,Hub-Pvt,Moggapair,Chennai,TamilNadu,South,13.07533394,80.18525826
-WMQISXM1V1-02198,Mogappaire_Dinesh Babu​,CHE_PVT_HUB_Mogappaire_Dinesh_Babu​,Hub-Pvt,Moggapair,Chennai,TamilNadu,South,13.07533394,80.18525826
-WMQISXM1V1-02294,MUM_ PVT_ MaroL_Praful Thakkar,MUM_PVT_ Marol_Praful Thakkar,Private,Marol,Mumbai,Maharashtra,West,19.116192,72.885363
+WMQISXM1V1-02196,Mogappaire_Dinesh Babu​,CHE_PVT_HUB_Mogappaire_Dinesh_Babu​,Hub-Private,Moggapair,Chennai,TamilNadu,South,13.07533394,80.18525826
+WMQISXM1V1-02198,Mogappaire_Dinesh Babu​,CHE_PVT_HUB_Mogappaire_Dinesh_Babu​,Hub-Private,Moggapair,Chennai,TamilNadu,South,13.07533394,80.18525826
 WMQISXM1V1-02175,MUM_ PVT_ MaroL_Praful Thakkar,MUM_PVT_ Marol_Praful Thakkar,Private,Marol,Mumbai,Maharashtra,West,19.116192,72.885363
 WMQISXM1V1-02281,MUM_ PVT_ MaroL_Praful Thakkar,MUM_PVT_ Marol_Praful Thakkar,Private,Marol,Mumbai,Maharashtra,West,19.116192,72.885363
 WMQISXM1V1-02188,PUN_PVT_HDPSR_TUSHAR,PUN_PVT_Hadapsar_Tushar,Private,Hadapsar,Pune,Maharashtra,West,18.502708,73.93489
@@ -1430,6 +1423,11 @@ WMQISXM1V1-01364,Malik Colony,SNP_PVT_Malik_Colony,Private,"Malik Colony,",Sonip
 WMQISXM1V1-02268,SAGAR X ROAD_3QIS,HYD_FRN_SAGAR X ROAD_3QIS,Franchise,Bairamalguda,Hyderabad,Telangana,South,17.33808,78.543882
 WMQISXM1V1-02313,SAGAR X ROAD_3QIS,HYD_FRN_SAGAR X ROAD_3QIS,Franchise,Bairamalguda,Hyderabad,Telangana,South,17.33808,78.543882
 WMQISXM1V1-02314,SAGAR X ROAD_3QIS,HYD_FRN_SAGAR X ROAD_3QIS,Franchise,Bairamalguda,Hyderabad,Telangana,South,17.33808,78.543882
+WMQISXM1V1-00974,Aarey,MUM_MMMOCL_Aarey,MMMOCL,Aarey,Mumbai,Maharashtra,West,19.168769,72.85843
+WMQISXM1V1-02135,Aarey,MUM_MMMOCL_Aarey,MMMOCL,Aarey,Mumbai,Maharashtra,West,19.16877,72.85843
+WMQISXM1V1-02128,Aarey,MUM_MMMOCL_Aarey,MMMOCL,Aarey,Mumbai,Maharashtra,West,19.16877,72.85843
+WMQISXM1V1-02267,PUN_PVT_GHRPDI_SAMARTH,PUN_PVT_Ghorpadi_Samarth,Private,Ghorpadi,Pune,Maharashtra,West,18.51715,73.90733
+WMQISXM1V1-02255,PUN_PVT_GHRPDI_SAMARTH,PUN_PVT_Ghorpadi_Samarth,Private,Ghorpadi,Pune,Maharashtra,West,18.51715,73.90733
 WMQISXM1V1-02287,ADHOC-ASHOK SERVICE STATION FOR ASC,HYD_IOC_ADHOC_ASHOK_SERVICE_STATION_FOR_ASC,IOCL,ASCI BANJARA HILLS,Hyderabad,Telangana,South,17.427,78.4413
 WMQISXM1V1-02276,ADHOC-ASHOK SERVICE STATION FOR ASC,HYD_IOC_ADHOC_ASHOK_SERVICE_STATION_FOR_ASC,IOCL,ASCI BANJARA HILLS,Hyderabad,Telangana,South,17.427,78.4413
 WMQISXM1V1-02274,ADHOC-ASHOK SERVICE STATION FOR ASC,HYD_IOC_ADHOC_ASHOK_SERVICE_STATION_FOR_ASC,IOCL,ASCI BANJARA HILLS,Hyderabad,Telangana,South,17.427,78.4413
@@ -1442,18 +1440,96 @@ WMQISXM1V1-02303,Mandaveli Railway Station,CHE_IRS_Mandaveli_Railway_Station,Ind
 WMQISXM1V1-02309,Mandaveli Railway Station,CHE_IRS_Mandaveli_Railway_Station,Indian Railways,Mandaveli,Chennai,TamilNadu,South,13.02802,80.26049
 WMQISXM1V1-02292,Ramavarapaddu,VJD_IRS_Ramavarapaddu,Indian Railways,Ramavarapaddu,Vijayawada,Andhra Pradesh,South,16.52643,80.6807
 WMQISXM1V1-02312,Ramavarapaddu,VJD_IRS_Ramavarapaddu,Indian Railways,Ramavarapaddu,Vijayawada,Andhra Pradesh,South,16.52643,80.6807
-WMQISXM1V1-00974,Aarey,MUM_MMMOCL_Aarey,MMMOCL,Aarey,Mumbai,Maharashtra,West,19.168769,72.85843
-WMQISXM1V1-02135,Aarey,MUM_MMMOCL_Aarey,MMMOCL,Aarey,Mumbai,Maharashtra,West,19.16877,72.85843
-WMQISXM1V1-02128,Aarey,MUM_MMMOCL_Aarey,MMMOCL,Aarey,Mumbai,Maharashtra,West,19.16877,72.85843
-WMQISXM1V1-02154,PUN_PVT_GHRPDI_SAMARTH,PUN_PVT_Ghorpadi_Samarth,Private,Ghorpadi,Pune,Maharashtra,West,18.51715,73.90733
-WMQISXM1V1-02255,PUN_PVT_GHRPDI_SAMARTH,PUN_PVT_Ghorpadi_Samarth,Private,Ghorpadi,Pune,Maharashtra,West,18.51715,73.90733
-WMQISXM1V1-02267,MUM_ PVT_ Mulund W Jayantilal G Shah,MUM_PVT_Mulund(W)_Jayantilal_G_Shah,Private,Mulund,Mumbai,Maharashtra,West,19.18059,72.95588
+WMQISXM1V1-02154,MUM_ PVT_ Mulund W Jayantilal G Shah,MUM_PVT_Mulund(W)_Jayantilal_G_Shah,Private,Mulund,Mumbai,Maharashtra,West,19.18059,72.95588
 WMQISXM1V1-02164,MUM_ PVT_ Mulund W Jayantilal G Shah,MUM_PVT_Mulund(W)_Jayantilal_G_Shah,Private,Mulund,Mumbai,Maharashtra,West,19.18059,72.95588
 WMQISXM1V1-02165,MUM_ PVT_ Mulund W Jayantilal G Shah,MUM_PVT_Mulund(W)_Jayantilal_G_Shah,Private,Mulund,Mumbai,Maharashtra,West,19.18059,72.95588
 WMQISXM1V1-02166,PUN_PVT_BLWDI_MANOJ - 2,PUN_PVT_Balewadi_Manoj-2,Private,Balewadi,Pune,Maharashtra,West,18.581425,73.766968
 WMQISXM1V1-02204,PUN_PVT_BLWDI_MANOJ - 2,PUN_PVT_Balewadi_Manoj-2,Private,Balewadi,Pune,Maharashtra,West,18.581425,73.766968
 WMQISXM1V1-02182,PUNE_PVT_HINJEWADI-3_BHUJBAL,PUN_PVT_Hinjewadi-3_Bhujbal,Private,Hinjewadi,Pune,Maharashtra,West,18.59231,73.75501
 WMQISXM1V1-02243,PUNE_PVT_HINJEWADI-3_BHUJBAL,PUN_PVT_Hinjewadi-3_Bhujbal,Private,Hinjewadi,Pune,Maharashtra,West,18.59231,73.75501
-WMQISXM1V1-02266,MUM_ PVT_Jogeshwari Vipul Loonawat,,Private,Jogeshwari,Mumbai,Maharashtra,West,19.140853,72.841255
-WMQISXM1V1-02241,MUM_ PVT_Jogeshwari Vipul Loonawat,,Private,Jogeshwari,Mumbai,Maharashtra,West,19.140853,72.841255
-WMQISXM1V1-02245,MUM_ PVT_Jogeshwari Vipul Loonawat,,Private,Jogeshwari,Mumbai,Maharashtra,West,19.140853,72.841255
+WMQISXM1V1-02266,MUM_ PVT_Jogeshwari Vipul Loonawat,MUM_PVT_Jogeshwari_Vipul_Loonawat,Private,Jogeshwari,Mumbai,Maharashtra,West,19.140853,72.841255
+WMQISXM1V1-02241,MUM_ PVT_Jogeshwari Vipul Loonawat,MUM_PVT_Jogeshwari_Vipul_Loonawat,Private,Jogeshwari,Mumbai,Maharashtra,West,19.140853,72.841255
+WMQISXM1V1-02245,MUM_ PVT_Jogeshwari Vipul Loonawat,MUM_PVT_Jogeshwari_Vipul_Loonawat,Private,Jogeshwari,Mumbai,Maharashtra,West,19.140853,72.841255
+WMQISXM1V1-02311,PUN_PVT_BLWDI_MANOJ - 1,PUN_PVT_Balewadi_Manoj_1,Private,Balewadi,Pune ,Maharashtra,West,18.574146,73.772751
+WMQISXM1V1-02296,PUN_PVT_BLWDI_MANOJ - 1,PUN_PVT_Balewadi_Manoj_1,Private,Balewadi,Pune,Maharashtra,West,18.574146,73.772751
+WMQISXM1V1-01383,VIRAT NAGAR,PNP_PVT_Virat_Nagar,Private,Virat Nagar phase 2,Panipat,HARYANA,North,29.386105,76.947172
+WMQISXM1V1-01384,VIRAT NAGAR,PNP_PVT_Virat_Nagar,Private,Virat Nagar phase 2,Panipat,HARYANA,North,29.386105,76.947172
+WMQISXM1V1-02163,PEDDITI RAGHUPATHI REDDY,HYD_IOC_Pedditi_Raghupathi_Reddy,IOCL, KOMPALLY,Hyderabad,Telangana,South,17.537,78.4896
+WMQISXM1V1-02282,PEDDITI RAGHUPATHI REDDY,HYD_IOC_Pedditi_Raghupathi_Reddy,IOCL, KOMPALLY,Hyderabad,Telangana,South,17.537,78.4896
+WMQISXM1V1-00270,PEDDITI RAGHUPATHI REDDY,HYD_IOC_Pedditi_Raghupathi_Reddy,IOCL, KOMPALLY,Hyderabad,Telangana,South,17.537,78.4896
+WMQISXM1V1-01285,Community Center karkardooma,DEL_BYPL_Community_Centre_Karkardooma,BYPL MCD,Community Center karkardooma,Delhi,Delhi,North,28.64909,77.30185
+WMQISXM1V1-01289,HARI OM FILLING STATION,PNP_IOC_Hari_Om_Filling_Station,IOCL,KHERI NANGAL,PaniPat,Haryana,North,29.35908,76.980578
+WMQISXM1V1-01287,BATRA COLONY FUELS,PNP_IOC_Batra_Colony_Fuels,IOCL,MAIN ROAD BATRA COLONY,Panipat,HARYANA,North,29.399816,76.947071
+WMQISXM1V1-01398,Shailen Tewathia,GGN_FRN_Shailen_Tewathia,Franchise,Sarai Alawardi,Gurugram,HARYANA,North,28.50402,77.01934
+WMQISXM1V1-01286,Community Center karkardooma,DEL_BYPL_Community_Centre_Karkardooma,BYPL MCD,Community Center karkardooma,Delhi,Delhi,North,28.64909,77.30185
+WMQISXM1V1-01290,HARI OM FILLING STATION,PNP_IOC_Hari_Om_Filling_Station,IOCL,KHERI NANGAL,PaniPat,Haryana,North,29.35908,76.980578
+WMQISXM1V1-01288,BATRA COLONY FUELS,PNP_IOC_Batra_Colony_Fuels,IOCL,MAIN ROAD BATRA COLONY,Panipat,HARYANA,North,29.399816,76.947071
+WMQISXM1V1-01399,Shailen Tewathia,GGN_FRN_Shailen_Tewathia,Franchise,Sarai Alawardi,Gurugram,HARYANA,North,28.50402,77.01934
+WMQISXM1V1-01301,"Gohana Road, Anup","SNP_PVT_Gohana_Road, Anup",Private,Gohana Road,Sonipat,HARYANA,North,29.00302,76.993445
+WMQISXM1V1-01302,"Gohana Road, Anup","SNP_PVT_Gohana_Road, Anup",Private,Gohana Road,Sonipat,HARYANA,North,29.00302,76.993445
+WMQISXM1V1-01303,"Gohana Road, Anup","SNP_PVT_Gohana_Road, Anup",Private,Gohana Road,Sonipat,HARYANA,North,29.00302,76.993445
+WMQISXM1V1-02261,BLR_FRN_AMRITHAHALLI_Mr. RAO​,BLR_FRN_AMRITHAHALLI_Mr. RAO​,Franchise,Amruthahalli,Bengaluru,Karnataka,South,13.069947,13.069947
+WMQISXM1V1-02262,BLR_FRN_AMRITHAHALLI_Mr. RAO​,BLR_FRN_AMRITHAHALLI_Mr. RAO​,Franchise,Amruthahalli,Bengaluru,Karnataka,South,13.069947,13.069947
+WMQISXM1V1-02290,BLR_FRN_AMRITHAHALLI_Mr. RAO​,BLR_FRN_AMRITHAHALLI_Mr. RAO​,Franchise,Amruthahalli,Bengaluru,Karnataka,South,13.069947,13.069947
+WMQISXM1V1-02322,SMPL Plant-1,BLR_SMP_SMPL_Plant-1,SMPL,Dudanekhundi,Bengaluru,Karnataka,South,12.977114,77.70653
+WMQISXM1V1-01401,Ujjwal Chandna,NOI_FRN_Ujjwal_Chandna,Franchise,Behlolpur,Noida,UP,North,28.6137816,77.39645
+WMQISXM1V1-01402,Ujjwal Chandna,NOI_FRN_Ujjwal_Chandna,Franchise,Behlolpur,Noida,UP,North,28.6137816,77.39645
+WMQISXM1V1-01403,Ujjwal Chandna,NOI_FRN_Ujjwal_Chandna,Franchise,Behlolpur,Noida,UP,North,28.6137816,77.39645
+WMQISXM1V1-02346,Thiruvallikeni Railway Station,CHE_IRS_Thiruvallikeni_Railway_Station,Indian Railways,Thiruvallikeni,Chennai,TamilNadu,South,13.02238323,80.25304021
+WMQISXM1V1-02344,Thiruvallikeni Railway Station,CHE_IRS_Thiruvallikeni_Railway_Station,Indian Railways,Thiruvallikeni,Chennai,TamilNadu,South,13.02238323,80.25304021
+WMQISXM1V1-02307,Thiruvallikeni Railway Station,CHE_IRS_Thiruvallikeni_Railway_Station,Indian Railways,Thiruvallikeni,Chennai,TamilNadu,South,13.02238323,80.25304021
+WMQISXM1V1-02321,BTM 2nd Stage,"BLR_PVT_BTM layout, 2nd stage",Private,BTM layout,Bengaluru,Karnataka,South,12.909409,77.610821
+WMQISXM1V1-02300,Madhuranagar,VJD_IRS_Madhuranagar,Indian Railways,Madhuranagar,Vijayawada,Andhra Pradesh,South,16.52572,80.6479
+WMQISXM1V1-02297,Madhuranagar,VJD_IRS_Madhuranagar,Indian Railways,Madhuranagar,Vijayawada,Andhra Pradesh,South,16.52572,80.6479
+WMQISXM1V1-02169,PUN_PVT_NANAPETH_MUNIR,PUN_PVT_Nanapeth_Munir,Private,Nanapeth,Pune,Maharashtra,West,18.516304,73.864601
+WMQISXM1V1-02140,PUN_PVT_NANAPETH_MUNIR,PUN_PVT_Nanapeth_Munir,Private,Nanapeth,Pune,Maharashtra,West,18.516304,73.864601
+WMQISXM1V1-02145,PUN_PVT_NANAPETH_MUNIR,PUN_PVT_Nanapeth_Munir,Private,Nanapeth,Pune,Maharashtra,West,18.516304,73.864601
+WMQISXM1V1-01331,PUN_PVT_BNR_JAYSING,PUN_PVT_Baner_Jaysing,Private,Baner,Pune,Maharashtra,West,18.561611,73.78862
+WMQISXM1V1-01332,PUN_PVT_BNR_JAYSING,PUN_PVT_Baner_Jaysing,Private,Baner,Pune,Maharashtra,West,18.561611,73.78862
+WMQISXM1V1-01323,PUN_PVT_BNR_JAYSING,PUN_PVT_Baner_Jaysing,Private,Baner,Pune,Maharashtra,West,18.561611,73.78862
+WMQISXM1V1-01359,PUN_PVT_KTHRD_SWAPNIL,PUN_PVT_Kothrud_Swapnil,Private,Kothrud,Pune,Maharashtra,West,18.503654,73.79541
+WMQISXM1V1-01365,PUN_PVT_KTHRD_SWAPNIL,PUN_PVT_Kothrud_Swapnil,Private,Kothrud,Pune,Maharashtra,West,18.503654,73.79541
+WMQISXM1V1-02302,BESCOM Office Bannerghatta,BLR_BESM_BESCOM_Office_Bannerghatta,BESCOM,Bannerghatta,Bengaluru,Karnataka,South,12.81444,77.58021
+WMQISXM1V1-02278,BESCOM Office Bannerghatta,BLR_BESM_BESCOM_Office_Bannerghatta,BESCOM,Bannerghatta,Bengaluru,Karnataka,South,12.81444,77.58021
+WMQISXM1V1-02285,BESCOM Jigani Subdivision,BLR_BESM_BESCOM_Jigani_Subdivision,BESCOM,Jigani,Bengaluru,Karnataka,South,12.7800543,77.641847
+WMQISXM1V1-02317,BESCOM Jigani Subdivision,BLR_BESM_BESCOM_Jigani_Subdivision,BESCOM,Jigani,Bengaluru,Karnataka,South,12.7800543,77.641847
+WMQISXM1V1-02333,BESCOM O&M Sarajapur,BLR_BESM_BESCOM_O&M_Sarajapur,BESCOM,Sarajapur,Bengaluru,Karnataka,South,12.861132,77.785714
+WMQISXM1V1-02343,BESCOM O&M Sarajapur,BLR_BESM_BESCOM_O&M_Sarajapur,BESCOM,Sarajapur,Bengaluru,Karnataka,South,12.861132,77.785714
+WMQISXM1V1-01333,Shreenath Complex _Nikol EV_Hinjewadi Phase 1,PUN_PVT_Shreenath Complex _Nikol EV_Hinjewadi Phase 1,Private,Hinjewadi,Pune,Maharashtra,West,18.594555,73.730674
+WMQISXM1V1-01404,Aksi Zehra,"GZB_FRN_Khora colony, Sector 62A",Franchise,Ghaziabad,Ghaziabad,UP,North,28.619999,77.343589
+WMQISXM1V1-01321,Shakurpur,DEL_NGO_DMR_Shakurpur,NGO DMRC,Shakurpur,Delhi,Delhi,North,28.68586,77.14936
+WMQISXM1V1-01322,Shakurpur,DEL_NGO_DMR_Shakurpur,NGO DMRC,Shakurpur,Delhi,Delhi,North,28.68586,77.14936
+WMQISXM1V1-01420,Shakurpur,DEL_NGO_DMR_Shakurpur,NGO DMRC,Shakurpur,Delhi,Delhi,North,28.68586,77.14936
+WMQISXM1V1-02147,Aeropark Thunderplus,BLR_TPS_Aeropark_Thunderplus,Thunderplus,Devanahalli,Bengaluru,Karnataka,South,13.182358,77.671002
+WMQISXM1V1-02334,Aeropark Thunderplus,BLR_TPS_Aeropark_Thunderplus,Thunderplus,Devanahalli,Bengaluru,Karnataka,South,13.182358,77.671002
+WMQISXM1V1-02319,Aeropark Thunderplus,BLR_TPS_Aeropark_Thunderplus,Thunderplus,Devanahalli,Bengaluru,Karnataka,South,13.182358,77.671002
+WMQISXM1V1-02335,Aeropark Thunderplus,BLR_TPS_Aeropark_Thunderplus,Thunderplus,Devanahalli,Bengaluru,Karnataka,South,13.182358,77.671002
+WMQISXM1V1-02332,Devanahalli (Near Airport)- Hosokate,BLR_BESM_Devanahalli(Near Airport)_ Hosokate,BESCOM,Devanahalli,Bengaluru,Karnataka,South,13.246497,77.7138
+WMQISXM1V1-02325,Devanahalli (Near Airport)- Hosokate,BLR_BESM_Devanahalli(Near Airport)_ Hosokate,BESCOM,Devanahalli,Bengaluru,Karnataka,South,13.246497,77.7138
+WMQISXM1V1-01370,COCO I,NOI_IOC_COCO_I,IOCL,Noida,Noida,UP,North,28.53071,77.45346
+WMQISXM1V1-01371,COCO I,NOI_IOC_COCO_I,IOCL,Noida,Noida,UP,North,28.53071,77.45346
+WMQISXM1V1-01386,DEVRU ROAD-Shalu,SNP_FRN_DEVRU_ROAD_Shalu,Franchise,Shiv colony Devru road,Sonipat,HARYANA,North,29.009021,77.028336
+WMQISXM1V1-01387,DEVRU ROAD-Shalu,SNP_FRN_DEVRU_ROAD_Shalu,Franchise,Shiv colony Devru road,Sonipat,HARYANA,North,29.009021,77.028336
+WMQISXM1V1-01334,MUM_ PVT_ MaroL_Praful Thakkar,MUM_PVT_MaroL_Praful_Thakkar,Private,Marol,Mumbai,Maharashtra,West,19.116192,72.885363
+WMQISXM1V1-01283,Mamta Sharma,JPR_FRN_Mamta_Sharma,Franchise,Hariya nagar,Jaipur,Rajasthan,North,27.008631,75.720053
+WMQISXM1V1-01294,Mamta Sharma,JPR_FRN_Mamta_Sharma,Franchise,Hariya nagar,Jaipur,Rajasthan,North,27.008631,75.720053
+WMQISXM1V1-00571,Dhruv Aggarwal,GZB_FRN_Dhruv_Aggarwal,Franchise,Chander Nagar,Ghaziabad,UP,North,28.6712835,77.3345667
+WMQISXM1V1-00436,Dhruv Aggarwal,GZB_FRN_Dhruv_Aggarwal,Franchise,Chander Nagar,Ghaziabad,UP,North,28.6712835,77.3345667
+WMQISXM1V1-01385,PUN_PVT_AUNDH_MURKUTE,PUN_PVT_Aundh_Murkute,Private,Aundh,Pune,Maharashtra,West,18.566549,73.801407
+WMQISXM1V1-01366,PUN_PVT_AUNDH_MURKUTE,PUN_PVT_Aundh_Murkute,Private,Aundh,Pune,Maharashtra,West,18.566549,73.801407
+WMQISXM1V1-01392,UMA FILLING STATION ADHOC,SNP_IOC_UMA_FILLING_STATION_ADHOC,IOCL,Sonipat,Sonipat,Haryana,North,28.9874,77.0375
+WMQISXM1V1-01393,UMA FILLING STATION ADHOC,SNP_IOC_UMA_FILLING_STATION_ADHOC,IOCL,Sonipat,Sonipat,Haryana,North,28.9874,77.0375
+WMQISXM1V1-01407,SEC31 Vipin Ambavat,NOI_FRN_SEC31_Vipin_Ambavat,Franchise,sector-31 Near -ram vihar ,Noida,UP,North,28.575806,77.340195
+WMQISXM1V1-01408,SEC31 Vipin Ambavat,NOI_FRN_SEC31_Vipin_Ambavat,Franchise,sector-31 Near -ram vihar ,Noida,UP,North,28.575806,77.340195
+WMQISXM1V1-01260,SHIVANSH SWAPPING STATION-Nagli Nagla,NOI_FRN_Shivansh_Swapping_Station_Nagli_Nagla,Franchise,Sector 134,Noida,UP,North,28.50030136,77.37653972
+WMQISXM1V1-01261,SHIVANSH SWAPPING STATION-Nagli Nagla,NOI_FRN_Shivansh_Swapping_Station_Nagli_Nagla,Franchise,Sector 134,Noida,UP,North,28.50030136,77.37653972
+WMQISXM1V1-01307,SHIVANSH SWAPPING STATION-Nagli Nagla,NOI_FRN_Shivansh_Swapping_Station_Nagli_Nagla,Franchise,Sector 134,Noida,UP,North,28.50030136,77.37653972
+WMQISXM1V1-01379,SHIVANSH SWAPPING STATION-Nagli Nagla,NOI_FRN_Shivansh_Swapping_Station_Nagli_Nagla,Franchise,Sector 134,Noida,UP,North,28.50030136,77.37653972
+WMQISXM1V1-02299,Valnai,MUM_MMMOCL_Valnai,MMMOCL,Malad (W),Mumbai,Maharashtra,West,19.196232,72.83354
+WMQISXM1V1-02327,BESCOM Panduranganagar,BLR_BESM_Panduranganagar,BESCOM,Pandduranganagar,Bengaluru,Karnataka,South,12.8938,77.59499
+WMQISXM1V1-02328,BESCOM Panduranganagar,BLR_BESM_Panduranganagar,BESCOM,Pandduranganagar,Bengaluru,Karnataka,South,12.8938,77.59499
+WMQISXM1V1-02277,MUM_PVT_Mahim Zeeshan Hussain Shaikh,MUM_PVT_Mahim_Zeeshan,Private,Mahim,Mumbai,Maharashtra,West,19.038685,72.842623
+WMQISXM1V1-02214,MUM_PVT_Mahim Zeeshan Hussain Shaikh,MUM_PVT_Mahim_Zeeshan,Private,Mahim,Mumbai,Maharashtra,West,19.038685,72.842623
+WMQISXM1V1-01421,Rithala,DEL_DMR_NVN_Rithala,DMRC-Navnirmaan,Rithala,Delhi,Delhi,North,28.72079,77.10713
+WMQISXM1V1-01422,Rithala,DEL_DMR_NVN_Rithala,DMRC-Navnirmaan,Rithala,Delhi,Delhi,North,28.72079,77.10713
+WMQISXM1V1-01405,Sharda Sharma 3,GZB_FRN_Sharda_Sharma_3,Franchise,Ghaziabad,UP,UP,North,28.6769359,77.41705
