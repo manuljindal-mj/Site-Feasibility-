@@ -409,6 +409,20 @@ if st.session_state.run:
     else:
         st.error("Not Feasible")
 
+    # Additional utilisation check alert for nearby QIS / Deals
+    nearby_qis_check = qis_table[
+        qis_table["Distance_km"] <= 1.5
+    ] if not qis_table.empty else pd.DataFrame()
+
+    nearby_deals_check = deal_table[
+        deal_table["Distance"] <= 1.5
+    ] if not deal_table.empty else pd.DataFrame()
+
+    if not nearby_qis_check.empty or not nearby_deals_check.empty:
+        st.info(
+            "QIS / Deal exists within 1.5 km radius. Please check the current utilisation levels before proceeding."
+        )
+
     # --------------------------------------------
     # TABLES
     # --------------------------------------------
