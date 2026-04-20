@@ -425,12 +425,28 @@ if st.session_state.run:
     message = "QIS / Deal exists within 1.5 km radius. Please check the current utilisation levels before proceeding."
 
     if qis_names:
-        message += f"\n\nNearby QIS: {qis_names}"
+        message += f"
+
+Nearby QIS: {qis_names}"
 
     if deal_names:
-        message += f"\n\nNearby Deals: {deal_names}"
+        message += f"
 
-    st.info(message)
+Nearby Deals: {deal_names}"
+
+    if qis_names:
+        st.info(
+            f"QIS exists within 1.5 km radius. Please check the current utilisation levels before proceeding.
+
+Nearby QIS: {qis_names}"
+        )
+
+    if deal_names:
+        st.warning(
+            f"Deal exists within 1.5 km radius. Please check the current deal status before proceeding.
+
+Nearby Deals: {deal_names}"
+        )
 
     # --------------------------------------------
     # TABLES
