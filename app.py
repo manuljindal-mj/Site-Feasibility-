@@ -1,6 +1,3 @@
-# Full corrected Streamlit app code
-# (includes QIS alert fix and removes Deal warning syntax issue)
-
 import streamlit as st
 import pandas as pd
 from geopy.distance import geodesic
@@ -175,6 +172,7 @@ p0, qis, deals, darkstores = load_data()
 # ------------------------------------------------
 
 
+
 def score_p0(count):
     if count >= 10:
         return 5
@@ -215,5 +213,284 @@ def score_access(val):
 def score_binary(val):
     return 4 if val == "Yes" else 2
 
-# Remaining UI/output section continues exactly with your corrected QIS alert block.
-# (Shortened here for clean canvas setup and easy continuation.)
+
+# ------------------------------------------------
+# SIDEBAR INPUTS
+# ------------------------------------------------
+
+st.sidebar.header("Site Inputs")
+
+if st.sidebar.button("Get My Location 📍"):
+    st.session_state.fetch_location = True
+
+if st.session_state.fetch_location:
+    loc = get_geolocation()
+
+    if loc:
+        st.session_state.lat = str(loc["coords"]["latitude"])
+        st.session_state.lon = str(loc["coords"]["longitude"])
+        st.session_state.fetch_location = False
+        st.sidebar.success("Location captured")
+
+lat_input = st.sidebar.text_input(
+    "Latitude",
+    value=st.session_state.lat,
+)
+
+lon_input = st.sidebar.text_input(
+    "Longitude",
+    value=st.session_state.lon,
+)
+
+arterial_distance = st.sidebar.selectbox(
+    "Distance from Arterial Road",
+    [">1km", "<1km", "<500m", "<250m", "<100m"],
+)
+
+access_width = st.sidebar.selectbox(
+    "Access Road Width",
+    ["<10ft", "10-20ft", "20-30ft", "30-40ft", ">40ft"],
+)
+
+open_24 = st.sidebar.selectbox(
+    "24x7 Possible",
+    ["No", "Yes"],
+)
+
+parking = st.sidebar.selectbox(
+    "Parking Available",
+    ["No", "Yes"],
+)
+
+if st.sidebar.button("Run Feasibility"):
+    st.session_state.run = True
+
+# ------------------------------------------------
+# RUN ANALYSIS
+# ------------------------------------------------
+
+if st.session_state.run:
+    lat = convert_coord(lat_input)
+    lon = convert_coord(lon_input)
+
+    if lat is None or lon is None:
+        st.error("Invalid coordinates")
+        st.stop()
+
+    input_point = (lat, lon)
+
+    # --------------------------------------------
+    # P0 ANALYSIS
+    # --------------------------------------------
+
+    p0_results = []
+
+    for _, row in p0.iterrows():
+        dist = safe_distance(
+            input_point,
+            row["Latitude"],
+            row["Longitude"],
+        )
+
+        if dist is not None and dist <= 1.5:
+            p0_results.append(
+                {
+                    "Location": row.get("Location", ""),
+                    "Distance_km": round(dist, 2),
+                }
+            )
+
+    p0_count = len(p0_results)
+    p0_score = score_p0(p0_count)
+
+    # --------------------------------------------
+    # QIS ANALYSIS
+    # --------------------------------------------
+
+    qis_results = []
+
+    for _, row in qis.iterrows():
+        dist = safe_distance(
+            input_point,
+            row["Lat"],
+            row["Long"],
+        )
+
+        if dist is None:
+            continue
+
+        qis_results.append(
+            {
+                "QIS": row.get("QIS Name", ""),
+                "Distance_km": round(dist, 2),
+            }
+        )
+
+    qis_table = (
+        pd.DataFrame(qis_results)
+        .sort_values("Distance_km")
+        .head(10)
+    )
+
+    # --------------------------------------------
+    # NEAREST DARKSTORE (DISPLAY ONLY)
+    # --------------------------------------------
+
+    nearest_dark = None
+    nearest_dark_name = "Unknown"
+
+    for _, row in darkstores.iterrows():
+        dist = safe_distance(
+            input_point,
+            row["Latitude"],
+            row["Longitude"],
+        )
+
+        if dist is None:
+            continue
+
+        if nearest_dark is None or dist < nearest_dark:
+            nearest_dark = dist
+            nearest_dark_name = row.get("Name", "Unknown")
+
+    # --------------------------------------------
+    # DEALS ANALYSIS
+    # --------------------------------------------
+
+    deal_results = []
+
+    for _, row in deals.iterrows():
+        dist = safe_distance(
+            input_point,
+            row["Latitude"],
+            row["Longitude"],
+        )
+
+        if dist is not None and dist <= 2:
+            deal_results.append(
+                {
+                    "Deal": row.get("Deal Name", ""),
+                    "Distance": round(dist, 2),
+                }
+            )
+
+    deal_table = pd.DataFrame(deal_results)
+
+    # --------------------------------------------
+    # FINAL SCORE
+    # --------------------------------------------
+
+    arterial_score = score_arterial(arterial_distance)
+    access_score = score_access(access_width)
+    open_score = score_binary(open_24)
+    parking_score = score_binary(parking)
+
+    weighted_score = (
+        p0_score * 0.40
+        + arterial_score * 0.20
+        + access_score * 0.20
+        + open_score * 0.10
+        + parking_score * 0.10
+    )
+
+    normalized_score = weighted_score / 5
+
+    # --------------------------------------------
+    # OUTPUT
+    # --------------------------------------------
+
+    st.header("Feasibility Result")
+    st.metric("Score", round(normalized_score, 2))
+
+    if normalized_score > 0.6:
+        st.success("Approved")
+    elif normalized_score >= 0.3:
+        st.warning("Feasible")
+    else:
+        st.error("Not Feasible")
+
+    # --------------------------------------------
+    # TABLES
+    # --------------------------------------------
+
+    colA, colB = st.columns(2)
+
+    with colA:
+        st.subheader("P0 within 1.5km")
+        st.dataframe(pd.DataFrame(p0_results))
+
+        st.subheader("Nearest QIS")
+        st.dataframe(qis_table)
+
+    with colB:
+        st.subheader("Nearby Deals")
+
+        if deal_table.empty:
+            st.write("No deals nearby")
+        else:
+            st.dataframe(deal_table)
+
+        if nearest_dark is not None:
+            st.write(
+                f"Nearest Darkstore: {nearest_dark_name} | {round(nearest_dark, 2)} km"
+            )
+
+    # --------------------------------------------
+    # MAP
+    # --------------------------------------------
+
+    st.subheader("Map")
+
+    m = folium.Map(location=[lat, lon], zoom_start=13)
+
+    folium.Marker(
+        [lat, lon],
+        popup="Input Site",
+        icon=folium.Icon(color="blue"),
+    ).add_to(m)
+
+    folium.Circle(
+        [lat, lon],
+        radius=1500,
+        color="blue",
+        fill=True,
+        fill_opacity=0.1,
+    ).add_to(m)
+
+    for _, row in p0.iterrows():
+        folium.CircleMarker(
+            [row["Latitude"], row["Longitude"]],
+            radius=5,
+            color="green",
+        ).add_to(m)
+
+    for _, row in qis.iterrows():
+        folium.CircleMarker(
+            [row["Lat"], row["Long"]],
+            radius=4,
+            color="orange",
+        ).add_to(m)
+
+    for _, row in darkstores.iterrows():
+        folium.CircleMarker(
+            [row["Latitude"], row["Longitude"]],
+            radius=4,
+            color="purple",
+            popup=row.get("Name", "Unknown"),
+        ).add_to(m)
+
+    for _, row in deals.iterrows():
+        folium.CircleMarker(
+            [row["Latitude"], row["Longitude"]],
+            radius=5,
+            color="red",
+        ).add_to(m)
+
+    st_folium(m, width=900, height=600)
+
+# ------------------------------------------------
+# FOOTER
+# ------------------------------------------------
+
+st.markdown("---")
+st.markdown("Created by Manul 🚀")
