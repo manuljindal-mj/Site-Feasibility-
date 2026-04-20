@@ -1,199 +1,604 @@
-﻿Location,QIS #,Latitude,Longitude,City,Category,Priority
-Madhapur,4,17.44858,78.3908,Hyderabad,Network Strengthening,P0
-JNTU College,6,17.49867,78.38881,Hyderabad,Network Strengthening,P0
-Hafeezpet,4,17.48417,78.36029,Hyderabad,Network Strengthening,P0
-Nampally,4,17.388,78.46717,Hyderabad,Network Expansion,P0
-Bowenpally,6,17.46859,78.48106,Hyderabad,Network Strengthening,P0
-Gachibowli,3,17.44008,78.34892,Hyderabad,Network Expansion,P0
-Begampet,4,17.438386,78.4580437,Hyderabad,Network Expansion,P0
-Nanakramguda,3,17.41691,78.34238,Hyderabad,Network Strengthening,P0
-Shaikpet,4,17.40675,78.4024,Hyderabad,BD Demand,P0
-Jubli Hills,4,17.42353,78.41186,Hyderabad,Network Expansion,P0
-RaiDurg,4,17.41839,78.39101,Hyderabad,Network Expansion,P0
-Mehdipatnam,4,17.39546,78.43077,Hyderabad,Network Strengthening,P0
-Sarath City Capital Mall,5,17.4576353,78.365079,Hyderabad,Network Expansion,P0
-Shaikpet,4,17.40609,78.39131,Hyderabad,BD Demand,P0
-Kokapet,3,17.3970188,78.3350704,Hyderabad,BD Demand,P0
-Upperpally,4,17.3606718,78.4169804,Hyderabad,BD Demand,P0
-Attapur,3,17.3767773,78.4296662,Hyderabad,Network Strengthening,P0
-Mothi Nagar,4,17.4536366,78.4223029,Hyderabad,Network Strengthening,P0
-Izzathnagar,4,17.4673427,78.3796125,Hyderabad,Network Strengthening,P0
-Anjaneya Nagar,4,17.472031,78.4180007,Hyderabad,Network Strengthening,P0
-Hindustan Aeronautics,4,17.4729134,78.4555617,Hyderabad,Network Strengthening,P0
-Kormangala,6,12.93545,77.62714,Bangalore,Network plan,P0
-Bommanahalli,6,12.903,77.62479,Bangalore,Network plan,P0
-Domlur,6,12.96099,77.63873,Bangalore,Network plan,P0
-Sarjapur Social,6,12.91009,77.6862,Bangalore,Network plan,P0
-JP Nagar 7th phase,6,12.8867,77.57686,Bangalore,Network Strengthening,P0
-HSR Layout,4,12.91213,77.64373,Bangalore,Network Strengthening,P0
-Brookefield,4,12.96554,77.71868,Bangalore,BD Demand,P0
-Sathanur,4,13.12143,77.63102,Bangalore,BD Demand,P0
-Maruthi Nagar,4,13.10798,77.60847,Bangalore,BD Demand,P0
-Doddabettahalli,4,13.0905,77.5544,Bangalore,BD Demand,P0
-Mathikere,4,13.03392,77.56444,Bangalore,Network plan,P0
-Malleshwaram,4,13.00551,77.56924,Bangalore,Network Strengthening,P0
-Shampura,4,13.02941,77.61292,Bangalore,Network Strengthening,P0
-Bangalore Cantt,4,12.99407,77.59842,Bangalore,Network Strengthening,P0
-Kalasipalya,4,12.95959,77.58019,Bangalore,Network Strengthening,P0
-Banashankari/Uttarahalli,4,12.92545,77.54676,Bangalore,BD Demand,P0
-Adugodi,4,12.942,77.6083,Bangalore,Network plan,P0
-BTM 2nd stage,4,12.90906,77.60118,Bangalore,Network Strengthening,P0
-Vishwapriya Nagar,4,12.88162,77.62783,Bangalore,Network Strengthening,P0
-Somasundar Palya,4,12.89804,77.65409,Bangalore,Network Strengthening,P0
-Basapura,4,12.86524,77.65153,Bangalore,Network Strengthening,P0
-Gunjur Village,4,12.92101,77.73554,Bangalore,Network plan,P0
-Murugeshpalya,4,12.95603,77.65351,Bangalore,Network Strengthening,P0
-CV Raman Nagar,4,12.98616,77.66452,Bangalore,Network plan,P0
-KEB layout,4,13.03081,77.58037,Bangalore,Network plan,P0
-Rajajinagar,4,12.99807,77.55253,Bangalore,Network plan,P0
-Varthur Kodi,4,12.95774,77.74414,Bangalore,Network plan,P0
-Kudlu,4,12.88678,77.65692,Bangalore,Network plan,P0
-Choodasandra,4,12.88872,77.67303,Bangalore,Network plan,P0
-T. Nagar,6,13.04176,80.23408,Chennai,BD Demand,P0
-Balagere,4,12.93948,77.7294,Bangalore,BD Demand,P0
-Perambur,4,13.12132,80.232975,Chennai,BD Demand,P0
-Tajganj (taj mahal metro ),3,27.16826,78.03623,Agra,Network Expansion,P0
-Transport Nagar ( near ISBT),3,27.20781,77.97748,Agra,Network Expansion,P0
-Sikandra,3,27.21837,77.94751,Agra,Network Expansion,P0
-Agra Cantt,4,27.15805,78.00989,Agra,Network Expansion,P0
-Sita Nagar,3,27.20192,78.04085,Agra,Network Expansion,P0
-Ram Bagh,2,27.20674808,78.04732796,Agra,Network Expansion,P0
-Bijili Ghar,2,27.18096767,78.01533902,Agra,Network Expansion,P0
-Bhagwan Talkies,3,27.21074342,78.00466482,Agra,Network Expansion,P0
-Saket,6,28.5221,77.21015,Delhi,Network Expansion,P0
-Pahar Ganj,6,28.6456,77.21278,Delhi,Network Expansion,P0
-Khan Market,6,28.60016,77.22696,Delhi,Network Expansion,P0
-Chhatarpur,4,28.49586,77.18483,Delhi,Network Strengthening ,P0
-Hauz Khas,4,28.54789,77.20312,Delhi,Network Expansion,P0
-Malviya Nagar,4,28.53423,77.20945,Delhi,Network Expansion,P0
-Sarita Vihar,4,28.53078,77.294,Delhi,Network Expansion,P0
-Jangpura,4,28.58259,77.24868,Delhi,Network Expansion,P0
-Jorbagh,4,28.58776,77.21531,Delhi,Network Expansion,P0
-Mehrauli,4,28.5212,77.17891,Delhi,Network Strengthening ,P0
-Mayapuri Industrial Area,4,28.61836,77.11717,Delhi,Network Strengthening ,P0
-Vsant Kunj,4,28.52867,77.1485,Delhi,Network Strengthening ,P0
-Rk Puram,4,28.55062,77.18533,Delhi,Network Strengthening ,P0
-Karol bhag,4,28.65534,77.18823,Delhi,Network Strengthening ,P0
-Khanpur,4,28.50598,77.23022,Delhi,Network Strengthening ,P0
-Rama Krishna Puram,3,28.56601,77.17674,Delhi,Network Expansion,P0
-Moti Bagh,3,28.58334,77.1678,Delhi,Network Strengthening ,P0
-Okhla Pocket D,3,28.52142,77.28297,Delhi,Network Strengthening,P0
-Sushant Lok 2,3,28.42596,77.08926,Gurgaon,Network Strengthening,P0
-Sector 41,4,28.4557,77.063,Gurgaon,BD Demand ,P0
-Sector 53-54,3,28.44658,77.10491,Gurgaon,BD Demand ,P0
-Badshahpur,4,28.39811,77.05469,Gurgaon,BD Demand ,P0
-Vyapar Kendra,3,28.46054,77.08394,Gurgaon,Network Expansion ,P0
-Sector 49,4,28.4119,77.04243,Gurgaon,Network Expansion ,P0
-Sector 57,4,28.42256,77.07537,Gurgaon,Network Expansion ,P0
-Sector 32,4,28.4478,77.04317,Gurgaon,BD Demand ,P0
-Suhash Chowk,4,28.42857,77.03704,Gurgaon,Network Expansion ,P0
-Badalpur,2,28.59261,77.51706,Ghaziabad,BD Demand,P0
-Sector 12 Pratap Vihar,2,28.6453,77.41177,Ghaziabad,BD Demand,P0
-Vijay Nagar + Pratap Vihar,2,28.65211,77.42109,Ghaziabad,BD Demand,P0
-Lal Kuan to New Bus stand,2,28.6429,77.45197,Ghaziabad,Network Expansion,P0
-Indirapuram,6,28.63986,77.36885,Ghaziabad,Network Expansion,P0
-LAL KUAN,3,28.63373,77.47369,Ghaziabad,Network Expansion,P0
-Shalimar Garden,2,28.69152,77.33536,Ghaziabad,BD Demand,P0
-Vasundhara,4,28.66281,77.37443,Ghaziabad,BD Demand,P0
-Mohan Nagar,2,28.6731,77.38581,Ghaziabad,Network Expansion,P0
-Shahibabad Industrial Area,4,28.66279,77.33633,Ghaziabad,Network Expansion,P0
-Raj Bhag,3,28.68009,77.34592,Ghaziabad,Network Expansion,P0
-Sector 28,2,28.43804,77.30904,Faridabad,Network Expansion,P0
-Bata Chowk,2,28.38603,77.31353,Faridabad,Network Expansion,P0
-Crown Interiorz Mall,2,28.46993,77.30812,Faridabad,Network Expansion,P0
-Sector 15 Market,2,28.39519,77.32272,Faridabad,Network Expansion,P0
-Sector 21 D,2,28.41698,77.28485,Faridabad,Network Expansion,P0
-NHPC CHOWK,2,28.45774,77.30754,Faridabad,Network Expansion,P0
-Rajeev nagar,2,28.45752,77.31666,Faridabad,BD Demand,P0
-Sarai Khwaja,2,28.4786,77.30476,Faridabad,Network Expansion,P0
- Ballabgarh,2,28.33934,77.32091,Faridabad,BD Demand,P0
-Sector 50,2,28.3808,77.28021,Faridabad,Network Expansion,P0
-Surajpur Site 4,2,28.45347,77.53185,Greater Noida,Network Expansion ,P0
-Gamma 1,4,28.48472,77.50013,Greater Noida,Network Expansion ,P0
-Noida Sector 16,4,28.57903,77.31682,Noida,Network Expansion ,P0
-Wave City Center Noida,4,28.57469,77.35605,Noida,Network Expansion ,P0
-Sector 78,4,28.56436,77.38627,Noida,Network Strengthening ,P0
-Sector 93,4,28.52264,77.39259,Noida,Network Strengthening ,P0
-Sector 141,2,28.50094,77.42135,Noida,BD Demand,P0
-Zeta1,3,28.50399,77.52831,Greater Noida,BD Demand,P0
-Gaur City,4,28.60804,77.42939,Greater Noida,BD Demand,P0
-Sector 58,3,28.6066,77.35628,Noida,BD Demand,P0
-Noida Electronic City,2,28.62884,77.37521,Noida,BD Demand,P0
-Knowledge Park III,2,28.47887,77.48126,Greater Noida,Network Expansion ,P0
-Gurjinder Vihar,2,28.44649,77.50941,Greater Noida,BD Demand,P0
-Sector 129,2,28.50622,77.38878,Noida,BD Demand,P0
-Sector 167,2,28.48905,77.4161,Noida,BD Demand,P0
-Sector 156,3,28.45753,77.4511,Noida,BD Demand,P0
-Sector 154,3,28.45774,77.46399,Noida,BD Demand,P0
-Pari chowk,4,28.46531,77.51126,Greater Noida,BD Demand,P0
-Delta 1,2,28.47831,77.52536,Greater Noida,Network Expansion ,P0
-Sector 125,3,28.54487,77.32732,Noida,BD Demand,P0
-Sector 62,3,28.62801,77.36353,Noida,BD Demand,P0
-Vikhroli East,3,19.11439,72.93754,Mumbai,Network Expansion ,P0
-Santa Cruz Electronics Export Zone,4,19.12684,72.87674,Mumbai,BD Demand,P0
-Mulund,3,19.17244,72.95242,Mumbai,BD Demand,P0
-MSRTC Bud Stand,3,19.19601,72.97067,Mumbai,Network Expansion ,P0
-Mandapa,2,19.23116,72.97413,Mumbai,BD Demand,P0
-Kopri,2,19.1816,72.97159,Mumbai,BD Demand,P0
-Kanjur Marg,3,19.1284,72.92801,Mumbai,BD Demand,P0
-ESIC Hospital,3,19.20409,72.95645,Mumbai,Network Expansion ,P0
-Bhandup West,4,19.16365,72.93934,Mumbai,BD Demand,P0
-Bhandup,3,19.14209,72.93733,Mumbai,Network Expansion ,P0
-Wakad Bridge / Dange road,3,18.6029,73.7701,Pune,BD Demand,P0
-Tingre Nagar,3,18.57601,73.8891529,Pune,BD Demand,P0
-Nimbalakar Nagar,3,18.60861,73.9116262,Pune,BD Demand,P0
-Abhiruchi Mall,3,18.46415,73.8174699,Pune,BD Demand,P0
-Baner,3,18.55731,73.77205,Pune,BD Demand,P0
-Aundh,6,18.56074,73.80723,Pune,BD Demand,P0
-Wakad,3,18.58922,73.77769,Pune,BD Demand,P0
-Hinjawadi,4,18.59159,73.72657,Pune,BD Demand,P0
-Yashwant Nagar,6,18.5525,73.89404,Pune,Network Plan,P0
-Viman Nagar-1,3,18.56798,73.90705,Pune,Network Plan,P0
-Kharadi,4,18.55122,73.9506601,Pune,BD Demand,P0
-Gokhalenagar,6,18.52914,73.82705,Pune,Network Plan,P0
-Hinjewadi Infotech park,4,18.59566,73.71169,Pune,Network Plan,P0
-Range hills,3,18.55038,73.8393372,Pune,Network Plan,P0
-Hinjewadi phase3,3,18.58067,73.6854866,Pune,Network Plan,P0
-Nungambakkam,4,13.05695,80.24247,Chennai,BD Demand,P0
-Tiruvottiyur,4,13.1627,80.300714,Chennai,BD Demand,P0
-Royapettah,4,13.05371,80.264355,Chennai,BD Demand,P0
-Anna Nagar,4,13.08496,80.21013,Chennai,BD Demand,P0
-Pammal,4,12.97478,80.131982,Chennai,BD Demand,P0
-Padi,3,13.09801,80.185151,Chennai,BD Demand,P0
-Chetpet,4,13.07171,80.240329,Chennai,BD Demand,P0
-Ayanavaram,4,13.09875,80.234847,Chennai,Network Expansion,P0
-Sholinganallur,2,12.90672,80.230338,Chennai,BD Demand,P0
-Perumbakkam,3,12.89329,80.184968,Chennai,Network Expansion,P0
-Selaiyur,2,12.90774,80.142649,Chennai,BD Demand,P0
-Navallur,3,12.8468,80.229183,Chennai,BD Demand,P0
-Medavakkam,3,12.92015,80.19255,Chennai,Network Expansion,P0
-Keelkattalai,3,12.95573,80.187334,Chennai,Network Expansion,P0
-Avadi,3,13.10485,80.110332,Chennai,BD Demand,P0
-Tambaram west,2,12.92534,80.100519,Chennai,BD Demand,P0
-Banjara Hills,4,17.41689,78.43867,Hyderabad,Network Expansion,P0
-Indiranagr,6,12.97837,77.64084,Bangalore,Network plan,P0
-Ambattur Industrial area,2,13.08919,80.1613,Chennai,Network Expansion,P0
-Ambattur,2,13.11867,80.155691,Chennai,BD Demand,P0
-Gandhinagar,4,26.8757,75.80319,Jaipur, ,P0
-Khatipura,4,26.92802,75.74801,Jaipur, ,P0
-Mahaveer Nagar,4,26.85346,75.79092,Jaipur, ,P0
-Sanganer,4,26.8142,75.77311,Jaipur, ,P0
-Mahesh Nagar,4,26.87879,75.78419,Jaipur, ,P0
-Malviya Nagar,3,26.85501,75.8241,Jaipur, ,P0
-Mansarovar,2,26.85046,75.76277,Jaipur, ,P0
-Model Town,3,26.84351,75.82455,Jaipur, ,P0
-Pratap Nagar,4,26.80518,75.81293,Jaipur, ,P0
-Shipra Path,4,26.85453,75.77341,Jaipur, ,P0
-Palika Bazar,2,26.84909,75.80934,Jaipur, ,P0
-Goliyawas,4,26.85397,75.73681,Jaipur, ,P0
-SKIT,2,26.82612,75.85101,Jaipur, ,P0
-Lalapura,2,26.90162313,75.71012236,Jaipur,BD Demand,P0
-Manyawas,2,26.8699794,75.74147408,Jaipur,BD Demand,P0
-Gajsinghpur,2,26.87949544,75.72562718,Jaipur,Network Expansion,P0
-Vaishali Nagar,2,26.90490334,75.75259567,Jaipur, ,P0
-Nirman Nagar,4,26.88562,75.74515,Jaipur, ,P0
-Near Rajasthan University,2,26.8902,75.80937,Jaipur, ,P0
-Vivek Nagar,2,26.88957324,75.7688428,Jaipur, ,P0
-SitaBari,3,26.82649968,75.7923887,Jaipur,BD Demand,P0
-Heerapura,2,26.88947502,75.72770763,Jaipur,Network Expansion,P0
-Kalyanpura,2,26.82705735,75.7637434,Jaipur,Network Expansion,P0
+﻿Name,No. of QIS,Latitude,Longitude,City
+Bellahalli,6,13.10367,77.63305,Bengaluru
+Jalahalli east,4,13.06868,77.54511,Bengaluru
+Kodigehalli,4,13.07009,77.579,Bengaluru
+Sahakar Nagar,4,13.06255,77.58737,Bengaluru
+Yelahanka,6,13.10394,77.57209,Bengaluru
+Bagalakunte,4,13.05334,77.49704,Bengaluru
+Attiguppe,4,12.96018,77.52964,Bengaluru
+Armane Nagar,1,13.01555,77.58301,Bengaluru
+Hesaraghatta,1,13.13589,77.48624,Bengaluru
+Guttahalli,1,13.00154,77.58224,Bengaluru
+VijayaNagar,4,12.97611,77.53534,Bengaluru
+Shanti Nagar,1,12.95785,77.59985,Bengaluru
+Chickpet,1,12.96747,77.57503,Bengaluru
+Vasanth Nagar,1,12.98917,77.59351,Bengaluru
+Benson town,4,13.00457,77.5999,Bengaluru
+Gopalapura,1,12.97824,77.56313,Bengaluru
+Laggere,4,13.01003,77.52552,Bengaluru
+Richmond Town,1,12.96369,77.60389,Bengaluru
+Shanthala nagar,1,12.97163,77.60069,Bengaluru
+CRAIG park Layout,1,12.97113,77.61507,Bengaluru
+Jogupalya,2,12.9694,77.62394,Bengaluru
+Tavarekere,4,12.92806,77.60849,Bengaluru
+Jayanagar,6,12.93022,77.58436,Bengaluru
+Basavanagudi,6,12.9405,77.57365,Bengaluru
+Azad Nagar,4,12.95543,77.55435,Bengaluru
+Srinagar,6,12.9469,77.55144,Bengaluru
+Kengeri Satellite Town,4,12.92605,77.48454,Bengaluru
+Ullal,4,12.95789,77.48094,Bengaluru
+Lakkasandra,6,12.94419,77.60068,Bengaluru
+Kothur,6,12.87045,77.58193,Bengaluru
+Hosakerehalli,4,12.92193,77.53533,Bengaluru
+Rajarajeshwari Nagar,4,12.91472,77.52074,Bengaluru
+Kodihalli,1,12.96591,77.64966,Bengaluru
+Kaggadasapura,6,12.98275,77.67873,Bengaluru
+Belur Nagasandra,1,12.94226,77.65515,Bengaluru
+Varthur,6,12.93936,77.74241,Bengaluru
+Bidare Agraha,4,13.03338,77.7449,Bengaluru
+Byappanahalli,4,13.12587,77.64364,Bengaluru
+Chikkajala,2,13.16845,77.63423,Bengaluru
+Bagaluru,4,13.13267,77.66839,Bengaluru
+Rajanukuntte,1,13.17635,77.5579,Bengaluru
+Kambipura,4,12.87961,77.45727,Bengaluru
+KIADB industrial Area,3,12.79781,77.65596,Bengaluru
+Yarandahalli,3,12.81129,77.66944,Bengaluru
+Kammasandra,3,12.83377,77.68835,Bengaluru
+Bommasandra,4,12.81675,77.69509,Bengaluru
+Chandapura,2,12.80086,77.70967,Bengaluru
+Dommasandra,3,12.8787,77.75545,Bengaluru
+Chikkakannalli,4,12.89561,77.7045,Bengaluru
+Kasavanahalli,3,12.90653,77.67568,Bengaluru
+Thubarahalli,4,12.95109,77.71937,Bengaluru
+Budigere,1,13.13386,77.74493,Bengaluru
+Bikasipura,6,12.89239,77.55955,Bengaluru
+Kengri metro,4,12.90778,77.47665,Bengaluru
+Neladri Nagar,6,12.83946,77.64576,Bengaluru
+Sonnenahalli,4,12.93935,77.48218,Bengaluru
+Peenya 2nd stage,4,13.0131,77.49111,Bengaluru
+Sampigehalli,6,13.08076,77.62097,Bengaluru
+Amrutahalli,6,13.06582,77.60285,Bengaluru
+Geddalahalli,6,13.05212,77.63715,Bengaluru
+Lingarajapuram,4,13.02177,77.62672,Bengaluru
+Bharti Nagar,1,13.13806,77.61905,Bengaluru
+Billamaranahalli,2,13.1534,77.63837,Bengaluru
+Muddanahalli,1,13.14528,77.56874,Bengaluru
+Nagenahalli,2,13.12827,77.57468,Bengaluru
+Chikkabanavara,4,13.07554,77.50942,Bengaluru
+Sompura,3,12.86559,77.76758,Bengaluru
+Sarjapura,3,12.86185,77.78837,Bengaluru
+Sadarmangala,6,12.99506,77.69193,Bengaluru
+Kadubeesanahalli,4,12.94164,77.69492,Bengaluru
+Bellandur,4,12.93603,77.68394,Bengaluru
+Royal menakshi mall,4,12.87684,77.59516,Bengaluru
+Sathanur,4,13.12142659,77.63101596,Bengaluru
+Maruthi Nagar,4,13.10797641,77.60846714,Bengaluru
+Doddabettahalli,4,13.09050436,77.5544027,Bengaluru
+Nagasandra,4,13.03947281,77.50086572,Bengaluru
+Jalahalli,4,13.04606,77.54549,Bengaluru
+Mathikere,4,13.03392,77.56444,Bengaluru
+Malleshwaram,4,13.00551,77.56924,Bengaluru
+Shampura,4,13.02940887,77.61292478,Bengaluru
+Bangalore Cantt,4,12.99406919,77.59841968,Bengaluru
+Naagarabhavi,4,12.97193,77.51275,Bengaluru
+Basavereshwar nagar,4,12.9879,77.53666,Bengaluru
+Chandra Layout,4,12.95529,77.52344,Bengaluru
+Kalasipalya,4,12.95959,77.58019,Bengaluru
+Banashankari,4,12.92545,77.54676,Bengaluru
+Kormangala,6,12.93545,77.62714,Bengaluru
+Adugodi,4,12.942,77.6083,Bengaluru
+Kodipalya,4,12.89852,77.48902,Bengaluru
+Vajarahalli,4,12.87013,77.54331,Bengaluru
+Anajanpura,4,12.85695,77.56216,Bengaluru
+Gottigere,4,12.85644,77.58884,Bengaluru
+Bommanahalli,6,12.903,77.62479,Bengaluru
+HSR Layout,4,12.91213,77.64373,Bengaluru
+Vishwapriya nagar,4,12.88162175,77.62782546,Bengaluru
+Somasundar Palya,4,12.89804,77.65409,Bengaluru
+Basapura,4,12.86523759,77.6515281,Bengaluru
+Sarjapur Social,6,12.91009,77.6862,Bengaluru
+Gunjur Village,4,12.92101,77.73554,Bengaluru
+Balagere,4,12.93948,77.7294,Bengaluru
+Brookefield,4,12.96554,77.71868,Bengaluru
+Varthur Kodi,4,12.95774,77.74414,Bengaluru
+Ramamurthy Nagar,4,13.01631,77.67848,Bengaluru
+Indiranagr,6,12.97837,77.64084,Bengaluru
+Domlur,6,12.96099,77.63873,Bengaluru
+Murugeshpalya,4,12.95602629,77.65350607,Bengaluru
+CV Raman Nagar,4,12.98615732,77.66451675,Bengaluru
+Basavanagara,4,12.96617985,77.67954931,Bengaluru
+gayatri Nagar,4,13.00915,77.70547,Bengaluru
+Kodigehalli,4,13.00263,77.72648,Bengaluru
+KEB layout,4,13.03081074,77.58037341,Bengaluru
+IISc,4,13.0175796,77.56594475,Bengaluru
+Rajajinagar,4,12.99806879,77.55252863,Bengaluru
+BTM 2nd stage,4,12.90905936,77.60117677,Bengaluru
+Peenya,4,13.03657018,77.52427272,Bengaluru
+Jalahali west,4,13.06164564,77.51976987,Bengaluru
+Chikkalasandra,4,12.91214301,77.54699348,Bengaluru
+JP Nagar 7th phase,6,12.88669576,77.57686096,Bengaluru
+Kudlu,4,12.88677838,77.65692067,Bengaluru
+choodasandra,4,12.88871997,77.67303175,Bengaluru
+KR defence colony,4,13.04877057,77.7439953,Bengaluru
+Banaswadi,4,13.01118271,77.64853686,Bengaluru
+Kadugodi,3,12.99092169,77.76222921,Bengaluru
+Badi Chaupar,2,26.92405,75.82671,Jaipur
+C Scheme,2,26.91329,75.80345,Jaipur
+Civil Lines,2,26.90593,75.78444,Jaipur
+Gandhinagar,2,26.8757,75.80319,Jaipur
+Hatwara,2,26.91464,75.77064,Jaipur
+Neta Ki Chakki,2,26.9563,75.73941,Jaipur
+Kacchi Basti,2,26.88753,75.8386,Jaipur
+Sanganer,2,26.8142,75.77311,Jaipur
+Mahesh Nagar,2,26.87879,75.78419,Jaipur
+Prem Nagar,2,26.89041,75.87546,Jaipur
+Malviya Nagar,2,26.85501,75.8241,Jaipur
+Mansarovar,2,26.85046,75.76277,Jaipur
+Pratap Nagar,2,26.80518,75.81293,Jaipur
+Goliyawas,2,26.85397,75.73681,Jaipur
+Sindhi Camp Bus Station Jaipur,2,26.92419,75.80079,Jaipur
+Vidyadhar Nagar,2,26.94409,75.7822,Jaipur
+SKIT,2,26.82612,75.85101,Jaipur
+Sirsi Road,2,26.92421,75.69367,Jaipur
+Bani Park,2,26.93082,75.79365,Jaipur
+Gajsinghpur,2,26.87949544,75.72562718,Jaipur
+Vaishali Nagar,2,26.90490334,75.75259567,Jaipur
+Nirman Nagar,2,26.88562,75.74515,Jaipur
+Near Rajasthan University,2,26.8902,75.80937,Jaipur
+Vivek Nagar,2,26.88957324,75.7688428,Jaipur
+SitaBari,2,26.82649968,75.7923887,Jaipur
+Heerapura,2,26.88947502,75.72770763,Jaipur
+Banjara Hills,4,17.41689,78.43867,Hyderabad
+Kachiguda,6,17.39009,78.49334,Hyderabad
+JBS Parade Groud,4,17.44446,78.49746,Hyderabad
+Dilsukhnagar,3,17.36847,78.53159,Hyderabad
+Kharmaghat,3,17.34247048,78.53446176,Hyderabad
+JNTU College,6,17.49867,78.38881,Hyderabad
+Madhapur,4,17.44858,78.3908,Hyderabad
+Nampally,4,17.388,78.46717,Hyderabad
+Gandhi Hospital,3,17.42332,78.50407,Hyderabad
+Uppal,4,17.39838,78.55827,Hyderabad
+Bowenpally,6,17.46859,78.48106,Hyderabad
+Hafeezpet,4,17.48417,78.36029,Hyderabad
+Aditya Hills,4,17.51837,78.40058,Hyderabad
+Gachibowli,3,17.44008,78.34892,Hyderabad
+Santosh Nagar,4,17.34724,78.50831,Hyderabad
+Amberpet,4,17.39202,78.51626,Hyderabad
+Malakpet,4,17.37165,78.49098,Hyderabad
+Manikonda,2,17.40622,78.37635,Hyderabad
+Nanakramguda,3,17.41691,78.34238,Hyderabad
+Shaikpet,4,17.40675,78.4024,Hyderabad
+Jubli Hills,4,17.42353,78.41186,Hyderabad
+RaiDurg,4,17.41839,78.39101,Hyderabad
+Medipally,2,17.40778,78.60228,Hyderabad
+Mehdipatnam,4,17.39546,78.43077,Hyderabad
+Sarath City capital Mall,5,17.45763534,78.36507896,Hyderabad
+Shaikpet,4,17.40609,78.39131,Hyderabad
+Ramanthapur,4,17.38529,78.529,Hyderabad
+Badangpet,2,17.30526,78.52547,Hyderabad
+Kompally,3,17.53679,78.48493,Hyderabad
+Narsingi,3,17.38898076,78.35803062,Hyderabad
+Kokapet,3,17.39701882,78.33507044,Hyderabad
+Jeedimetla,3,17.52016748,78.45785193,Hyderabad
+New Malakpet,3,17.36773174,78.51273046,Hyderabad
+Upperpally,4,17.36067182,78.41698037,Hyderabad
+Attapur,3,17.37677726,78.42966615,Hyderabad
+Mothi Nagar,4,17.45363656,78.42230288,Hyderabad
+Izzathnagar,4,17.46734273,78.37961246,Hyderabad
+Anjaneya Nagar,4,17.47203095,78.41800074,Hyderabad
+RamNagar,3,17.41279385,78.51275804,Hyderabad
+Aramgarh,3,17.33006047,78.43068653,Hyderabad
+Suraram,3,17.5362,78.433,Hyderabad
+Hindustan Aeronautics,4,17.47291344,78.4555617,Hyderabad
+Begampet,4,17.43838604,78.4580437,Hyderabad
+Yapral,4,17.5056207,78.54072192,Hyderabad
+Nacharam,4,17.43058325,78.56008411,Hyderabad
+Boduppal,3,17.41495859,78.58000545,Hyderabad
+LAL bazar,3,17.47928,78.51394,Hyderabad
+Tirumalagiri,3,17.47928,78.50457,Hyderabad
+Karkhana,3,17.46101,78.49914,Hyderabad
+Koti,4,17.38616,78.47974,Hyderabad
+Hyderguda,4,17.39413,78.48328,Hyderabad
+Ashok Nagar,4,17.40529,78.48988,Hyderabad
+Bansilalpet,4,17.4275,78.49414,Hyderabad
+Prakash Nagar,6,17.44208,78.46953,Hyderabad
+Ameerpet,4,17.43882,78.44951,Hyderabad
+Sanath Nagar,4,17.45343,78.44233,Hyderabad
+Lakdikapul,4,17.39881,78.46231,Hyderabad
+Dammaiguda,2,17.49865,78.59025,Hyderabad
+Cherlapalli,2,17.47095,78.59446,Hyderabad
+Yousufguda,4,17.43379,78.42935,Hyderabad
+Khajaguda,4,17.41887,78.36196,Hyderabad
+Balapur,2,17.30863,78.50459,Hyderabad
+Alkapuri,3,17.36797,78.55312,Hyderabad
+Quthbullapur,4,17.49959,78.46301,Hyderabad
+Mehdipatnam,4,17.39879,78.4349,Hyderabad
+Nizampet,4,17.5125,78.38365,Hyderabad
+Gajularamaram,3,17.53528,78.40018,Hyderabad
+Vivekananda Nagar,4,17.49518,78.40771,Hyderabad
+Hi-tech city phase 2,6,17.44567,78.37497,Hyderabad
+Ramanthapur,4,17.39484,78.53585,Hyderabad
+Old Nallakunta,4,17.4025,78.50275,Hyderabad
+Tarnaka,4,17.42993,78.54169,Hyderabad
+Adarsh Nagar,4,17.41386,78.56204,Hyderabad
+Ravindra Nagar,4,17.40721,78.5409,Hyderabad
+charminar,4,17.35726,78.47243,Hyderabad
+Kukatpally Housing board,4,17.48481,78.38806,Hyderabad
+Miyapur,6,17.49553,78.37207,Hyderabad
+Nehru Nagar,4,17.48292,78.32505,Hyderabad
+Huda Layout,4,17.47262,78.30247,Hyderabad
+Hill County Phase 1,4,17.52572,78.37254,Hyderabad
+Kousalya Colony,4,17.52856,78.35645,Hyderabad
+Nungambakkam,4,13.05695,80.24247,Chennai
+T. Nagar,6,13.04176,80.23408,Chennai
+Anna Nagar (WIP),4,13.08496,80.21013,Chennai
+Adyar,4,13.00118,80.2565,Chennai
+Tondiarpet,4,13.12611,80.288,Chennai
+Choolai,4,13.09187,80.26419,Chennai
+Vyasarpadi,4,13.11838,80.25942,Chennai
+Vadapalani,4,13.04997,80.21213,Chennai
+K. K. Nagar,4,13.041,80.19939,Chennai
+Perungudi,4,12.96537,80.24611,Chennai
+St Thomas Mount,4,12.99514,80.19867,Chennai
+Kolathur,2,13.12396,80.21213,Chennai
+Villivakkam,2,13.11025,80.20895,Chennai
+Ambattur Industrial area,2,13.08919,80.1613,Chennai
+Pattaravakam,2,13.11452,80.16627,Chennai
+Tambaram East (WIP),2,12.92113291,80.13072689,Chennai
+Tambaram west,2,12.92534261,80.10051941,Chennai
+Selaiyur (WIP),2,12.90773557,80.14264871,Chennai
+Chrompet,2,12.9523899,80.14533872,Chennai
+Sholinganallur (WIP),2,12.90671964,80.23033777,Chennai
+Perambur,4,13.12131605,80.23297459,Chennai
+Ayanavaram,4,13.09875144,80.23484736,Chennai
+Chetpet,4,13.07171046,80.24032864,Chennai
+Pammal,4,12.97478313,80.13198198,Chennai
+Navallur,3,12.84679522,80.22918337,Chennai
+Medavakkam,3,12.92015303,80.19255014,Chennai
+Perumbakkam,3,12.89329475,80.1849677,Chennai
+Royapettah,4,13.05371358,80.26435492,Chennai
+Tiruvottiyur,4,13.16269972,80.30071409,Chennai
+Porur,3,13.03843907,80.15323276,Chennai
+Avadi,3,13.10485335,80.11033161,Chennai
+Keelkattalai,3,12.95573061,80.18733367,Chennai
+Ambattur,2,13.11867247,80.15569064,Chennai
+Padi,3,13.09801254,80.1851508,Chennai
+Korattur,3,13.10805031,80.18377576,Chennai
+Mugalivakkam,3,13.02013173,80.16328177,Chennai
+Nolambur,2,13.07519614,80.16595525,Chennai
+Red Hills chennai,3,13.1753,80.21262,Chennai
+Old washermen pet,3,13.15379,80.28003,Chennai
+Hari krishna puram,3,13.17556,80.25988,Chennai
+Nedunkundram,3,12.87922,80.10634,Chennai
+Bibwewadi,4,18.46943,73.85855,Pune
+Baner,3,18.55731,73.77205,Pune
+Aundh,6,18.56074,73.80723,Pune
+Wakad,3,18.58922,73.77769,Pune
+Hinjawadi,4,18.59161,73.73907,Pune
+Koregaon Park,2,18.53158,73.88867,Pune
+Yashwant Nagar,6,18.5525,73.89404,Pune
+Viman Nagar-1,3,18.56798,73.90705,Pune
+Pimpri,3,18.6292,73.80305,Pune
+Kharadi,4,18.55121678,73.95066011,Pune
+Swar Gate,4,18.49919,73.85884,Pune
+Shivaji Nagar Bus Stand,6,18.53212,73.85026,Pune
+Kothrud,5,18.5078,73.80697,Pune
+Karvenagar,5,18.4916,73.82178,Pune
+Market yard,4,18.48747,73.87142,Pune
+Katraj,4,18.4473,73.85855,Pune
+Kondhwa,4,18.46931,73.88909,Pune
+Gokhalenagar,6,18.52914,73.82705,Pune
+Sadashiv Peth,6,18.5082,73.84365,Pune
+PasHan Gaon,4,18.53989,73.79565,Pune
+Hinjewadi Infotech park,4,18.59566,73.71169,Pune
+Range hills,3,18.55038169,73.83933716,Pune
+Moshi,3,18.67482503,73.83967389,Pune
+MIDC,3,18.65519885,73.79682982,Pune
+Ravet,3,18.66456298,73.73307682,Pune
+Hinjewadi phasee3,3,18.5806707,73.68548655,Pune
+Balewadi,3,18.57836173,73.77348365,Pune
+Wakad Bridge / Dange road,3,18.6029,73.7701,Pune
+Tingre Nagar,3,18.57601303,73.8891529,Pune
+Nimbalakar Nagar,3,18.60861142,73.91162615,Pune
+Abhiruchi Mall,3,18.46414921,73.81746992,Pune
+Raghavendra Nagar,3,18.55605203,73.93032341,Pune
+Tathawade,2,18.62744,73.74938,Pune
+Thergaon,2,18.61442,73.77392,Pune
+PimpleGaurav,2,18.58484,73.82078,Pune
+Pimple Nilakh,2,18.57881,73.78737,Pune
+Kate wasti,2,18.6242,73.7337,Pune
+Pimple Saudagar,2,18.59781,73.79739,Pune
+Aundh Gaon,2,18.5666,73.81608,Pune
+Mahalunge,2,18.56769,73.76111,Pune
+Sus,2,18.55062,73.7626,Pune
+Bavdhan,2,18.51451,73.76776,Pune
+Sinhagad Road,2,18.47832,73.82462,Pune
+Magarpatta,2,18.51864,73.9355,Pune
+magarpatta new,2,18.5133,73.94128,Pune
+Dhanori,2,18.59665,73.89849,Pune
+Bhekrai Nagar,2,18.48849,73.94839,Pune
+CAMP,2,18.5152,73.87974,Pune
+Versova,3,19.14018,72.80996,Mumbai
+Andheri we,4,19.13491,72.83288,Mumbai
+Vile parle,4,19.1002,72.84359,Mumbai
+Bandra wes,4,19.05915,72.82999,Mumbai
+Bandra Eas,3,19.06166,72.86713,Mumbai
+Ghatkopar,3,19.08109,72.90745,Mumbai
+Mulund,3,19.17244,72.95242,Mumbai
+Bhandup,3,19.14209,72.93733,Mumbai
+Santa Cruz East,4,19.07497,72.86038,Mumbai
+Pheonix market city Kurla,4,19.08663,72.88874,Mumbai
+Chandivali Dmart,4,19.11137,72.89769,Mumbai
+Kanjur marg,3,19.1284,72.92801,Mumbai
+Kandivali East,3,19.20036,72.87386,Mumbai
+Dhangar Wadi,4,19.11864,72.83726,Mumbai
+Jogeshwari east,4,19.13631,72.85795,Mumbai
+Sion Koliwada,4,19.04097,72.86366,Mumbai
+Kurla- Nehru Nagar,4,19.06099,72.88391,Mumbai
+Asalpha,4,19.10113,72.89647,Mumbai
+Bhandup West,4,19.16365,72.93934,Mumbai
+Dadar west,4,19.02381086,72.83791278,Mumbai
+Mahim,3,19.03549146,72.84229534,Mumbai
+Byculla,2,18.97652937,72.82911827,Mumbai
+Santa Cruz,3,19.0844092,72.83784101,Mumbai
+Mira road,3,19.28417715,72.86700235,Mumbai
+Kopri,2,19.18159939,72.97158977,Mumbai
+ESIC Hospital,3,19.20409039,72.95645324,Mumbai
+MSRTC Bud Stand,3,19.19600902,72.97067046,Mumbai
+Manpada,2,19.23115655,72.9741339,Mumbai
+JB Nagar,3,19.11038502,72.86432994,Mumbai
+Santa cruz Electronics Export Zone,4,19.12683637,72.87674061,Mumbai
+Vikhroli East,3,19.11439363,72.93754327,Mumbai
+Dombivli East,3,19.21805376,73.08644972,Mumbai
+Mind space Airoli,3,19.16050031,72.9983838,Mumbai
+Bhiwandi,3,19.27980953,73.04460928,Mumbai
+Mazgaon,4,18.96605,72.83938,Mumbai
+Colaba,3,18.9523,72.83394,Mumbai
+Cuffe Parade colaba,4,18.90726,72.81272,Mumbai
+Worli,3,19.00048,72.81542,Mumbai
+Sewri,3,18.99134,72.85212,Mumbai
+Bhandup East,3,19.15106,72.94658,Mumbai
+Thane West,4,19.24711,72.97425,Mumbai
+Kalwa,3,19.20218,72.99915,Mumbai
+Digha Naka,4,19.17514,73.00119,Mumbai
+Rabale,4,19.14715,73.00368,Mumbai
+Ghansoli,4,19.12653,73.00092,Mumbai
+MIDC Industrial Area,4,19.08869,73.02136,Mumbai
+Koparkhairane,4,19.10496,73.0043,Mumbai
+APMC Market- Turbhe,4,19.0762,73.00584,Mumbai
+palm Beach road,6,19.06124,73.00568,Mumbai
+Juinagar,4,19.05041,73.01583,Mumbai
+Swawoods,4,19.01814,73.01732,Mumbai
+Nerul west,3,19.03646,73.01529,Mumbai
+Nerul,3,19.03486,73.02098,Mumbai
+CBD belapur,4,19.02208,73.03958,Mumbai
+Kharghar,6,19.04365,73.07109,Mumbai
+kamothe,3,19.01948,73.09439,Mumbai
+New Panvel East,3,19.00161,73.11957,Mumbai
+Old Panvel,3,18.9901,73.1056,Mumbai
+Khanda colony,3,19.00979,73.1106,Mumbai
+Kalamboli,3,19.03222,73.10217,Mumbai
+Taloja,2,19.07467,73.08661,Mumbai
+Kalyan East,3,19.22931,73.131,Mumbai
+Kalyan west,3,19.24281,73.12924,Mumbai
+TATA colony,4,19.04071,72.89781,Mumbai
+Malad west,4,19.18953,72.83611,Mumbai
+Gokuldham Colony goregaon East,4,19.17015,72.86994,Mumbai
+Passport Seva kendra Thane,4,19.199,72.9482,Mumbai
+Shivai Nagar,4,19.2181,72.95622,Mumbai
+Patlipada,3,19.24226,72.97108,Mumbai
+Mind Space Juinagar,4,19.05345,73.02942,Mumbai
+Palava city,2,19.16379,73.07337,Mumbai
+Ambernath,2,19.19318,73.19775,Mumbai
+Ulhasnagar,2,19.22106,73.16557,Mumbai
+Vadala Road,4,19.01608,72.8586,Mumbai
+Mumbai Central,4,18.96968,72.81749,Mumbai
+Grant Road,4,18.9631,72.815,Mumbai
+Bhola Nagar,3,19.18667,72.99912,Mumbai
+Surya Nagar,3,19.18127,72.98937,Mumbai
+Bhiwand bypass,3,19.26886,73.08319,Mumbai
+Anandnagar,4,19.26558,72.96719,Mumbai
+Bhayandar West,3,19.30135,72.84645,Mumbai
+Bhayendar east,3,19.30396,72.85988,Mumbai
+Seawoods East,3,19.02731,73.02361,Mumbai
+Shastri Nagar (goregaon West,4,19.15954,72.83493,Mumbai
+Chandni Chowk,4,28.65053,77.23034,Delhi
+Pahar Ganj,6,28.6456,77.21278,Delhi
+Chhatarpur,4,28.49586,77.18483,Delhi
+Ashok vihar,4,28.69144767,77.17539696,Delhi
+Saket,6,28.5221,77.21015,Delhi
+Khanpur,4,28.50597503,77.23022284,Delhi
+Hauz Khas,4,28.54789,77.20312,Delhi
+Punjabhi Bhag,4,28.67080294,77.12869762,Delhi
+Vsant Kunj,4,28.52867267,77.14850383,Delhi
+Mayapuri Industrial Area,4,28.6183576,77.11716754,Delhi
+Karol bhag,4,28.65534381,77.18822642,Delhi
+Rk Puram,4,28.55062096,77.18532812,Delhi
+Patparganj,2,28.63425937,77.3012032,Delhi
+Mayur Vihar,4,28.61036957,77.32789165,Delhi
+Dwarka sector 7,3,28.58584238,77.07193625,Delhi
+Mehrauli,4,28.5211974,77.1789123,Delhi
+Okhla Pocket D,3,28.52142,77.28297,Delhi
+Moti Bagh,3,28.58334,77.1678,Delhi
+Badar Pur Border,2,28.49364813,77.30300979,Delhi
+Burari,4,28.73312,77.19681,Delhi
+Kamla Nagar Market,6,28.67811,77.20628,Delhi
+Rama Krishna Puram,4,28.56601,77.17674,Delhi
+Khan Market,6,28.60016,77.22696,Delhi
+Model Town,6,28.70953,77.18877,Delhi
+Shalimar Bagh,6,28.71625,77.15626,Delhi
+Mundka,4,28.68231,77.03494,Delhi
+Connaught Place,6,28.63042,77.21772,Delhi
+Jorbagh,4,28.58776,77.21531,Delhi
+Inderlok,6,28.6722,77.16521,Delhi
+Civil Lines,6,28.68143,77.22269,Delhi
+Rohini Sector 13,4,28.72205,77.12847,Delhi
+Shalimar Bagh,4,28.71625,77.15626,Delhi
+Jangpura,4,28.58259,77.24868,Delhi
+INA,6,28.57446,77.21016,Delhi
+Sarita Vihar,4,28.53078,77.294,Delhi
+Malviya Nagar,4,28.53423,77.20945,Delhi
+Mahipalpur,4,28.54354,77.12952,Delhi
+RangPuri,4,28.5296,77.12515,Delhi
+Safdarjung,4,28.5663,77.19306,Delhi
+Green park Metro,3,28.55974,77.20727,Delhi
+South Extention -1,4,28.57446,77.22234,Delhi
+South Extention-2,4,28.56579,77.22086,Delhi
+Burari,4,28.7582,77.19349,Delhi
+Shastri Nagar,4,28.6699,77.18002,Delhi
+Munirka,4,28.55031,77.17393,Delhi
+New friends Colony,4,28.56861,77.27044,Delhi
+Kalkaji,4,28.54011,77.25831,Delhi
+Nehru Palace,3,28.55135,77.251,Delhi
+Krishna Park Extenstion,4,28.6468,77.08508,Delhi
+Mukherjee Nagar,4,28.71032,77.21414,Delhi
+University of Delhi,4,28.6908,77.1972,Delhi
+Pitampura,4,28.6989,77.13903,Delhi
+Fatehpur Beri,4,28.45928,77.18137,Delhi
+Satbari,4,28.47485,77.19284,Delhi
+DLF Farms,4,28.48212,77.1603,Delhi
+Sainik Farm,4,28.50459,77.21116,Delhi
+Greater Kailash,4,28.54218,77.23422,Delhi
+Shahpur Jat,3,28.55038,77.21817,Delhi
+JNU,4,28.53929,77.16848,Delhi
+ITO,4,28.62841,77.24129,Delhi
+Babarpur,3,28.68478,77.28211,Delhi
+Mayur Vihar,4,28.60823,77.29369,Delhi
+Ram Nagar Extention,3,28.68333,77.29578,Delhi
+Seelampur,4,28.66382,77.27205,Delhi
+Kirti Nagar,4,28.6496,77.14448,Delhi
+Chanayapuri,4,28.59676,77.19125,Delhi
+Lok Kalyan Marg,4,28.59767,77.21134,Delhi
+Central Secretariat,4,28.6147,77.21223,Delhi
+Shankar Vihar,3,28.5612,77.14028,Delhi
+Bhalswa,3,28.75536,77.16091,Delhi
+Sultan puri,3,28.69847,77.06904,Delhi
+Hatsal,3,28.6371,77.04862,Delhi
+Paschim Vihar,4,28.66873,77.0932,Delhi
+Dwarka Sector- 2,4,28.59931,77.06877,Delhi
+Kakrola,3,28.5974,77.02892,Delhi
+Dwarka sector 21,4,28.55217,77.05836,Delhi
+New Mustafabad,3,28.71307,77.26984,Delhi
+Tughlakabad Extention,4,28.52002,77.25683,Delhi
+Shiv Vihar,3,28.72539,77.28055,Delhi
+Jafrabad,3,28.68378,77.27238,Delhi
+Tajganj (taj mahal metro ),3,27.16826,78.03623,Agra
+Dhandhupura (Taj East Gate Metro Station),3,27.15922,78.05816,Agra
+Loha Mandi,3,27.19651,77.9686,Agra
+Transport Nagar ( near ISBT),3,27.20781,77.97748,Agra
+Gdhapura (Agra City station ),3,27.19559,78.01594,Agra
+Sikandra,3,27.21837,77.94751,Agra
+Gautam Nagar,3,27.18997,78.03835,Agra
+Idgah Bus Stand,2,27.16645,77.99677,Agra
+Maruthi estate,3,27.18174,77.96936,Agra
+Madhuvan Colony,3,27.18082,77.99218,Agra
+Kamla Nagar,2,27.21533,78.0311,Agra
+Rasulpur,3,27.15578,77.9839,Agra
+Agra Cantt,4,27.15805,78.00989,Agra
+Sita Nagar,3,27.20192,78.04085,Agra
+Tedi Bagiya,2,27.22871468,78.05005374,Agra
+Ram Bagh,2,27.20674808,78.04732796,Agra
+Bijili Ghar,2,27.18096767,78.01533902,Agra
+Rajpur Chungi,2,27.14462184,78.04566613,Agra
+Bhagwan Talkies,3,27.21074342,78.00466482,Agra
+Shamsabad,2,27.13995332,78.03996243,Agra
+Bundu Katra,2,27.14244319,78.01001289,Agra
+Shaheed Nagar,2,27.15372268,78.03605517,Agra
+Panchkuian,2,27.17762751,78.00404998,Agra
+Surajpur Site 4,2,28.45347,77.53185,Noida
+Gamma 1,4,28.48472,77.50013,Noida
+Noida Sector 16,4,28.57903,77.31682,Noida
+Wave City Center Noida,4,28.57469,77.35605,Noida
+Sector 78,4,28.56436,77.38627,Noida
+Sector 93,4,28.52264,77.39259,Noida
+Noida Phase 2,4,28.53535,77.40431,Noida
+EcoTech -3,3,28.53812,77.45903,Noida
+Zeta1,3,28.50399,77.52831,Noida
+Sector 63,3,28.62068,77.35982,Noida
+Gaur City,4,28.60804,77.42939,Noida
+Sector 65,3,28.61314,77.38387,Noida
+Noida electronic city,2,28.62884,77.37521,Noida
+chhajarsi Sabji market,3,28.62804,77.39406,Noida
+Gurjinder Vihar,2,28.44649187,77.50941168,Noida
+Accher market,2,28.4665552,77.54119622,Noida
+Sector 167,2,28.48905125,77.41609651,Noida
+Sector 156,3,28.45752764,77.45110029,Noida
+Sector 149,2,28.43856249,77.48331805,Noida
+Pari chowk,4,28.46531135,77.51125815,Noida
+Omnicron 1,4,28.46141273,77.56481002,Noida
+Delta 1,2,28.47830675,77.52536357,Noida
+Sector 119,3,28.58779298,77.40342342,Noida
+Sector 125,3,28.54486745,77.32731693,Noida
+Sector 28,2,28.43804,77.30904,Faridabad
+Bata Chowk,2,28.38603,77.31353,Faridabad
+Crown Interiorz Mall,2,28.46993,77.30812,Faridabad
+Sector 15 Market,2,28.39519,77.32272,Faridabad
+Sector 21 D,2,28.41698,77.28485,Faridabad
+NHPC CHOWK,2,28.45774,77.30754,Faridabad
+Rajeev nagar,2,28.4575184,77.31666039,Faridabad
+Sarai Khwaja,2,28.47860154,77.30476384,Faridabad
+ Ballabgarh,2,28.33934159,77.32090545,Faridabad
+Sector 50,2,28.38080124,77.28021038,Faridabad
+Huda market Sector 7,2,28.36179,77.32638,Faridabad
+Escorts Mujesar,2,28.37026,77.31463,Faridabad
+Sector 23,2,28.35552,77.294,Faridabad
+Sector 48,2,28.40497,77.2885,Faridabad
+Achievers Mall/ IP extension II,2,28.39617,77.26755,Faridabad
+Sector 49,4,28.4119,77.04243,Gurgaon
+Sector 23,4,28.50743,77.06075,Gurgaon
+Carterpuri Road,4,28.51011,77.04189,Gurgaon
+Sector 55/56,4,28.42363,77.1054,Gurgaon
+Suhash Chowk,4,28.42857,77.03704,Gurgaon
+Sector 32,4,28.44779512,77.04317042,Gurgaon
+Sector 41,3,28.45570334,77.06299748,Gurgaon
+sector 26 A,3,28.46892138,77.10123942,Gurgaon
+Sushant Lok 2,3,28.42596276,77.0892641,Gurgaon
+Sector 53-54,3,28.44658064,77.10491109,Gurgaon
+Badshahpur,4,28.39811449,77.05469384,Gurgaon
+Sector 74,3,28.41607747,77.01187643,Gurgaon
+Sector 18,4,28.49131862,77.06904163,Gurgaon
+Nathupur,4,28.48835303,77.10036386,Gurgaon
+Sector 28,3,28.47355335,77.0849993,Gurgaon
+Sector 72,3,28.42256,77.02192,Gurgaon
+Sector 48,4,28.41767,77.03535,Gurgaon
+South point mall,4,28.44852,77.096,Gurgaon
+Sector 65,3,28.40291,77.07066,Gurgaon
+Sector 86,4,28.39793,76.93846,Gurgaon
+Sector 84,4,28.39735,76.97345,Gurgaon
+Sector 36,4,28.4159,76.99089,Gurgaon
+Sector 15,4,28.45971,77.04146,Gurgaon
+Medicity,4,28.43801,77.04193,Gurgaon
+Sector 20,4,28.51035,77.08531,Gurgaon
+Sector 17 B,4,28.48068,77.06456,Gurgaon
+Sector 69,4,28.39662,77.03481,Gurgaon
+Sector 25,4,28.48464,77.08407,Gurgaon
+Sector 29,4,28.46923,77.0674,Gurgaon
+badalpur,2,28.59261,77.51706,Ghaziabad
+Sector 12,2,28.6453,77.41177,Ghaziabad
+Vijay Nagar + Pratap Vihar,2,28.65211,77.42109,Ghaziabad
+Lal Kuan to New Bus stand,2,28.6429,77.45197,Ghaziabad
+Lal Kuan to Dasna,2,28.66689,77.48139,Ghaziabad
+Indirapuram,6,28.63986,77.36885,Ghaziabad
+Dadri,3,28.55312,77.55636,Ghaziabad
+LAL KUAN,3,28.63373,77.47369,Ghaziabad
+Shalimar Garden,2,28.69152,77.33536,Ghaziabad
+Vasundhara,4,28.66280819,77.37443048,Ghaziabad
+Mohan Nagar,2,28.6731001,77.38581177,Ghaziabad
+Shahibabad Industrial Area,4,28.66279323,77.33633106,Ghaziabad
+Ashok Vatika,3,28.6965296,77.34992501,Ghaziabad
+Raj Bhag,3,28.68008588,77.34592058,Ghaziabad
+Gillco Park hills,2,30.72897,76.67362,Chandigarh
+Shivalik city,2,30.72039,76.65065,Chandigarh
+Sunny Enclave,2,30.75218,76.66154,Chandigarh
+Kharar,2,30.76583,76.62556,Chandigarh
+Phase 8 Mohali,2,30.71198,76.70854,Chandigarh
+Jubilee Junction,2,30.67296,76.72735,Chandigarh
+Sector 34,2,30.72166,76.76743,Chandigarh
+Sector 17,2,30.74267,76.78742,Chandigarh
+Sector 26,2,30.72996,76.8101,Chandigarh
+Peer Muchalla,2,30.65877,76.8565,Chandigarh
+Zirakpur Apple heights,2,30.63755,76.81407,Chandigarh
+Dera Bassi,2,30.58709,76.84715,Chandigarh
+Daddu Majra Colony,2,30.754,76.744,Chandigarh
+Sohana,2,30.68788,76.70602,Chandigarh
+Industrial Area Phase 1,2,30.7081,76.8111,Chandigarh
