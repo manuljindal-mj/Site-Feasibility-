@@ -422,8 +422,6 @@ if st.session_state.run:
         qis_names = ", ".join(nearby_qis_check["QIS"].astype(str).tolist()) if not nearby_qis_check.empty else ""
     deal_names = ", ".join(nearby_deals_check["Deal"].astype(str).tolist()) if not nearby_deals_check.empty else ""
 
-    message = "QIS / Deal exists within 1.5 km radius. Please check the current utilisation levels before proceeding."
-
     if qis_names:
         message += f"
 
