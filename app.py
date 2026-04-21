@@ -138,7 +138,6 @@ def load_kmz(file):
 # LOAD DATA
 # ------------------------------------------------
 
-
 @st.cache_data
 def load_data():
     p0 = pd.read_csv("P0.csv")
@@ -170,7 +169,6 @@ p0, qis, deals, darkstores = load_data()
 # ------------------------------------------------
 # SCORING FUNCTIONS
 # ------------------------------------------------
-
 
 
 def score_p0(count):
@@ -265,6 +263,7 @@ parking = st.sidebar.selectbox(
 if st.sidebar.button("Run Feasibility"):
     st.session_state.run = True
 
+
 # ------------------------------------------------
 # RUN ANALYSIS
 # ------------------------------------------------
@@ -326,14 +325,10 @@ if st.session_state.run:
             }
         )
 
-    qis_table = (
-        pd.DataFrame(qis_results)
-        .sort_values("Distance_km")
-        .head(10)
-    )
+    qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
 
     # --------------------------------------------
-    # NEAREST DARKSTORE (DISPLAY ONLY)
+    # NEAREST DARKSTORE
     # --------------------------------------------
 
     nearest_dark = None
@@ -402,12 +397,16 @@ if st.session_state.run:
     st.header("Feasibility Result")
     st.metric("Score", round(normalized_score, 2))
 
-    if normalized_score > 0.6:
-        st.success("Approved")
-    elif normalized_score >= 0.3:
-        st.warning("Feasible")
+    # Only feasible if at least one P0 exists
+    if p0_count == 0:
+        st.error("Not Feasible - No P0 available within 1.5 km")
     else:
-        st.error("Not Feasible")
+        if normalized_score > 0.6:
+            st.success("Approved")
+        elif normalized_score >= 0.3:
+            st.warning("Feasible")
+        else:
+            st.error("Not Feasible")
 
     # --------------------------------------------
     # TABLES
