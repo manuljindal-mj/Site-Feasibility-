@@ -56,7 +56,6 @@ def convert_coord(coord):
     return None
 
 
-
 def valid_coord(lat, lon):
     if pd.isna(lat) or pd.isna(lon):
         return False
@@ -74,7 +73,6 @@ def valid_coord(lat, lon):
         return False
 
     return True
-
 
 
 def safe_distance(point, lat, lon):
@@ -138,6 +136,7 @@ def load_kmz(file):
 # LOAD DATA
 # ------------------------------------------------
 
+
 @st.cache_data
 def load_data():
     p0 = pd.read_csv("P0.csv")
@@ -183,7 +182,6 @@ def score_p0(count):
     return 1
 
 
-
 def score_arterial(val):
     mapping = {
         ">1km": 1,
@@ -195,7 +193,6 @@ def score_arterial(val):
     return mapping[val]
 
 
-
 def score_access(val):
     mapping = {
         "<10ft": 1,
@@ -205,7 +202,6 @@ def score_access(val):
         ">40ft": 5,
     }
     return mapping[val]
-
 
 
 def score_binary(val):
@@ -263,7 +259,6 @@ parking = st.sidebar.selectbox(
 if st.sidebar.button("Run Feasibility"):
     st.session_state.run = True
 
-
 # ------------------------------------------------
 # RUN ANALYSIS
 # ------------------------------------------------
@@ -279,7 +274,7 @@ if st.session_state.run:
     input_point = (lat, lon)
 
     # --------------------------------------------
-    # P0 ANALYSIS
+    # P0 ANALYSIS (HARD GATE)
     # --------------------------------------------
 
     p0_results = []
@@ -300,6 +295,48 @@ if st.session_state.run:
             )
 
     p0_count = len(p0_results)
+
+    # ------------------------------------------------
+    # HARD STOP IF NO P0 WITHIN 1.5 KM
+    # ------------------------------------------------
+
+    if p0_count == 0:
+        st.header("Feasibility Result")
+        st.error("Not Feasible - No P0 available within 1.5 km radius")
+
+        st.subheader("P0 within 1.5km")
+        st.dataframe(pd.DataFrame(p0_results))
+
+        st.subheader("Map")
+
+        m = folium.Map(location=[lat, lon], zoom_start=13)
+
+        folium.Marker(
+            [lat, lon],
+            popup="Input Site",
+            icon=folium.Icon(color="blue"),
+        ).add_to(m)
+
+        folium.Circle(
+            [lat, lon],
+            radius=1500,
+            color="blue",
+            fill=True,
+            fill_opacity=0.1,
+        ).add_to(m)
+
+        for _, row in p0.iterrows():
+            folium.CircleMarker(
+                [row["Latitude"], row["Longitude"]],
+                radius=5,
+                color="green",
+            ).add_to(m)
+
+        st_folium(m, width=900, height=600)
+
+        st.stop()
+
+    # Continue only if P0 exists
     p0_score = score_p0(p0_count)
 
     # --------------------------------------------
@@ -315,17 +352,17 @@ if st.session_state.run:
             row["Long"],
         )
 
-        if dist is None:
-            continue
+        if dist is not None:
+            qis_results.append(
+                {
+                    "QIS": row.get("QIS Name", ""),
+                    "Distance_km": round(dist, 2),
+                }
+            )
 
-        qis_results.append(
-            {
-                "QIS": row.get("QIS Name", ""),
-                "Distance_km": round(dist, 2),
-            }
-        )
-
-    qis_table = pd.DataFrame(qis_results).sort_values("Distance_km").head(10)
+    qis_table = pd.DataFrame(qis_results).sort_values(
+        "Distance_km"
+    ).head(10)
 
     # --------------------------------------------
     # NEAREST DARKSTORE
@@ -365,7 +402,7 @@ if st.session_state.run:
             deal_results.append(
                 {
                     "Deal": row.get("Deal Name", ""),
-                    "Distance": round(dist, 2),
+                    "Distance_km": round(dist, 2),
                 }
             )
 
@@ -391,47 +428,44 @@ if st.session_state.run:
     normalized_score = weighted_score / 5
 
     # --------------------------------------------
-    # OUTPUT
+    # FINAL RESULT
     # --------------------------------------------
 
     st.header("Feasibility Result")
     st.metric("Score", round(normalized_score, 2))
 
-    # Only feasible if at least one P0 exists
-    if p0_count == 0:
-        st.error("Not Feasible - No P0 available within 1.5 km")
+    if normalized_score > 0.6:
+        st.success("Approved")
+    elif normalized_score >= 0.3:
+        st.warning("Feasible")
     else:
-        if normalized_score > 0.6:
-            st.success("Approved")
-        elif normalized_score >= 0.3:
-            st.warning("Feasible")
-        else:
-            st.error("Not Feasible")
+        st.error("Not Feasible")
 
     # --------------------------------------------
     # TABLES
     # --------------------------------------------
 
-    colA, colB = st.columns(2)
+    col1, col2 = st.columns(2)
 
-    with colA:
+    with col1:
         st.subheader("P0 within 1.5km")
         st.dataframe(pd.DataFrame(p0_results))
 
         st.subheader("Nearest QIS")
         st.dataframe(qis_table)
 
-    with colB:
+    with col2:
         st.subheader("Nearby Deals")
 
         if deal_table.empty:
-            st.write("No deals nearby")
+            st.write("No nearby deals found")
         else:
             st.dataframe(deal_table)
 
         if nearest_dark is not None:
             st.write(
-                f"Nearest Darkstore: {nearest_dark_name} | {round(nearest_dark, 2)} km"
+                f"Nearest Darkstore: {nearest_dark_name} | "
+                f"{round(nearest_dark, 2)} km"
             )
 
     # --------------------------------------------
