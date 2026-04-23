@@ -27,6 +27,7 @@ for key in ["lat", "lon", "fetch_location", "run"]:
 # COORDINATE UTILITIES
 # ------------------------------------------------
 
+
 def convert_coord(coord):
     coord = str(coord).strip()
 
@@ -82,6 +83,7 @@ def safe_distance(point, lat, lon):
 # LOAD KMZ (DARKSTORES)
 # ------------------------------------------------
 
+
 def load_kmz(file):
     rows = []
 
@@ -127,6 +129,7 @@ def load_kmz(file):
 # LOAD DATA
 # ------------------------------------------------
 
+
 @st.cache_data
 def load_data():
     p0 = pd.read_csv("P0.csv")
@@ -161,6 +164,7 @@ p0, qis, deals, darkstores = load_data()
 # ------------------------------------------------
 # SCORING FUNCTIONS
 # ------------------------------------------------
+
 
 def score_p0(count):
     if count >= 10:
@@ -240,11 +244,6 @@ access_width = st.sidebar.selectbox(
 
 open_24 = st.sidebar.selectbox(
     "24x7 Possible",
-    ["No", "Yes"]
-)
-
-parking = st.sidebar.selectbox(
-    "Parking Available",
     ["No", "Yes"]
 )
 
@@ -377,14 +376,15 @@ if st.session_state.run:
     arterial_score = score_arterial(arterial_distance)
     access_score = score_access(access_width)
     open_score = score_binary(open_24)
-    parking_score = score_binary(parking)
+
+    # Parking removed
+    # Its 10% weight added to Distance from Arterial Road
 
     weighted_score = (
         p0_score * 0.40
-        + arterial_score * 0.20
+        + arterial_score * 0.30
         + access_score * 0.20
         + open_score * 0.10
-        + parking_score * 0.10
     )
 
     normalized_score = round(weighted_score / 5, 2)
